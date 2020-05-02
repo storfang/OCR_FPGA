@@ -21,13 +21,17 @@
 
 
 module single_neuron_test_tb;
-    reg [3:0] x;
+    //reg [3:0] x;
+    real  x [3:0];
     reg z;
-    wire [3:0] y;
+    wire [13:0] y;
     reg clk;
     reg rst;
+    reg mode;
     single_neuron_test singleneuron(
-    .x(x) ,.z(z), .rst(rst) , .clk(clk), .y(y));
+    .x(x) ,.z(z), .rst(rst) , .clk(clk), .y(y), .mode(mode));
+    /*neuron_layer3 neuron3(
+    .x(x) ,.z(z), .rst(rst) , .clk(clk), .y(y), .mode(mode));*/
     
     int i = 0;
   //  wire [3:0] x_nxt[3:0]= {1, 0, 1, 0};
@@ -41,11 +45,16 @@ begin
 rst <= 1'b1;
 #10;
 rst <= 1'b0;
-x[0] <= 0;
+/*x <= 0;
 x[1] <= 0;
 x[2] <= 0;
-x[3] <= 0;
+x[3] <= 0;*/
 z <=0;
+mode <=1;
+#100
+mode <=0;
+#100
+mode <=1;
 end  
   
      always@(posedge clk)begin
@@ -54,7 +63,9 @@ end
         if(i<4) begin
             x[i] <= 1;
             x[i+1] <= 0;
-            i = i+1;end
+            i = i+1;
+            z <= ~z;           
+            end
         else  i=0;
             
      end
