@@ -1,16 +1,17 @@
 module neuron_layer2    # ( parameter LAYER2 = 8, parameter integer FXP_SCALE = 1, parameter LEARNING_RATE = 0.1*FXP_SCALE )(
     input real  x[LAYER2-1:0],
-    input wire [3:0] z,
+    input wire d,
     input wire rst,
     input wire clk,
     input wire mode,
+    output real g_delta[LAYER2-1:0],
     output real  y
     );
 
-    real w[LAYER2-1:0] ={0.8*FXP_SCALE, -1*FXP_SCALE, 0.23*FXP_SCALE, 1*FXP_SCALE, 0.4*FXP_SCALE,
-                  -1*FXP_SCALE, 0.6*FXP_SCALE, -0.64*FXP_SCALE};
-    real w_nxt[LAYER2-1:0] ={0.8*FXP_SCALE, -1*FXP_SCALE, 0.23*FXP_SCALE, 1*FXP_SCALE, 0.4*FXP_SCALE,
-                     -1*FXP_SCALE, 0.6*FXP_SCALE, -0.64*FXP_SCALE};
+    real w[LAYER2-1:0] ={5*FXP_SCALE, -1*FXP_SCALE, 0.23*FXP_SCALE, 1*FXP_SCALE, 0.4*FXP_SCALE,
+                  -1*FXP_SCALE, 0.6*FXP_SCALE, 2*FXP_SCALE};
+    real w_nxt[LAYER2-1:0] ={5*FXP_SCALE, -1*FXP_SCALE, 0.23*FXP_SCALE, 1*FXP_SCALE, 0.4*FXP_SCALE,
+                     -1*FXP_SCALE, 0.6*FXP_SCALE, 2*FXP_SCALE};
     real sum = 0;
     real delta = 0;
     real komparator = 0;
@@ -49,9 +50,10 @@ module neuron_layer2    # ( parameter LAYER2 = 8, parameter integer FXP_SCALE = 
     always@*
     if (mode == 1) begin
     begin
-    assign komparator = z - sum;
+    assign komparator = d;
     if(sum < 0) delta = 0;
     else delta = komparator * LEARNING_RATE;
-    for(i=0;i<LAYER2;i++) w_nxt[i] = x[i]*delta+w[i];           
+    for(i=0;i<LAYER2;i++) w_nxt[i] = x[i]*delta+w[i]; 
+    g_delta[i] = delta*w[i];          
     end end
 endmodule

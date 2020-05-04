@@ -21,13 +21,16 @@
 
 
 module network_tb();
-        reg [15:0] x;
+        reg [3:0] x;
         reg [3:0] z;
-        reg [3:0] y;
+        real  y[3:0];
         reg clk;
         reg rst;
         reg mode;
         reg [255:0] temp ;
+        reg [255:0] temp2 ;
+        reg ready;
+        reg start;
         localparam
         A = 16'b0110100111111001,
         C = 16'b1111000000001111,
@@ -49,7 +52,7 @@ module network_tb();
         /*single_neuron_test singleneuron(
         .x(x) ,.z(z), .rst(rst) , .clk(clk), .y(y), .mode(mode));*/
         network network1(
-        .x1(x) ,.z(z), .rst(rst) , .clk(clk), .y3(y), .mode(mode));
+        .x1(x) ,.z(z), .rst(rst) , .clk(clk), .y3(y), .mode(mode), .start(start), .ready(ready));
         
         int i = 0;
         
@@ -68,42 +71,53 @@ module network_tb();
     x[1] <= 0;
     x[2] <= 0;
     x[3] <= 0;*/
- //   z <=0;
+    z <=4'b0000;
+    mode <=0;
+    start <=0;
+    temp[255:255-(16*1)+1] <= A;
+    temp[255-(16*1):255-(16*2)+1] <= C;
+    temp[255-(16*2):255-(16*3)+1] <= D;
+    temp[255-(16*3):255-(16*4)+1] <= F;
+    temp[255-(16*4):255-(16*5)+1] <= H;
+    temp[255-(16*5):255-(16*6)+1] <= I;
+    temp[255-(16*6):255-(16*7)+1] <= J;
+    temp[255-(16*7):255-(16*8)+1] <= L;
+    temp[255-(16*8):255-(16*9)+1] <= N;
+    temp[255-(16*9):255-(16*10)+1] <= O;
+    temp[255-(16*10):255-(16*11)+1] <= P;
+    temp[255-(16*11):255-(16*12)+1] <= T;
+    temp[255-(16*12):255-(16*13)+1] <= U;
+    temp[255-(16*13):255-(16*14)+1] <= X;
+    temp[255-(16*14):255-(16*15)+1] <= Y;
+    temp[255-(16*15):255-(16*16)+1] <= Z;
+    temp2 <= temp;
+    #300;
     mode <=1;
-    temp[255:255-(16*1)] <= A;
-    temp[255-(16*1):255-(16*2)] <= C;
-    temp[255-(16*2):255-(16*3)] <= D;
-    temp[255-(16*3):255-(16*4)] <= F;
-    temp[255-(16*4):255-(16*5)] <= H;
-    temp[255-(16*5):255-(16*6)] <= I;
-    temp[255-(16*6):255-(16*7)] <= J;
-    temp[255-(16*7):255-(16*8)] <= L;
-    temp[255-(16*8):255-(16*9)] <= N;
-    temp[255-(16*9):255-(16*10)] <= O;
-    temp[255-(16*10):255-(16*11)] <= P;
-    temp[255-(16*11):255-(16*12)] <= T;
-    temp[255-(16*12):255-(16*13)] <= U;
-    temp[255-(16*13):255-(16*14)] <= X;
-    temp[255-(16*14):255-(16*15)] <= Y;
-    temp[255-(16*15):255-(16*16)] <= Z;
+    start <=1;
+    #15; start <= 0;
     end  
       
          always@(posedge clk)begin
        //  x[3:0] <= x_nxt[0:3];
-       /*
-            if(i<4) begin
+            x[3] <=1;
+            if(i<2) begin
                 x[i] <= 1;
                 x[i+1] <= 0;
                 i = i+1;
-                z <= ~z;           
+                z <= 1;           
                 end
-            else  i=0;*/
-         //for(i=0;i<1000;i++)begin
-         x[15:0] <= A;
-         z <= 4'b0000;
-         
-         
-                
-         end// end
+            else  i=0; temp2 = temp; start = 1;
+       /*if(ready==1)begin
+       //start = 1;
+         if(i<16)begin
+         start = 0;
+         x[15:0] <= temp2[255:255-15];
+         temp2 <= (temp2 << 16);
+         z <= i/4;
+         i = i+1;
+         end
+         else 
+         i=0; temp2 = temp; start = 1; end*/
+       end
         
 endmodule

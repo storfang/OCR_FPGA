@@ -1,19 +1,20 @@
-module neuron_layer3    # ( parameter LAYER3 = 16, parameter integer FXP_SCALE = 1, parameter LEARNING_RATE = 0.1*FXP_SCALE )(
+module neuron_layer3    # ( parameter LAYER3 = 16, parameter integer FXP_SCALE = 5, parameter LEARNING_RATE = 0.1*FXP_SCALE )(
     input real  x[LAYER3-1:0],
     input wire [3:0] z,
     input wire rst,
     input wire clk,
     input wire mode,
-    output reg  y
+    output real g_delta[LAYER3-1:0],
+    output real  y
     );
 
     real w[LAYER3-1:0] ={0.4*FXP_SCALE, -1*FXP_SCALE, 0.6*FXP_SCALE, 1*FXP_SCALE, 0.4*FXP_SCALE,
                   -1*FXP_SCALE, 0.6*FXP_SCALE, 1*FXP_SCALE, 0.4*FXP_SCALE, -1*FXP_SCALE,
-                  0.6*FXP_SCALE, 1*FXP_SCALE, 0.4*FXP_SCALE, -1*FXP_SCALE, 0.6*FXP_SCALE,
+                  0.6*FXP_SCALE, 1*FXP_SCALE, 0.4*FXP_SCALE, 1*FXP_SCALE, 0.6*FXP_SCALE,
                   1*FXP_SCALE };
     real w_nxt[LAYER3-1:0] ={0.4*FXP_SCALE, -1*FXP_SCALE, 0.6*FXP_SCALE, 1*FXP_SCALE, 0.4*FXP_SCALE,
                      -1*FXP_SCALE, 0.6*FXP_SCALE, 1*FXP_SCALE, 0.4*FXP_SCALE, -1*FXP_SCALE,
-                      0.6*FXP_SCALE, 1*FXP_SCALE, 0.4*FXP_SCALE, -1*FXP_SCALE, 0.6*FXP_SCALE,
+                      0.6*FXP_SCALE, 1*FXP_SCALE, 0.4*FXP_SCALE, 1*FXP_SCALE, 0.6*FXP_SCALE,
                       1*FXP_SCALE};
     real sum = 0;
     real delta = 0;
@@ -48,7 +49,7 @@ module neuron_layer3    # ( parameter LAYER3 = 16, parameter integer FXP_SCALE =
          w[14] <= w_nxt[14];
          w[15] <= w_nxt[15];                                             
          //w[15:0] <= w_nxt[15:0];
-         $display(" y3 = %f" , sum);    
+         //$display(" y3 = %f" , sum);    
      end
     always@*
     if (mode == 1) begin
@@ -56,6 +57,8 @@ module neuron_layer3    # ( parameter LAYER3 = 16, parameter integer FXP_SCALE =
     assign komparator = z - sum;
     if(sum < 0) delta = 0;
     else delta = komparator * LEARNING_RATE;
-    for(i=0;i<LAYER3;i++) w_nxt[i] = x[i]*delta+w[i];           
-    end end
+    for(i=0;i<LAYER3;i++) w_nxt[i] = x[i]*delta+w[i];
+    g_delta[i] = delta*w[i];           
+    end
+    end
 endmodule
