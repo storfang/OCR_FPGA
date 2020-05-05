@@ -21,7 +21,7 @@
 
 
 module network_tb();
-        reg [3:0] x;
+        reg [15:0] x;
         reg [3:0] z;
         real  y[3:0];
         reg clk;
@@ -95,29 +95,50 @@ module network_tb();
     mode <=1;
     start <=1;
     #15; start <= 0;
+    x <= A; #800;
+    x <= C; #800;
+    x <= D; #800;
+    x <= F; #800;
+    x <= H; #800;
+    x <= I; #800;
+    x <= J; #800;
+    x <= N; #800;
+    x <= O; #800;
+    x <= P; #800;
+    x <= T; #800;
+    x <= U; #800;
+    x <= X; #800;
+    x <= Y; #800;
+    x <= Z; #800;
+    
     end  
       
          always@(posedge clk)begin
        //  x[3:0] <= x_nxt[0:3];
-            x[3] <=1;
-            if(i<2) begin
+            //x[3] <=1;
+           /* if(i==2) begin
                 x[i] <= 1;
                 x[i+1] <= 0;
-                i = i+1;
+              / x <= 4'b1111;
+                i = 0;
                 z <= 1;           
                 end
-            else  i=0; temp2 = temp; start = 1;
-       /*if(ready==1)begin
+            else begin i=i+1; x <= 4'b0000; z <= 0; temp2 = temp; start = 1; end*/
+      // if(ready==1)begin
        //start = 1;
          if(i<16)begin
          start = 0;
-         x[15:0] <= temp2[255:255-15];
-         temp2 <= (temp2 << 16);
-         z <= i/4;
+         //x[15:0] <= temp2[255:255-15];
+         //temp2 <= (temp2 << 16);
+         //x[i] <= 1; x[i-1] <= 0;
+         //x=A;
+         z <= 10;
+        // x[i] = 1'b1;
+        // x[i-1] = 1'b0;
          i = i+1;
          end
          else 
-         i=0; temp2 = temp; start = 1; end*/
-       end
+         i=0; temp2 = temp; start = 1;  end
+       //end
         
 endmodule

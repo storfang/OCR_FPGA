@@ -1,6 +1,6 @@
 module neuron_layer2    # ( parameter LAYER2 = 8, parameter integer FXP_SCALE = 1, parameter LEARNING_RATE = 0.1*FXP_SCALE )(
     input real  x[LAYER2-1:0],
-    input wire d,
+    input real d,
     input wire rst,
     input wire clk,
     input wire mode,
@@ -53,7 +53,7 @@ module neuron_layer2    # ( parameter LAYER2 = 8, parameter integer FXP_SCALE = 
     assign komparator = d;
     if(sum < 0) delta = 0;
     else delta = komparator * LEARNING_RATE;
-    for(i=0;i<LAYER2;i++) w_nxt[i] = x[i]*delta+w[i]; 
-    g_delta[i] = delta*w[i];          
+    for(i=0;i<LAYER2;i++)begin w_nxt[i] = x[i]*delta+w[i]; 
+    g_delta[i] = delta*w[i];   end       
     end end
 endmodule

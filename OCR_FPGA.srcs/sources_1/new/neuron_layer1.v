@@ -1,6 +1,6 @@
-module neuron_layer1    # ( parameter LAYER1 = 4, parameter integer FXP_SCALE = 1, parameter LEARNING_RATE = 0.1*FXP_SCALE )(
+module neuron_layer1    # ( parameter LAYER1 = 16, parameter integer FXP_SCALE = 1, parameter LEARNING_RATE = 0.1*FXP_SCALE )(
     input wire  [LAYER1-1:0]x,
-    input wire  d,
+    input real  d,
     input wire rst,
     input wire clk,
     input wire mode,

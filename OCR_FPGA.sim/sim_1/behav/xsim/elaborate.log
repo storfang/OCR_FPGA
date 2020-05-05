@@ -3,43 +3,10 @@ Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
 Running: C:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto 05e7eb624244473499a814d600c6f3d2 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot network_tb_behav xil_defaultlib.network_tb xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
-WARNING: [VRFC 10-278] actual bit length 4 differs from formal bit length 16 for port x [G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.srcs/sources_1/new/network.sv:221]
-WARNING: [VRFC 10-278] actual bit length 4 differs from formal bit length 16 for port x [G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.srcs/sources_1/new/network.sv:222]
-WARNING: [VRFC 10-278] actual bit length 4 differs from formal bit length 16 for port x [G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.srcs/sources_1/new/network.sv:223]
-WARNING: [VRFC 10-278] actual bit length 4 differs from formal bit length 16 for port x [G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.srcs/sources_1/new/network.sv:224]
-WARNING: [VRFC 10-278] actual bit length 4 differs from formal bit length 16 for port x [G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.srcs/sources_1/new/network.sv:225]
-WARNING: [VRFC 10-278] actual bit length 4 differs from formal bit length 16 for port x [G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.srcs/sources_1/new/network.sv:226]
-WARNING: [VRFC 10-278] actual bit length 4 differs from formal bit length 16 for port x [G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.srcs/sources_1/new/network.sv:227]
-WARNING: [VRFC 10-278] actual bit length 4 differs from formal bit length 16 for port x [G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.srcs/sources_1/new/network.sv:228]
-WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 1 for port d [G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.srcs/sources_1/new/network.sv:234]
-WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 1 for port d [G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.srcs/sources_1/new/network.sv:235]
-WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 1 for port d [G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.srcs/sources_1/new/network.sv:236]
-WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 1 for port d [G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.srcs/sources_1/new/network.sv:237]
-WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 1 for port d [G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.srcs/sources_1/new/network.sv:238]
-WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 1 for port d [G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.srcs/sources_1/new/network.sv:239]
-WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 1 for port d [G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.srcs/sources_1/new/network.sv:240]
-WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 1 for port d [G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.srcs/sources_1/new/network.sv:241]
-WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 1 for port d [G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.srcs/sources_1/new/network.sv:242]
-WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 1 for port d [G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.srcs/sources_1/new/network.sv:243]
-WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 1 for port d [G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.srcs/sources_1/new/network.sv:244]
-WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 1 for port d [G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.srcs/sources_1/new/network.sv:245]
-WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 1 for port d [G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.srcs/sources_1/new/network.sv:246]
-WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 1 for port d [G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.srcs/sources_1/new/network.sv:247]
-WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 1 for port d [G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.srcs/sources_1/new/network.sv:248]
-WARNING: [VRFC 10-278] actual bit length 64 differs from formal bit length 1 for port d [G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.srcs/sources_1/new/network.sv:249]
-WARNING: [VRFC 10-597] element index 15 into d1 is out of bounds [G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.srcs/sources_1/new/network.sv:193]
-WARNING: [VRFC 10-1783] select index 4 into d1_nxt is out of bounds [G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.srcs/sources_1/new/network.sv:225]
-WARNING: [VRFC 10-1783] select index 5 into d1_nxt is out of bounds [G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.srcs/sources_1/new/network.sv:226]
-WARNING: [VRFC 10-1783] select index 6 into d1_nxt is out of bounds [G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.srcs/sources_1/new/network.sv:227]
-WARNING: [VRFC 10-1783] select index 7 into d1_nxt is out of bounds [G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.srcs/sources_1/new/network.sv:228]
+WARNING: [VRFC 10-597] element index 15 into d1 is out of bounds [G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.srcs/sources_1/new/network.sv:209]
+WARNING: [VRFC 10-1783] select index 4 into d1_nxt is out of bounds [G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.srcs/sources_1/new/network.sv:237]
+WARNING: [VRFC 10-1783] select index 5 into d1_nxt is out of bounds [G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.srcs/sources_1/new/network.sv:238]
+WARNING: [VRFC 10-1783] select index 6 into d1_nxt is out of bounds [G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.srcs/sources_1/new/network.sv:239]
+WARNING: [VRFC 10-1783] select index 7 into d1_nxt is out of bounds [G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.srcs/sources_1/new/network.sv:240]
 Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.neuron_layer1(LAYER1=16,LEARNING...
-Compiling module xil_defaultlib.neuron_layer2(LEARNING_RATE=0.00...
-Compiling module xil_defaultlib.neuron_layer3(FXP_SCALE=1,LEARNI...
-Compiling module xil_defaultlib.network_default
-Compiling module xil_defaultlib.network_tb
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot network_tb_behav
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
