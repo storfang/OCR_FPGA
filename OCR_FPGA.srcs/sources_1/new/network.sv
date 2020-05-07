@@ -37,11 +37,11 @@ module network(
     
     parameter LAYER0 = 16;
     parameter LAYER1 = 16;
-    parameter LAYER2 = 16;
+    parameter LAYER2 = 32;
     parameter LAYER3 = 4;
     parameter ALL_LAYERS = LAYER0+LAYER1+LAYER2+LAYER3;
     parameter integer FXP_SCALE = 1;
-    parameter LEARNING_RATE = 0.0002*FXP_SCALE; 
+    parameter LEARNING_RATE = 0.00002*FXP_SCALE; 
     
     reg mode1; reg mode2; reg mode3;
     
@@ -53,7 +53,10 @@ module network(
     real delta21 [LAYER1-1:0]; real delta22 [LAYER1-1:0]; real delta23 [LAYER1-1:0]; real delta24 [LAYER1-1:0]; real delta25 [LAYER1-1:0];
     real delta26 [LAYER1-1:0]; real delta27 [LAYER1-1:0]; real delta28 [LAYER1-1:0]; real delta29 [LAYER1-1:0]; real delta210 [LAYER1-1:0];
     real delta211 [LAYER1-1:0]; real delta212 [LAYER1-1:0]; real delta213 [LAYER1-1:0]; real delta214 [LAYER1-1:0]; real delta215 [LAYER1-1:0];
-    real delta20 [LAYER1-1:0];    
+    real delta216 [LAYER1-1:0]; real delta217 [LAYER1-1:0]; real delta218 [LAYER1-1:0]; real delta219 [LAYER1-1:0]; real delta220 [LAYER1-1:0];
+    real delta221 [LAYER1-1:0]; real delta222 [LAYER1-1:0]; real delta223 [LAYER1-1:0]; real delta224 [LAYER1-1:0]; real delta225 [LAYER1-1:0];
+    real delta226 [LAYER1-1:0]; real delta227 [LAYER1-1:0]; real delta228 [LAYER1-1:0]; real delta229 [LAYER1-1:0]; real delta230 [LAYER1-1:0];
+    real delta231 [LAYER1-1:0]; real delta20 [LAYER1-1:0];    
     
     real  y2 [LAYER2-1:0] ; real  y2_nxt [LAYER2-1:0] ;
     
@@ -218,7 +221,9 @@ module network(
   always @* begin
          
   for(i=0;i<LAYER2;i++) d2_nxt[i] = delta31[i]+delta32[i]+delta33[i]+delta34[i];
-  for(i=0;i<LAYER1;i++) d1_nxt[i] = delta21[i]+delta22[i]+delta23[i]+delta24[i]+delta25[i]+delta26[i]+delta27[i]+delta28[i]+delta29[i]+delta210[i]+delta211[i]+delta212[i]+delta213[i]+delta214[i]+delta215[i];
+  for(i=0;i<LAYER1;i++) d1_nxt[i] = delta21[i]+delta22[i]+delta23[i]+delta24[i]+delta25[i]+delta26[i]+delta27[i]+delta28[i]+delta29[i]+delta210[i]+delta211[i]+delta212[i]+delta213[i]
+  +delta214[i]+delta215[i]+delta216[i]+delta217[i]+delta218[i]+delta219[i]+delta220[i]+delta221[i]+delta222[i]+delta223[i]+delta224[i]+delta225[i]+delta226[i]+delta227[i]
+  +delta228[i]+delta229[i]+delta230[i]+delta231[i];
   //for(i=0;i<LAYER0;i++) d2[i] = delta31[i]+delta32[i]+delta33[i]+delta34[i];
 
   
@@ -261,26 +266,24 @@ module network(
         neuron_layer2 # (.LAYER2(LAYER1), .FXP_SCALE(FXP_SCALE), .LEARNING_RATE(LEARNING_RATE) ) n2_13(.x(y1) ,.d(d2_nxt[13]), .rst(rst) , .clk(clk), .y(y2_nxt[13]), .mode(mode2), .g_delta(delta213));
         neuron_layer2 # (.LAYER2(LAYER1), .FXP_SCALE(FXP_SCALE), .LEARNING_RATE(LEARNING_RATE) ) n2_14(.x(y1) ,.d(d2_nxt[14]), .rst(rst) , .clk(clk), .y(y2_nxt[14]), .mode(mode2), .g_delta(delta214));
         neuron_layer2 # (.LAYER2(LAYER1), .FXP_SCALE(FXP_SCALE), .LEARNING_RATE(LEARNING_RATE) ) n2_15(.x(y1) ,.d(d2_nxt[15]), .rst(rst) , .clk(clk), .y(y2_nxt[15]), .mode(mode2), .g_delta(delta215)); 
-        
+
+      neuron_layer2 # (.LAYER2(LAYER1), .FXP_SCALE(FXP_SCALE), .LEARNING_RATE(LEARNING_RATE) ) n2_16(.x(y1) ,.d(d2_nxt[16]), .rst(rst) , .clk(clk), .y(y2_nxt[16]), .mode(mode2), .g_delta(delta216));
+      neuron_layer2 # (.LAYER2(LAYER1), .FXP_SCALE(FXP_SCALE), .LEARNING_RATE(LEARNING_RATE) ) n2_17(.x(y1) ,.d(d2_nxt[17]), .rst(rst) , .clk(clk), .y(y2_nxt[17]), .mode(mode2), .g_delta(delta217));
+      neuron_layer2 # (.LAYER2(LAYER1), .FXP_SCALE(FXP_SCALE), .LEARNING_RATE(LEARNING_RATE) ) n2_18(.x(y1) ,.d(d2_nxt[18]), .rst(rst) , .clk(clk), .y(y2_nxt[18]), .mode(mode2), .g_delta(delta218));
+      neuron_layer2 # (.LAYER2(LAYER1), .FXP_SCALE(FXP_SCALE), .LEARNING_RATE(LEARNING_RATE) ) n2_19(.x(y1) ,.d(d2_nxt[19]), .rst(rst) , .clk(clk), .y(y2_nxt[19]), .mode(mode2), .g_delta(delta219));  
+      neuron_layer2 # (.LAYER2(LAYER1), .FXP_SCALE(FXP_SCALE), .LEARNING_RATE(LEARNING_RATE) ) n2_20(.x(y1) ,.d(d2_nxt[20]), .rst(rst) , .clk(clk), .y(y2_nxt[20]), .mode(mode2), .g_delta(delta220));
+      neuron_layer2 # (.LAYER2(LAYER1), .FXP_SCALE(FXP_SCALE), .LEARNING_RATE(LEARNING_RATE) ) n2_21(.x(y1) ,.d(d2_nxt[21]), .rst(rst) , .clk(clk), .y(y2_nxt[21]), .mode(mode2), .g_delta(delta221));
+      neuron_layer2 # (.LAYER2(LAYER1), .FXP_SCALE(FXP_SCALE), .LEARNING_RATE(LEARNING_RATE) ) n2_22(.x(y1) ,.d(d2_nxt[22]), .rst(rst) , .clk(clk), .y(y2_nxt[22]), .mode(mode2), .g_delta(delta222));
+      neuron_layer2 # (.LAYER2(LAYER1), .FXP_SCALE(FXP_SCALE), .LEARNING_RATE(LEARNING_RATE) ) n2_23(.x(y1) ,.d(d2_nxt[23]), .rst(rst) , .clk(clk), .y(y2_nxt[23]), .mode(mode2), .g_delta(delta223)); 
+      neuron_layer2 # (.LAYER2(LAYER1), .FXP_SCALE(FXP_SCALE), .LEARNING_RATE(LEARNING_RATE) ) n2_24(.x(y1) ,.d(d2_nxt[24]), .rst(rst) , .clk(clk), .y(y2_nxt[24]), .mode(mode2), .g_delta(delta224));
+      neuron_layer2 # (.LAYER2(LAYER1), .FXP_SCALE(FXP_SCALE), .LEARNING_RATE(LEARNING_RATE) ) n2_25(.x(y1) ,.d(d2_nxt[25]), .rst(rst) , .clk(clk), .y(y2_nxt[25]), .mode(mode2), .g_delta(delta225));
+      neuron_layer2 # (.LAYER2(LAYER1), .FXP_SCALE(FXP_SCALE), .LEARNING_RATE(LEARNING_RATE) ) n2_26(.x(y1) ,.d(d2_nxt[26]), .rst(rst) , .clk(clk), .y(y2_nxt[26]), .mode(mode2), .g_delta(delta226));
+      neuron_layer2 # (.LAYER2(LAYER1), .FXP_SCALE(FXP_SCALE), .LEARNING_RATE(LEARNING_RATE) ) n2_27(.x(y1) ,.d(d2_nxt[27]), .rst(rst) , .clk(clk), .y(y2_nxt[27]), .mode(mode2), .g_delta(delta227));  
+      neuron_layer2 # (.LAYER2(LAYER1), .FXP_SCALE(FXP_SCALE), .LEARNING_RATE(LEARNING_RATE) ) n2_28(.x(y1) ,.d(d2_nxt[28]), .rst(rst) , .clk(clk), .y(y2_nxt[28]), .mode(mode2), .g_delta(delta228));
+      neuron_layer2 # (.LAYER2(LAYER1), .FXP_SCALE(FXP_SCALE), .LEARNING_RATE(LEARNING_RATE) ) n2_29(.x(y1) ,.d(d2_nxt[29]), .rst(rst) , .clk(clk), .y(y2_nxt[29]), .mode(mode2), .g_delta(delta229));
+      neuron_layer2 # (.LAYER2(LAYER1), .FXP_SCALE(FXP_SCALE), .LEARNING_RATE(LEARNING_RATE) ) n2_30(.x(y1) ,.d(d2_nxt[30]), .rst(rst) , .clk(clk), .y(y2_nxt[30]), .mode(mode2), .g_delta(delta230));
+      neuron_layer2 # (.LAYER2(LAYER1), .FXP_SCALE(FXP_SCALE), .LEARNING_RATE(LEARNING_RATE) ) n2_31(.x(y1) ,.d(d2_nxt[31]), .rst(rst) , .clk(clk), .y(y2_nxt[31]), .mode(mode2), .g_delta(delta231));  
  
- /*
-      neuron_layer2 # (.LAYER2(LAYER1), .FXP_SCALE(FXP_SCALE), .LEARNING_RATE(LEARNING_RATE) ) n2_0(.x(y1) ,.d(z), .rst(rst) , .clk(clk), .y(y2_nxt[0]), .mode(mode2), .g_delta(delta20));
-      neuron_layer2 # (.LAYER2(LAYER1), .FXP_SCALE(FXP_SCALE), .LEARNING_RATE(LEARNING_RATE) ) n2_1(.x(y1) ,.d(z), .rst(rst) , .clk(clk), .y(y2_nxt[1]), .mode(mode2), .g_delta(delta21));
-      neuron_layer2 # (.LAYER2(LAYER1), .FXP_SCALE(FXP_SCALE), .LEARNING_RATE(LEARNING_RATE) ) n2_2(.x(y1) ,.d(z), .rst(rst) , .clk(clk), .y(y2_nxt[2]), .mode(mode2), .g_delta(delta22));
-      neuron_layer2 # (.LAYER2(LAYER1), .FXP_SCALE(FXP_SCALE), .LEARNING_RATE(LEARNING_RATE) ) n2_3(.x(y1) ,.d(z), .rst(rst) , .clk(clk), .y(y2_nxt[3]), .mode(mode2), .g_delta(delta23));  
-      neuron_layer2 # (.LAYER2(LAYER1), .FXP_SCALE(FXP_SCALE), .LEARNING_RATE(LEARNING_RATE) ) n2_4(.x(y1) ,.d(z), .rst(rst) , .clk(clk), .y(y2_nxt[4]), .mode(mode2), .g_delta(delta24));
-      neuron_layer2 # (.LAYER2(LAYER1), .FXP_SCALE(FXP_SCALE), .LEARNING_RATE(LEARNING_RATE) ) n2_5(.x(y1) ,.d(z), .rst(rst) , .clk(clk), .y(y2_nxt[5]), .mode(mode2), .g_delta(delta25));
-      neuron_layer2 # (.LAYER2(LAYER1), .FXP_SCALE(FXP_SCALE), .LEARNING_RATE(LEARNING_RATE) ) n2_6(.x(y1) ,.d(z), .rst(rst) , .clk(clk), .y(y2_nxt[6]), .mode(mode2), .g_delta(delta26));
-      neuron_layer2 # (.LAYER2(LAYER1), .FXP_SCALE(FXP_SCALE), .LEARNING_RATE(LEARNING_RATE) ) n2_7(.x(y1) ,.d(z), .rst(rst) , .clk(clk), .y(y2_nxt[7]), .mode(mode2), .g_delta(delta27)); 
-      neuron_layer2 # (.LAYER2(LAYER1), .FXP_SCALE(FXP_SCALE), .LEARNING_RATE(LEARNING_RATE) ) n2_8(.x(y1) ,.d(z), .rst(rst) , .clk(clk), .y(y2_nxt[8]), .mode(mode2), .g_delta(delta28));
-      neuron_layer2 # (.LAYER2(LAYER1), .FXP_SCALE(FXP_SCALE), .LEARNING_RATE(LEARNING_RATE) ) n2_9(.x(y1) ,.d(z), .rst(rst) , .clk(clk), .y(y2_nxt[9]), .mode(mode2), .g_delta(delta29));
-      neuron_layer2 # (.LAYER2(LAYER1), .FXP_SCALE(FXP_SCALE), .LEARNING_RATE(LEARNING_RATE) ) n2_10(.x(y1) ,.d(z), .rst(rst) , .clk(clk), .y(y2_nxt[10]), .mode(mode2), .g_delta(delta210));
-      neuron_layer2 # (.LAYER2(LAYER1), .FXP_SCALE(FXP_SCALE), .LEARNING_RATE(LEARNING_RATE) ) n2_11(.x(y1) ,.d(z), .rst(rst) , .clk(clk), .y(y2_nxt[11]), .mode(mode2), .g_delta(delta211));  
-      neuron_layer2 # (.LAYER2(LAYER1), .FXP_SCALE(FXP_SCALE), .LEARNING_RATE(LEARNING_RATE) ) n2_12(.x(y1) ,.d(z), .rst(rst) , .clk(clk), .y(y2_nxt[12]), .mode(mode2), .g_delta(delta212));
-      neuron_layer2 # (.LAYER2(LAYER1), .FXP_SCALE(FXP_SCALE), .LEARNING_RATE(LEARNING_RATE) ) n2_13(.x(y1) ,.d(z), .rst(rst) , .clk(clk), .y(y2_nxt[13]), .mode(mode2), .g_delta(delta213));
-      neuron_layer2 # (.LAYER2(LAYER1), .FXP_SCALE(FXP_SCALE), .LEARNING_RATE(LEARNING_RATE) ) n2_14(.x(y1) ,.d(z), .rst(rst) , .clk(clk), .y(y2_nxt[14]), .mode(mode2), .g_delta(delta214));
-      neuron_layer2 # (.LAYER2(LAYER1), .FXP_SCALE(FXP_SCALE), .LEARNING_RATE(LEARNING_RATE) ) n2_15(.x(y1) ,.d(z), .rst(rst) , .clk(clk), .y(y2_nxt[15]), .mode(mode2), .g_delta(delta215));  
- */
 //3 layer    
         neuron_layer3 # (.LAYER3(LAYER2), .FXP_SCALE(FXP_SCALE), .LEARNING_RATE(LEARNING_RATE) )n3_0(.x(y2) ,.z(z_prev[0]), .rst(rst) , .clk(clk), .y(y3_nxt[0]), .mode(mode3), .g_delta(delta31));
         neuron_layer3 # (.LAYER3(LAYER2), .FXP_SCALE(FXP_SCALE), .LEARNING_RATE(LEARNING_RATE) )n3_1(.x(y2) ,.z(z_prev[1]), .rst(rst) , .clk(clk), .y(y3_nxt[1]), .mode(mode3), .g_delta(delta32));

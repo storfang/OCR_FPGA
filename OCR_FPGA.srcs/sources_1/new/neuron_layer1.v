@@ -8,14 +8,14 @@ module neuron_layer1    # ( parameter LAYER1 = 16, parameter integer FXP_SCALE =
     output real  y
     );
 
-    real w[LAYER1-1:0] ={0.8*FXP_SCALE, -1*FXP_SCALE, 0.23*FXP_SCALE, 1*FXP_SCALE, 0.4*FXP_SCALE,
-                  -0.45*FXP_SCALE, 0.6*FXP_SCALE, -0.64*FXP_SCALE, 0.67*FXP_SCALE, -1*FXP_SCALE,
-                      0.6*FXP_SCALE, 1*FXP_SCALE, 0.4*FXP_SCALE, -1*FXP_SCALE, 0.6*FXP_SCALE,
+    real w[LAYER1-1:0] ={-0.8*FXP_SCALE, 1*FXP_SCALE, 0.23*FXP_SCALE, 1*FXP_SCALE, 0.4*FXP_SCALE,
+                     1*FXP_SCALE, 0.6*FXP_SCALE, -0.64*FXP_SCALE, -0.4*FXP_SCALE, 1*FXP_SCALE,
+                      0.6*FXP_SCALE,- 0.4687*FXP_SCALE, 0.346*FXP_SCALE, 1*FXP_SCALE, -0.648*FXP_SCALE,
                       1*FXP_SCALE};
-    real w_nxt[LAYER1-1:0] ={0.8*FXP_SCALE, -1*FXP_SCALE, 0.23*FXP_SCALE, 1*FXP_SCALE, 0.4*FXP_SCALE,
-                     -1*FXP_SCALE, 0.6*FXP_SCALE, -0.64*FXP_SCALE, 0.4*FXP_SCALE, -1*FXP_SCALE,
-                      0.6*FXP_SCALE, 0.4687*FXP_SCALE, 0.346*FXP_SCALE, -1*FXP_SCALE, 0.648*FXP_SCALE,
-                      0.357*FXP_SCALE};
+    real w_nxt[LAYER1-1:0] ={-0.8*FXP_SCALE, 1*FXP_SCALE, 0.23*FXP_SCALE, 1*FXP_SCALE, 0.4*FXP_SCALE,
+                     1*FXP_SCALE, 0.6*FXP_SCALE, -0.64*FXP_SCALE, -0.4*FXP_SCALE, 1*FXP_SCALE,
+                      0.6*FXP_SCALE, -0.4687*FXP_SCALE, 0.346*FXP_SCALE, 1*FXP_SCALE, -0.648*FXP_SCALE,
+                      1*FXP_SCALE};
     real sum = 0;
     real delta = 0;
     real komparator = 0;
