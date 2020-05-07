@@ -1,6 +1,6 @@
 module neuron_layer3    # ( parameter LAYER3 = 16, parameter integer FXP_SCALE = 1, parameter LEARNING_RATE = 0.1*FXP_SCALE )(
     input real  x[LAYER3-1:0],
-    input wire [3:0] z,
+    input wire  z,
     input wire rst,
     input wire clk,
     input wire mode,
@@ -12,9 +12,9 @@ module neuron_layer3    # ( parameter LAYER3 = 16, parameter integer FXP_SCALE =
                   -1*FXP_SCALE, 0.6*FXP_SCALE, 1*FXP_SCALE, 0.4*FXP_SCALE, -1*FXP_SCALE,
                   0.6*FXP_SCALE, 1*FXP_SCALE, 0.4*FXP_SCALE, 1*FXP_SCALE, 0.6*FXP_SCALE,
                   1*FXP_SCALE };
-    real w_nxt[LAYER3-1:0] ={0.4*FXP_SCALE, -1*FXP_SCALE, 0.6*FXP_SCALE, 1*FXP_SCALE, 0.4*FXP_SCALE,
-                     -1*FXP_SCALE, 0.6*FXP_SCALE, 1*FXP_SCALE, 0.4*FXP_SCALE, -1*FXP_SCALE,
-                      0.6*FXP_SCALE, 1*FXP_SCALE, 0.4*FXP_SCALE, 1*FXP_SCALE, 0.6*FXP_SCALE,
+    real w_nxt[LAYER3-1:0] ={0.48*FXP_SCALE, -0.5794*FXP_SCALE, 0.48*FXP_SCALE, 1*FXP_SCALE, 0.3*FXP_SCALE,
+                     -1*FXP_SCALE, 0.597*FXP_SCALE, 1*FXP_SCALE, 0.4*FXP_SCALE, -1*FXP_SCALE,
+                      0.6*FXP_SCALE, 1*FXP_SCALE, 0.4*FXP_SCALE, 2*FXP_SCALE, 0.486*FXP_SCALE,
                       1*FXP_SCALE};
     real sum = 0;
     real delta = 0;
@@ -29,7 +29,7 @@ module neuron_layer3    # ( parameter LAYER3 = 16, parameter integer FXP_SCALE =
          begin
          assign sum = x[0]*w[0]+x[1]*w[1]+x[2]*w[2]+x[3]*w[3]+x[4]*w[4]+x[5]*w[5]+x[6]*w[6]+x[7]*w[7]+
                       x[8]*w[8]+x[9]*w[9]+x[10]*w[10]+x[11]*w[11]+x[12]*w[12]+x[13]*w[13]+x[14]*w[14]+x[15]*w[15];
-             if(sum<0) y=1'b0;
+             if(sum<0) y=0;
             else y=sum;
          end
          w[0] <= w_nxt[0];
