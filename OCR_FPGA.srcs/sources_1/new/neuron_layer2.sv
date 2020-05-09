@@ -1,4 +1,4 @@
-module neuron_layer2    # ( parameter LAYER2 = 16, parameter integer FXP_SCALE = 1, parameter LEARNING_RATE = 0.1*FXP_SCALE )(
+module neuron_layer2    # ( parameter LAYER2 = 16, parameter FXP_SCALE = 1, parameter LEARNING_RATE = 0.1*FXP_SCALE )(
     input real  x[LAYER2-1:0],
     input real d,
     input wire rst,
@@ -8,12 +8,12 @@ module neuron_layer2    # ( parameter LAYER2 = 16, parameter integer FXP_SCALE =
     output real  y
     );
 
-    real w[LAYER2-1:0] ={-0.5*FXP_SCALE, 1*FXP_SCALE, 0.23*FXP_SCALE, 1*FXP_SCALE, -0.4*FXP_SCALE,
-                     1*FXP_SCALE, 0.8942*FXP_SCALE, -0.5*FXP_SCALE,-0.2*FXP_SCALE, 0.583*FXP_SCALE, 0.23*FXP_SCALE, 1*FXP_SCALE, 0.579*FXP_SCALE,
-                      -1*FXP_SCALE, 0.468*FXP_SCALE, 1*FXP_SCALE};
-    real w_nxt[LAYER2-1:0] ={-0.5*FXP_SCALE, 1*FXP_SCALE, 0.23*FXP_SCALE, 1*FXP_SCALE, -0.4*FXP_SCALE,
-                     1*FXP_SCALE, 0.8942*FXP_SCALE, -0.5*FXP_SCALE,-0.2*FXP_SCALE, 0.583*FXP_SCALE, 0.23*FXP_SCALE, 1*FXP_SCALE, 0.579*FXP_SCALE,
-                     -1*FXP_SCALE, 0.468*FXP_SCALE, 1*FXP_SCALE};
+    real w[LAYER2-1:0] ={-0.5*FXP_SCALE, 0.24*FXP_SCALE, 0.23*FXP_SCALE, 0.16*FXP_SCALE, -0.4*FXP_SCALE,
+                     0.21*FXP_SCALE, 0.8942*FXP_SCALE, -0.5*FXP_SCALE,-0.2*FXP_SCALE, 0.583*FXP_SCALE, 0.23*FXP_SCALE, -0.1*FXP_SCALE, 0.579*FXP_SCALE,
+                      -0.41*FXP_SCALE, 0.468*FXP_SCALE, 1*FXP_SCALE};
+    real w_nxt[LAYER2-1:0] ={-0.5*FXP_SCALE,0.24*FXP_SCALE, 0.23*FXP_SCALE, 0.16*FXP_SCALE, -0.4*FXP_SCALE,
+                     0.21*FXP_SCALE, 0.8942*FXP_SCALE, -0.5*FXP_SCALE,-0.2*FXP_SCALE, 0.583*FXP_SCALE, 0.23*FXP_SCALE, -0.1*FXP_SCALE, 0.579*FXP_SCALE,
+                     -0.41*FXP_SCALE, 0.468*FXP_SCALE, 1*FXP_SCALE};
     real sum = 0;
     real delta = 0;
     real komparator = 0;
