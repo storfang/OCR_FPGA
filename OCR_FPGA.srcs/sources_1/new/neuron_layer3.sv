@@ -8,20 +8,20 @@ module neuron_layer3    # ( parameter LAYER3 = 32, parameter FXP_SCALE = 1, para
     output real  y
     );
 
-    real w[LAYER3:0] ={0.48*FXP_SCALE, 0.5794*FXP_SCALE, 0.48*FXP_SCALE, 0.31*FXP_SCALE, -0.3*FXP_SCALE,
-                     0.1*FXP_SCALE, 0.597*FXP_SCALE, 0.11*FXP_SCALE, 0.4*FXP_SCALE, -0.51*FXP_SCALE,
+    real w[LAYER3:0] ={0.48*FXP_SCALE, 0.25794*FXP_SCALE, 0.48*FXP_SCALE, 0.31*FXP_SCALE, -0.3*FXP_SCALE,
+                     0.1*FXP_SCALE, 0.3597*FXP_SCALE, 0.11*FXP_SCALE, 0.4*FXP_SCALE, -0.151*FXP_SCALE,
                       0.6*FXP_SCALE, 1*FXP_SCALE, 0.4*FXP_SCALE, 0.32*FXP_SCALE, 0.486*FXP_SCALE,
                       -0.31*FXP_SCALE,0.48*FXP_SCALE, -0.5794*FXP_SCALE, 0.97*FXP_SCALE, 0.35*FXP_SCALE, 0.39*FXP_SCALE,
                                            -0.08*FXP_SCALE, 0.597*FXP_SCALE, -0.1*FXP_SCALE, 0.498*FXP_SCALE, 1.098*FXP_SCALE,
                                             0.6*FXP_SCALE, 0.588*FXP_SCALE, 0.4*FXP_SCALE, -0.2*FXP_SCALE, 0.486*FXP_SCALE,
                                             -0.31*FXP_SCALE, 1*FXP_SCALE};
-    real w_nxt[LAYER3:0] ={0.48*FXP_SCALE, 0.5794*FXP_SCALE, 0.48*FXP_SCALE, 0.31*FXP_SCALE, -0.3*FXP_SCALE,
-                                                                 0.1*FXP_SCALE, 0.597*FXP_SCALE, 0.11*FXP_SCALE, 0.4*FXP_SCALE, -0.51*FXP_SCALE,
-                                                                  0.6*FXP_SCALE, 1*FXP_SCALE, 0.4*FXP_SCALE, 0.32*FXP_SCALE, 0.486*FXP_SCALE,
-                                                                  -0.31*FXP_SCALE,0.48*FXP_SCALE, -0.5794*FXP_SCALE, 0.97*FXP_SCALE, 0.35*FXP_SCALE, 0.39*FXP_SCALE,
-                                                                                       -0.08*FXP_SCALE, 0.597*FXP_SCALE, -0.1*FXP_SCALE, 0.498*FXP_SCALE, 1.098*FXP_SCALE,
-                                                                                        0.6*FXP_SCALE, 0.588*FXP_SCALE, 0.4*FXP_SCALE, -0.2*FXP_SCALE, 0.486*FXP_SCALE,
-                                                                                        -0.31*FXP_SCALE, 1*FXP_SCALE};
+    real w_nxt[LAYER3:0] ={0.48*FXP_SCALE, 0.25794*FXP_SCALE, 0.48*FXP_SCALE, 0.31*FXP_SCALE, -0.3*FXP_SCALE,
+                       0.1*FXP_SCALE, 0.3597*FXP_SCALE, 0.11*FXP_SCALE, 0.4*FXP_SCALE, -0.151*FXP_SCALE,
+                        0.6*FXP_SCALE, 1*FXP_SCALE, 0.4*FXP_SCALE, 0.32*FXP_SCALE, 0.486*FXP_SCALE,
+                        -0.31*FXP_SCALE,0.48*FXP_SCALE, -0.5794*FXP_SCALE, 0.97*FXP_SCALE, 0.35*FXP_SCALE, 0.39*FXP_SCALE,
+                                             -0.08*FXP_SCALE, 0.597*FXP_SCALE, -0.1*FXP_SCALE, 0.498*FXP_SCALE, 1.098*FXP_SCALE,
+                                              0.6*FXP_SCALE, 0.588*FXP_SCALE, 0.4*FXP_SCALE, -0.2*FXP_SCALE, 0.486*FXP_SCALE,
+                                              -0.31*FXP_SCALE, 1*FXP_SCALE};
     real sum = 0;
     real delta = 0;
     real komparator = 0;
