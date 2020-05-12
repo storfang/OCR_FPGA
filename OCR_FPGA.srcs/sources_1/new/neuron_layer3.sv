@@ -4,6 +4,7 @@ module neuron_layer3    # ( parameter LAYER3 = 8, parameter FXP_SCALE = 1, param
     input wire rst,
     input wire clk,
     input wire mode,
+    input real wg[LAYER3-1:0],
     output real g_delta[LAYER3-1:0],
     output real  y
     );

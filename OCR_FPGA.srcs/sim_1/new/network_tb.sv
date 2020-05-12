@@ -31,6 +31,7 @@ module network_tb();
         reg [255:0] temp2 ;
         reg ready;
         reg start;
+        real wg[7:0];
         localparam
         //A = 16'b1111000011110000,
         //C = 16'b0000000000001111,
@@ -47,7 +48,7 @@ module network_tb();
         D = 16'b0111_1001_1001_0111,//01
         F = 16'b1111_0001_1111_0001,//11
         H = 16'b1001_1111_1111_1001,//01
-        I = 16'b1111_0110_0110_1111,//10    
+        I = 16'b0110_0110_0110_0110,//10    
         J = 16'b1111_1000_1001_1110,//10
         L = 16'b0001_0001_0001_1111,//00
         N = 16'b1001_1011_1101_1001,//01   
@@ -64,9 +65,10 @@ module network_tb();
         .x(x) ,.z(z), .rst(rst) , .clk(clk), .y(y), .mode(mode));*/
         network network1(
         .x1(x) ,.z(z), .rst(rst) , .clk(clk), .y4(y), .mode(mode), .start(start), .ready(ready));
+        neuron_layer3 neuron3 (.wg(wg));
         
         int i = 0;
-        
+
       //  wire [3:0] x_nxt[3:0]= {1, 0, 1, 0};
     initial
          clk <= 1'b1;
@@ -78,6 +80,9 @@ module network_tb();
     rst <= 1'b1;
     #10;
     rst <= 1'b0;
+
+    
+    wg = {real'($random(1)),$random(2),$random(3),$random(4),$random(5),$random(6),$random(7),$random(8)};
     /*x[15:0] <= 0;
     x[1] <= 0;
     x[2] <= 0;
@@ -125,7 +130,7 @@ module network_tb();
     //x <= Z; z <= 9; #8000
     mode <= 1;
 
-        for(i=0;i<50000;i++)begin
+        for(i=0;i<5000;i++)begin
        /* x <= A; z <= 8; #50;
         x <= C; z <= 9; #50;
         x <= D; z <= 11; #50;
@@ -142,22 +147,22 @@ module network_tb();
         x <= X; z <= 3; #50;
         x <= Y; z <= 1; #50;
         x <= Z; z <= 0; #50;*/
-        x <= A; z <= 7; #90;
-        /*x <= C; z <= 8; #90;
-        x <= D; z <= 15; #90;*/
-        x <= F; z <= 11; #90;
-        /*x <= H; z <= 6; #90;
-        x <= I; z <= 0; #90;
-        x <= J; z <= 12; #90;
-        x <= L; z <= 1; #90;*/
-        x <= N; z <= 5; #90;
-        /*x <= O; z <= 13; #90;
-        x <= P; z <= 14; #90;
-        x <= T; z <= 10; #90;
-        x <= U; z <= 4; #90;
-        x <= X; z <= 3; #90;
-        x <= Y; z <= 2; #90;
-        x <= Z; z <= 9; #90;*/
+        x <= A; z <= 7; #100;
+        x <= C; z <= 8; #100;
+        x <= D; z <= 15; #100;
+        x <= F; z <= 11; #100;
+        x <= H; z <= 6; #100;
+        x <= I; z <= 0; #100;
+        x <= J; z <= 12; #100;
+        x <= L; z <= 1; #100;
+        x <= N; z <= 5; #100;
+        x <= O; z <= 13; #100;
+        x <= P; z <= 14; #100;
+        x <= T; z <= 10; #100;
+        x <= U; z <= 4; #100;
+        x <= X; z <= 3; #100;
+        x <= Y; z <= 2; #100;
+        x <= Z; z <= 9; #100;
         end
         mode <= 0;
         $display("mode = 0");
