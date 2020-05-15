@@ -31,7 +31,7 @@ module network_tb();
         reg [255:0] temp2 ;
         reg ready;
         reg start;
-        real wg[7:0];
+       
         localparam
         //A = 16'b1111000011110000,
         //C = 16'b0000000000001111,
@@ -65,7 +65,7 @@ module network_tb();
         .x(x) ,.z(z), .rst(rst) , .clk(clk), .y(y), .mode(mode));*/
         network network1(
         .x1(x) ,.z(z), .rst(rst) , .clk(clk), .y4(y), .mode(mode), .start(start), .ready(ready));
-        neuron_layer3 neuron3 (.wg(wg));
+
         
         int i = 0;
 
@@ -82,7 +82,6 @@ module network_tb();
     rst <= 1'b0;
 
     
-    wg = {real'($random(1)),$random(2),$random(3),$random(4),$random(5),$random(6),$random(7),$random(8)};
     /*x[15:0] <= 0;
     x[1] <= 0;
     x[2] <= 0;
@@ -108,11 +107,11 @@ module network_tb();
     temp[255-(16*15):255-(16*16)+1] <= Z;
     temp2 <= temp;
     #300;
-    mode <=1;
+   // mode <=1;
     start <=1;
     #15; start <= 0;
     
-    //x <= C; z <= 7; #800;
+    x <= C; z <= 7; #100;
     //x <= D; z <= 8; #5000;
     //x <= A; z <= 15; #5000;
     //x <= F; z <= 11; #5000;
@@ -130,7 +129,7 @@ module network_tb();
     //x <= Z; z <= 9; #8000
     mode <= 1;
 
-        for(i=0;i<5000;i++)begin
+        for(i=0;i<2000;i++)begin
        /* x <= A; z <= 8; #50;
         x <= C; z <= 9; #50;
         x <= D; z <= 11; #50;
