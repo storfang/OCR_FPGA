@@ -36,7 +36,7 @@ module network(
     );
     
     parameter LAYER0 = 16;
-    parameter LAYER1 = 8;
+    parameter LAYER1 = 16;
     parameter LAYER2 = 8;
     parameter LAYER3 = 8;
     parameter LAYER4 = 4;
@@ -69,8 +69,8 @@ module network(
         
     real y4_nxt[LAYER3-1:0];
 
-    real d3 [LAYER3-2:0]; real d2 [LAYER1-1:0]; real d1 [LAYER0-1:0];
-    real d3_nxt [LAYER2-1:0]; real d2_nxt [LAYER1-1:0]; real d1_nxt [LAYER0-1:0];    
+    real d3 [LAYER3-1:0]; real d2 [LAYER2-1:0]; real d1 [LAYER1-1:0];
+    real d3_nxt [LAYER3-1:0]; real d2_nxt [LAYER2-1:0]; real d1_nxt [LAYER1-1:0];    
 
     int i;
     genvar g;
@@ -203,17 +203,17 @@ module network(
           end
           
           ST_L3BP: begin
-          d3[LAYER3-1] = d3_nxt[LAYER3-1];
+          d3 = d3_nxt;
           end
           
           ST_L2BP: begin
 
-          d2[LAYER2-1] = d2_nxt[LAYER2-1];
+          d2 = d2_nxt;
           end
           
           ST_L1BP: begin
 
-          d1[LAYER1-1] = d1_nxt[LAYER1-1];
+          d1 = d1_nxt;
           end
           
           ST_STOP: begin

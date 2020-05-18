@@ -1,20 +1,20 @@
 module neuron_layer4_rtl    # ( parameter LAYER4 = 8, parameter FXP_SCALE = 1, parameter LEARNING_RATE = 0.1*FXP_SCALE, parameter m =1 )(
-    input wire signed [15:0] x[LAYER4-1:0],
+    input wire signed [21:0] x[LAYER4-1:0],
     input wire  z,
     input wire rst,
     input wire clk,
     input wire mode,
-    output reg signed [15:0] g_delta[LAYER4-1:0],
-    output reg signed [15:0]  y
+    output reg signed [21:0] g_delta[LAYER4-1:0],
+    output reg signed [21:0]  y
     );
 
-    reg signed [15:0] w[LAYER4-1:0] ={ 0.4*FXP_SCALE*m, 0.32*FXP_SCALE*m, 0.486*FXP_SCALE*m,
+    reg signed [21:0] w[LAYER4-1:0] ={ 0.4*FXP_SCALE*m, 0.32*FXP_SCALE*m, 0.486*FXP_SCALE*m,
                       -0.31*FXP_SCALE*m,-0.18*FXP_SCALE*m, -0.5794*FXP_SCALE*m, 0.37*FXP_SCALE*m, 0.35*FXP_SCALE*m};
-    reg signed [15:0] w_nxt[LAYER4-1:0] ={0.4*FXP_SCALE*m, 0.32*FXP_SCALE*m, 0.486*FXP_SCALE*m,
+    reg signed [21:0] w_nxt[LAYER4-1:0] ={0.4*FXP_SCALE*m, 0.32*FXP_SCALE*m, 0.486*FXP_SCALE*m,
                         -0.31*FXP_SCALE*m,-0.18*FXP_SCALE*m, -0.5794*FXP_SCALE*m, 0.37*FXP_SCALE*m, 0.35*FXP_SCALE*m};
-    reg signed [15:0] sum = 0;
-    reg signed [31:0] delta = 0;
-    reg signed [15:0] komparator = 0;
+    reg signed [21:0] sum = 0;
+    reg signed [43:0] delta = 0;
+    reg signed [21:0] komparator = 0;
     integer i =0;
     //real xbias=1;
    // reg [15:0] y_nxt;
@@ -45,7 +45,7 @@ module neuron_layer4_rtl    # ( parameter LAYER4 = 8, parameter FXP_SCALE = 1, p
     assign komparator = z*FXP_SCALE - sum;
     if(sum < 0) delta = 0;
     else delta = komparator * LEARNING_RATE;
-    for(i=0;i<LAYER4;i++)begin w_nxt[i] = x[i]*delta/FXP_SCALE+w[i];
+    for(i=0;i<LAYER4;i++)begin w_nxt[i] = (x[i]*(delta/FXP_SCALE))/FXP_SCALE+w[i];
     g_delta[i] = (delta/FXP_SCALE*w[i])/FXP_SCALE; end          
     //w_nxt[LAYER4] = xbias*w[LAYER4]; 
     end

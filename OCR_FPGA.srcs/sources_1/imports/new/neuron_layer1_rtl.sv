@@ -1,24 +1,24 @@
 module neuron_layer1_rtl    # ( parameter LAYER1 = 16, parameter FXP_SCALE = 1, parameter LEARNING_RATE = 0.1*FXP_SCALE , parameter m =1)(
     input wire  [LAYER1-1:0]x,
-    input wire signed [15:0]  d,
+    input wire signed [21:0]  d,
     input wire rst,
     input wire clk,
     input wire mode,
     //output real g_delta[LAYER1-1:0],
-    output reg signed [15:0]  y
+    output reg signed [21:0]  y
     );
 
-    reg signed [15:0] w[LAYER1-1:0] ={-0.24*FXP_SCALE*m, 0.5*FXP_SCALE*m, -0.73*FXP_SCALE*m, 0.11*FXP_SCALE*m, 0.4*FXP_SCALE*m,
+    reg signed [21:0] w[LAYER1-1:0] ={-0.24*FXP_SCALE*m, 0.5*FXP_SCALE*m, -0.73*FXP_SCALE*m, 0.11*FXP_SCALE*m, 0.4*FXP_SCALE*m,
                      -0.05*FXP_SCALE*m, 0.68*FXP_SCALE*m, -0.64*FXP_SCALE*m, -0.4*FXP_SCALE*m, 0.7*FXP_SCALE*m,
                       0.6*FXP_SCALE*m,- 0.4687*FXP_SCALE*m, 0.346*FXP_SCALE*m, 0.25*FXP_SCALE*m, -0.648*FXP_SCALE*m,
                       0.77*FXP_SCALE*m};
-    reg signed [15:0] w_nxt[LAYER1-1:0] ={-0.24*FXP_SCALE*m, 0.5*FXP_SCALE*m, -0.73*FXP_SCALE*m, 0.11*FXP_SCALE*m, 0.4*FXP_SCALE*m,
+    reg signed [21:0] w_nxt[LAYER1-1:0] ={-0.24*FXP_SCALE*m, 0.5*FXP_SCALE*m, -0.73*FXP_SCALE*m, 0.11*FXP_SCALE*m, 0.4*FXP_SCALE*m,
                      -0.05*FXP_SCALE*m, 0.68*FXP_SCALE*m, -0.64*FXP_SCALE*m, -0.4*FXP_SCALE*m, 0.7*FXP_SCALE*m,
                       0.6*FXP_SCALE*m, -0.4687*FXP_SCALE*m, 0.346*FXP_SCALE*m, 0.25*FXP_SCALE*m, -0.648*FXP_SCALE*m,
                       0.77*FXP_SCALE*m};
-    reg signed [15:0] sum = 0;
-    reg signed [31:0] delta = 0;
-    reg signed [15:0] komparator = 0;
+    reg signed [21:0] sum = 0;
+    reg signed [43:0] delta = 0;
+    reg signed [21:0] komparator = 0;
     integer i =0;
    // reg [15:0] y_nxt;
 
@@ -57,7 +57,7 @@ module neuron_layer1_rtl    # ( parameter LAYER1 = 16, parameter FXP_SCALE = 1, 
     assign komparator = d;
     if(sum < 0) delta = 0;
     else delta = komparator * LEARNING_RATE;
-    for(i=0;i<LAYER1;i++) w_nxt[i] = x[i]*delta/FXP_SCALE+w[i]; 
+    for(i=0;i<LAYER1;i++) w_nxt[i] = x[i]*(delta/FXP_SCALE)+w[i]; 
     //g_delta[i] = delta*w[i];          
     end end
 endmodule

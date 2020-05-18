@@ -44,7 +44,7 @@ module single_neuron_test_rtl(
         if(rst) y = 0;
         else
          begin
-         assign sum = x[0]*w[0]+x[1]*w[1]+x[2]*w[2]+x[3]*w[3];
+          
                  /* for(i=0;i<4;i++) begin
          assign temp = x[i]*w[i]+temp;
                 end
@@ -82,5 +82,9 @@ module single_neuron_test_rtl(
     for(i=0;i<4;i++)begin w_nxt[i] = x[i]*delta/FXP_SCALE+w[i]; 
     g_delta[i] = delta/FXP_SCALE*w[i]; end       
     end end
+    
+    always@* begin
+     sum = (x[0]*w[0])+(x[1]*w[1])+(x[2]*w[2])+(x[3]*w[3]);
+    end
     
 endmodule

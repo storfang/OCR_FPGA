@@ -67,7 +67,7 @@ module network_tb_rtl();
     #10;
     rst <= 1'b0;
 
-    x <= 16'b1111111111111111;
+    x <= L;
     /*x[15:0] <= 0;
     x[1] <= 0;
     x[2] <= 0;
@@ -97,7 +97,7 @@ module network_tb_rtl();
     start <=1;
     #15; start <= 0;
     
-    x <= C; z <= 7; #100;
+    //x <= C; z <= 7; #100;
     //x <= D; z <= 8; #5000;
     //x <= A; z <= 15; #5000;
     //x <= F; z <= 11; #5000;
@@ -115,7 +115,7 @@ module network_tb_rtl();
     //x <= Z; z <= 9; #8000
     mode <= 1;
 
-        for(i=0;i<2000;i++)begin
+        for(i=0;i<3000;i++)begin
         x <= A; z <= 7; #100;
         x <= C; z <= 8; #100;
         x <= D; z <= 15; #100;
