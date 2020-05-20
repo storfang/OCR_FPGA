@@ -23,7 +23,7 @@
 module network_tb_rtl();
         reg [15:0] x;
         reg [3:0] z;
-        wire  [63:0]y;
+        wire  [87:0]y;
         reg clk;
         reg rst;
         reg mode;
@@ -53,8 +53,8 @@ module network_tb_rtl();
         network_rtl network1(
         .x1(x) ,.z(z), .rst(rst) , .clk(clk), .y4(y), .mode(mode), .start(start), .ready(ready));
 
-        
-        int i = 0;
+        parameter FXP_SCALE = 16384;
+        int i = 0;    real y43; real y42; real y41; real y40;
 
     initial
          clk <= 1'b1;
@@ -170,6 +170,10 @@ module network_tb_rtl();
             else begin i=i+1; x <= 4'b0000; z <= 0; temp2 = temp; start = 1; end*/
        if(ready==1)begin
        start = 1;
+       //y43 = real'(y[87:66])/FXP_SCALE; y42 = real'(y[65:44])/FXP_SCALE; 
+       //y41 = real'(y[43:22])/FXP_SCALE; y40 = real'(y[21:0])/FXP_SCALE;
+       //$display(" y43 = %f y42 = %f y41 = %f y40 = %f z = %b" ,  y43,y42,y41,y40,z);
+       
          /*if(i<0)begin
          start = 0;
          //x[15:0] <= temp2[255-(16*0):255-(16*1)+1];

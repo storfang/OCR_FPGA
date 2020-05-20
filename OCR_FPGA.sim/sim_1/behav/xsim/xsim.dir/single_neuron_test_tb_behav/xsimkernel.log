@@ -2,3 +2,6 @@ Running: xsim.dir/single_neuron_test_tb_behav/xsimk.exe -simmode gui -wdb single
 Design successfully loaded
 Design Loading Memory Usage: 6708 KB (Peak: 6708 KB)
 Design Loading CPU Usage: 46 ms
+Simulation completed
+Simulation Memory Usage: 7472 KB (Peak: 7472 KB)
+Simulation CPU Usage: 249 ms
