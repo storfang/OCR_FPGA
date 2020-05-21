@@ -32,7 +32,7 @@ module network_rtl(
     input wire mode,
     input wire start,
     output reg ready,
-    output reg [87:0] y4
+    output reg [79:0] y4
     );
     
     parameter LAYER0 = 16;
@@ -50,34 +50,34 @@ module network_rtl(
     reg [LAYER0-1:0] x1_prev;
     reg [LAYER4-1:0] z_prev;
     
-    reg signed [21:0]  y1 [LAYER1-1:0] ; reg signed [21:0]  y1_nxt [LAYER1-1:0] ;
+    reg signed [19:0]  y1 [LAYER1-1:0] ; reg signed [19:0]  y1_nxt [LAYER1-1:0] ;
     
-    reg signed [21:0] delta21 [LAYER1-1:0]; reg signed [21:0] delta22 [LAYER1-1:0];
-    reg signed [21:0] delta23 [LAYER1-1:0]; reg signed [21:0] delta24 [LAYER1-1:0];
-    reg signed [21:0] delta25 [LAYER1-1:0]; reg signed [21:0] delta26 [LAYER1-1:0];
-    reg signed [21:0] delta27 [LAYER1-1:0]; reg signed [21:0] delta20 [LAYER1-1:0];    
+    reg signed [19:0] delta21 [LAYER1-1:0]; reg signed [19:0] delta22 [LAYER1-1:0];
+    reg signed [19:0] delta23 [LAYER1-1:0]; reg signed [19:0] delta24 [LAYER1-1:0];
+    reg signed [19:0] delta25 [LAYER1-1:0]; reg signed [19:0] delta26 [LAYER1-1:0];
+    reg signed [19:0] delta27 [LAYER1-1:0]; reg signed [19:0] delta20 [LAYER1-1:0];    
     
-    reg signed [21:0]  y2 [LAYER2-1:0] ; reg signed [21:0]  y2_nxt [LAYER2-1:0] ;
+    reg signed [19:0]  y2 [LAYER2-1:0] ; reg signed [19:0]  y2_nxt [LAYER2-1:0] ;
 
-    reg signed [21:0] delta31 [LAYER2-1:0]; reg signed [21:0] delta35 [LAYER2-1:0];
-    reg signed [21:0] delta32 [LAYER2-1:0]; reg signed [21:0] delta36 [LAYER2-1:0];
-    reg signed [21:0] delta33 [LAYER2-1:0]; reg signed [21:0] delta37 [LAYER2-1:0];
-    reg signed [21:0] delta34 [LAYER2-1:0]; reg signed [21:0] delta38 [LAYER2-1:0];
+    reg signed [19:0] delta31 [LAYER2-1:0]; reg signed [19:0] delta35 [LAYER2-1:0];
+    reg signed [19:0] delta32 [LAYER2-1:0]; reg signed [19:0] delta36 [LAYER2-1:0];
+    reg signed [19:0] delta33 [LAYER2-1:0]; reg signed [19:0] delta37 [LAYER2-1:0];
+    reg signed [19:0] delta34 [LAYER2-1:0]; reg signed [19:0] delta38 [LAYER2-1:0];
            
-    reg signed [21:0] y3_nxt[LAYER3-1:0]; reg signed [21:0] y3[LAYER3-1:0];
-    reg signed [21:0] delta41 [LAYER3-1:0];
-    reg signed [21:0] delta42 [LAYER3-1:0];
-    reg signed [21:0] delta43 [LAYER3-1:0];
-    reg signed [21:0] delta44 [LAYER3-1:0];
+    reg signed [19:0] y3_nxt[LAYER3-1:0]; reg signed [19:0] y3[LAYER3-1:0];
+    reg signed [19:0] delta41 [LAYER3-1:0];
+    reg signed [19:0] delta42 [LAYER3-1:0];
+    reg signed [19:0] delta43 [LAYER3-1:0];
+    reg signed [19:0] delta44 [LAYER3-1:0];
         
-    reg signed [11*LAYER3-1:0] y4_nxt;
+    reg signed [79:0] y4_nxt;
     real y43; real y42; real y41; real y40;
 
-    reg signed [21:0] d3 [LAYER3-1:0]; reg signed [21:0] d2 [LAYER2-1:0]; reg signed [21:0] d1 [LAYER1-1:0];
-    reg signed [21:0] d3_nxt [LAYER3-1:0]; reg signed [21:0] d2_nxt [LAYER2-1:0]; reg signed [21:0] d1_nxt [LAYER1-1:0];    
+    reg signed [19:0] d3 [LAYER3-1:0]; reg signed [19:0] d2 [LAYER2-1:0]; reg signed [19:0] d1 [LAYER1-1:0];
+    reg signed [19:0] d3_nxt [LAYER3-1:0]; reg signed [19:0] d2_nxt [LAYER2-1:0]; reg signed [19:0] d1_nxt [LAYER1-1:0];    
 
     int i;
-    genvar g;
+    //genvar g;
 
 
         
@@ -140,9 +140,9 @@ module network_rtl(
                 end
                 
                 ST_L4IN: begin/////////
-                y4[87:0] = y4_nxt[87:0];
-                //y43 = real'(y4[87:66])/FXP_SCALE; y42 = real'(y4[65:44])/FXP_SCALE; 
-                //y41 = real'(y4[43:22])/FXP_SCALE; y40 = real'(y4[21:0])/FXP_SCALE;
+                y4[79:0] = y4_nxt[79:0];
+                //y43 = real'(y4[79:60])/FXP_SCALE; y42 = real'(y4[59:40])/FXP_SCALE; 
+                //y41 = real'(y4[39:20])/FXP_SCALE; y40 = real'(y4[19:0])/FXP_SCALE;
                 //$display("in y43 = %f y42 = %f y41 = %f y40 = %f z = %b" ,  y43,y42,y41,y40,z_prev);
                 if ( mode == 1'b1 ) begin
                 state_nxt <= ST_L4BP;
@@ -287,10 +287,10 @@ module network_rtl(
         neuron_layer3_rtl # (.LAYER3(LAYER2), .FXP_SCALE(FXP_SCALE), .FXP_SHIFT(FXP_SHIFT), .m(0.366), .LEARNING_RATE(LEARNING_RATE) )n3_7(.x(y2) ,.d(d3_nxt[7]), .rst(rst) , .clk(clk), .y(y3_nxt[7]), .mode(mode3), .g_delta(delta38));
                
 //layer4                 
-        neuron_layer4_rtl # (.LAYER4(LAYER3), .FXP_SCALE(FXP_SCALE), .FXP_SHIFT(FXP_SHIFT), .m(0.59), .LEARNING_RATE(LEARNING_RATE) )n4_0(.x(y3) ,.z(z_prev[0]), .rst(rst) , .clk(clk), .y(y4_nxt[21:0]), .mode(mode4), .g_delta(delta41));
-        neuron_layer4_rtl # (.LAYER4(LAYER3), .FXP_SCALE(FXP_SCALE), .FXP_SHIFT(FXP_SHIFT), .m(0.67), .LEARNING_RATE(LEARNING_RATE) )n4_1(.x(y3) ,.z(z_prev[1]), .rst(rst) , .clk(clk), .y(y4_nxt[43:22]), .mode(mode4), .g_delta(delta42));
-        neuron_layer4_rtl # (.LAYER4(LAYER3), .FXP_SCALE(FXP_SCALE), .FXP_SHIFT(FXP_SHIFT), .m(0.57), .LEARNING_RATE(LEARNING_RATE) )n4_2(.x(y3) ,.z(z_prev[2]), .rst(rst) , .clk(clk), .y(y4_nxt[65:44]), .mode(mode4), .g_delta(delta43));
-        neuron_layer4_rtl # (.LAYER4(LAYER3), .FXP_SCALE(FXP_SCALE), .FXP_SHIFT(FXP_SHIFT), .m(0.76), .LEARNING_RATE(LEARNING_RATE) )n4_3(.x(y3) ,.z(z_prev[3]), .rst(rst) , .clk(clk), .y(y4_nxt[87:66]), .mode(mode4), .g_delta(delta44));         
+        neuron_layer4_rtl # (.LAYER4(LAYER3), .FXP_SCALE(FXP_SCALE), .FXP_SHIFT(FXP_SHIFT), .m(0.59), .LEARNING_RATE(LEARNING_RATE) )n4_0(.x(y3) ,.z(z_prev[0]), .rst(rst) , .clk(clk), .y(y4_nxt[19:0]), .mode(mode4), .g_delta(delta41));
+        neuron_layer4_rtl # (.LAYER4(LAYER3), .FXP_SCALE(FXP_SCALE), .FXP_SHIFT(FXP_SHIFT), .m(0.67), .LEARNING_RATE(LEARNING_RATE) )n4_1(.x(y3) ,.z(z_prev[1]), .rst(rst) , .clk(clk), .y(y4_nxt[39:20]), .mode(mode4), .g_delta(delta42));
+        neuron_layer4_rtl # (.LAYER4(LAYER3), .FXP_SCALE(FXP_SCALE), .FXP_SHIFT(FXP_SHIFT), .m(0.57), .LEARNING_RATE(LEARNING_RATE) )n4_2(.x(y3) ,.z(z_prev[2]), .rst(rst) , .clk(clk), .y(y4_nxt[59:40]), .mode(mode4), .g_delta(delta43));
+        neuron_layer4_rtl # (.LAYER4(LAYER3), .FXP_SCALE(FXP_SCALE), .FXP_SHIFT(FXP_SHIFT), .m(0.76), .LEARNING_RATE(LEARNING_RATE) )n4_3(.x(y3) ,.z(z_prev[3]), .rst(rst) , .clk(clk), .y(y4_nxt[79:60]), .mode(mode4), .g_delta(delta44));         
           
           
           

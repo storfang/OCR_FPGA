@@ -58,8 +58,8 @@ module single_neuron_test_rtl(
          w[2] <= w_nxt[2];
          w[3] <= w_nxt[3];
          //y<=y_nxt;
-         y_nxt = real'(y)/FXP_SCALE; sumo = real'(sum)/FXP_SCALE;
-         $display(" sum = %f y = %f" , sumo, y_nxt);    
+       //  y_nxt = real'(y)/FXP_SCALE; sumo = real'(sum)/FXP_SCALE;
+       //  $display(" sum = %f y = %f" , sumo, y_nxt);    
      end
   /*  always@*
     for(j=0;j<4;j++)begin

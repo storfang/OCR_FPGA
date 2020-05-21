@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1589991437">
+<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1590058702">
   <File Type="PA-TCL" Name="network_rtl.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="network_rtl_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="network_rtl_reports.tcl"/>

@@ -1,21 +1,21 @@
 module neuron_layer4_rtl    # ( parameter LAYER4 = 8, parameter FXP_SCALE = 1, parameter signed [15:0] LEARNING_RATE = 0.1*FXP_SCALE, parameter m =1,
 parameter FXP_SHIFT = 14 )(
-    input wire signed [21:0] x[LAYER4-1:0],
+    input wire signed [19:0] x[LAYER4-1:0],
     input wire  z,
     input wire rst,
     input wire clk,
     input wire mode,
-    output reg signed [21:0] g_delta[LAYER4-1:0],
-    output reg signed [21:0]  y
+    output reg signed [19:0] g_delta[LAYER4-1:0],
+    output reg signed [19:0]  y
     );
 
-    reg signed [21:0] w[LAYER4-1:0] ={ 0.4*FXP_SCALE*m, 0.32*FXP_SCALE*m, 0.486*FXP_SCALE*m,
+    reg signed [19:0] w[LAYER4-1:0] ={ 0.4*FXP_SCALE*m, 0.32*FXP_SCALE*m, 0.486*FXP_SCALE*m,
                       -0.31*FXP_SCALE*m,-0.18*FXP_SCALE*m, -0.5794*FXP_SCALE*m, 0.37*FXP_SCALE*m, 0.35*FXP_SCALE*m};
-    reg signed [21:0] w_nxt[LAYER4-1:0] ={0.4*FXP_SCALE*m, 0.32*FXP_SCALE*m, 0.486*FXP_SCALE*m,
+    reg signed [19:0] w_nxt[LAYER4-1:0] ={0.4*FXP_SCALE*m, 0.32*FXP_SCALE*m, 0.486*FXP_SCALE*m,
                         -0.31*FXP_SCALE*m,-0.18*FXP_SCALE*m, -0.5794*FXP_SCALE*m, 0.37*FXP_SCALE*m, 0.35*FXP_SCALE*m};
-    reg signed [43:0] sum = 0; //reg signed [31:0] sum1 = 0; reg signed [31:0] temp = 0;
-    reg signed [43:0] delta = 0;
-    reg signed [21:0] komparator = 0;
+    reg signed [39:0] sum = 0; //reg signed [31:0] sum1 = 0; reg signed [31:0] temp = 0;
+    reg signed [39:0] delta = 0;
+    reg signed [19:0] komparator = 0;
     integer i =0;
     //real xbias=1;
    // reg [15:0] y_nxt;
@@ -44,20 +44,20 @@ parameter FXP_SHIFT = 14 )(
     if (mode == 1) begin
     begin
      komparator = (z*FXP_SCALE) - sum;
-   /* if(sum < 0) delta = 0;
+    if(sum < 0) delta = 0;
     else delta = komparator * LEARNING_RATE;
     for(i=0;i<LAYER4;i++)begin w_nxt[i] = ((x[i]*(delta>>>FXP_SHIFT))>>>FXP_SHIFT)+w[i];
     g_delta[i] = ((delta>>>FXP_SHIFT)*w[i])>>>FXP_SHIFT; end          
     //w_nxt[LAYER4] = xbias*w[LAYER4]; 
     end
-    end*/
-        if(sum < 0) delta = 0;
+    end
+  /*      if(sum < 0) delta = 0;
     else delta = komparator * LEARNING_RATE;
     for(i=0;i<LAYER4;i++)begin w_nxt[i] = ((x[i]*(delta/FXP_SCALE))/FXP_SCALE)+w[i];
     g_delta[i] = (delta/FXP_SCALE*w[i])/FXP_SCALE; end          
     //w_nxt[LAYER4] = xbias*w[LAYER4]; 
     end
-    end
+    end*/
        always@* begin
     sum = ((x[0]*w[0])>>>FXP_SHIFT)+((x[1]*w[1])>>>FXP_SHIFT)+((x[2]*w[2])>>>FXP_SHIFT)+((x[3]*w[3])>>>FXP_SHIFT)+((x[4]*w[4])>>>FXP_SHIFT)+
      ((x[5]*w[5])>>>FXP_SHIFT)+((x[6]*w[6])>>>FXP_SHIFT)+((x[7]*w[7])>>>FXP_SHIFT);

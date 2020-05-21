@@ -23,7 +23,7 @@
 module network_tb_rtl();
         reg [15:0] x;
         reg [3:0] z;
-        wire  [87:0]y;
+        wire  [79:0]y;
         reg clk;
         reg rst;
         reg mode;
@@ -55,6 +55,7 @@ module network_tb_rtl();
 
         parameter FXP_SCALE = 16384;
         int i = 0;    real y43; real y42; real y41; real y40;
+        reg [3:0] z_prev;
 
     initial
          clk <= 1'b1;
@@ -156,6 +157,16 @@ module network_tb_rtl();
     
     $finish;
     end  
+    
+    
+    always@* begin
+    if(ready==1)begin
+    z_prev = z;
+    
+    
+    
+    end
+    end
       
          always@(posedge clk)begin
        //  x[3:0] <= x_nxt[0:3];
