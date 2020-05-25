@@ -32,51 +32,51 @@ module network_rtl(
     input wire mode,
     input wire start,
     output reg ready,
-    output reg [79:0] y4
+    output reg [71:0] y4
     );
     
     parameter LAYER0 = 16;
-    parameter LAYER1 = 16;
+    parameter LAYER1 = 8;
     parameter LAYER2 = 8;
     parameter LAYER3 = 8;
     parameter LAYER4 = 4;
     parameter ALL_LAYERS = LAYER0+LAYER1+LAYER2+LAYER3+LAYER4;
-    parameter FXP_SCALE = 16384;
-    parameter FXP_SHIFT = 14;
-    parameter signed [15:0] LEARNING_RATE = 0.2*FXP_SCALE; 
+    parameter FXP_SCALE = 8192;
+    parameter FXP_SHIFT = 13;
+    parameter signed [15:0] LEARNING_RATE = 0.25*FXP_SCALE; 
     
     reg mode1; reg mode2; reg mode3; reg mode4;
     
     reg [LAYER0-1:0] x1_prev;
     reg [LAYER4-1:0] z_prev;
     
-    reg signed [19:0]  y1 [LAYER1-1:0] ; reg signed [19:0]  y1_nxt [LAYER1-1:0] ;
+    reg signed [17:0]  y1 [LAYER1-1:0] ; reg signed [17:0]  y1_nxt [LAYER1-1:0] ;
     
-    reg signed [19:0] delta21 [LAYER1-1:0]; reg signed [19:0] delta22 [LAYER1-1:0];
-    reg signed [19:0] delta23 [LAYER1-1:0]; reg signed [19:0] delta24 [LAYER1-1:0];
-    reg signed [19:0] delta25 [LAYER1-1:0]; reg signed [19:0] delta26 [LAYER1-1:0];
-    reg signed [19:0] delta27 [LAYER1-1:0]; reg signed [19:0] delta20 [LAYER1-1:0];    
+    reg signed [17:0] delta21 [LAYER1-1:0]; reg signed [17:0] delta22 [LAYER1-1:0];
+    reg signed [17:0] delta23 [LAYER1-1:0]; reg signed [17:0] delta24 [LAYER1-1:0];
+    reg signed [17:0] delta25 [LAYER1-1:0]; reg signed [17:0] delta26 [LAYER1-1:0];
+    reg signed [17:0] delta27 [LAYER1-1:0]; reg signed [17:0] delta20 [LAYER1-1:0];    
     
-    reg signed [19:0]  y2 [LAYER2-1:0] ; reg signed [19:0]  y2_nxt [LAYER2-1:0] ;
+    reg signed [17:0]  y2 [LAYER2-1:0] ; reg signed [17:0]  y2_nxt [LAYER2-1:0] ;
 
-    reg signed [19:0] delta31 [LAYER2-1:0]; reg signed [19:0] delta35 [LAYER2-1:0];
-    reg signed [19:0] delta32 [LAYER2-1:0]; reg signed [19:0] delta36 [LAYER2-1:0];
-    reg signed [19:0] delta33 [LAYER2-1:0]; reg signed [19:0] delta37 [LAYER2-1:0];
-    reg signed [19:0] delta34 [LAYER2-1:0]; reg signed [19:0] delta38 [LAYER2-1:0];
+    reg signed [17:0] delta31 [LAYER2-1:0]; reg signed [17:0] delta35 [LAYER2-1:0];
+    reg signed [17:0] delta32 [LAYER2-1:0]; reg signed [17:0] delta36 [LAYER2-1:0];
+    reg signed [17:0] delta33 [LAYER2-1:0]; reg signed [17:0] delta37 [LAYER2-1:0];
+    reg signed [17:0] delta34 [LAYER2-1:0]; reg signed [17:0] delta38 [LAYER2-1:0];
            
-    reg signed [19:0] y3_nxt[LAYER3-1:0]; reg signed [19:0] y3[LAYER3-1:0];
-    reg signed [19:0] delta41 [LAYER3-1:0];
-    reg signed [19:0] delta42 [LAYER3-1:0];
-    reg signed [19:0] delta43 [LAYER3-1:0];
-    reg signed [19:0] delta44 [LAYER3-1:0];
+    reg signed [17:0] y3_nxt[LAYER3-1:0]; reg signed [17:0] y3[LAYER3-1:0];
+    reg signed [17:0] delta41 [LAYER3-1:0];
+    reg signed [17:0] delta42 [LAYER3-1:0];
+    reg signed [17:0] delta43 [LAYER3-1:0];
+    reg signed [17:0] delta44 [LAYER3-1:0];
         
-    reg signed [79:0] y4_nxt;
+    reg signed [71:0] y4_nxt;
     real y43; real y42; real y41; real y40;
 
-    reg signed [19:0] d3 [LAYER3-1:0]; reg signed [19:0] d2 [LAYER2-1:0]; reg signed [19:0] d1 [LAYER1-1:0];
-    reg signed [19:0] d3_nxt [LAYER3-1:0]; reg signed [19:0] d2_nxt [LAYER2-1:0]; reg signed [19:0] d1_nxt [LAYER1-1:0];    
+    reg signed [17:0] d3 [LAYER3-1:0]; reg signed [17:0] d2 [LAYER2-1:0]; reg signed [17:0] d1 [LAYER1-1:0];
+    reg signed [17:0] d3_nxt [LAYER3-1:0]; reg signed [17:0] d2_nxt [LAYER2-1:0]; reg signed [17:0] d1_nxt [LAYER1-1:0];    
 
-    int i;
+    int i; reg[4:0] p;
     //genvar g;
 
 
@@ -102,7 +102,7 @@ module network_rtl(
                 reg [ STATE_BITS-1 : 0 ] state_nxt;*/
 
                 
-           typedef enum {ST_START, ST_FORWARD, ST_L1IN,  ST_L2IN, ST_L3IN, ST_L4IN, ST_L1BP, ST_L2BP, ST_L3BP, ST_L4BP, ST_STOP} state_td;
+           typedef enum {ST_START, ST_FORWARD, ST_L1IN,  ST_L2IN, ST_L3IN, ST_L4IN, ST_L1BP, ST_L2BP, ST_L3BP, ST_L4BP, ST_STOP, ST_WAIT} state_td;
             state_td state = ST_STOP; state_td  state_nxt = ST_L2IN;
                 
                 
@@ -115,35 +115,39 @@ module network_rtl(
                 ST_START: begin
                 ready <= 1'b0;
                 if (start == 1'b0) state <= ST_STOP;
-                else begin state <= ST_L1IN;/*begin
+                else begin state <= ST_WAIT;/*begin
                 if (mode == 1) state <= ST_L1IN;
                 else state <= ST_FORWARD;
-                end */
+                end */ p<=0;
 
                 end end
                 
+                ST_WAIT:begin
+                if(p==12) state<=ST_L1IN;
+                else state <= ST_WAIT;
+                p<=p+1;
+                end
+                
                 ST_L1IN: begin////// 
                 state <= ST_L2IN;
-                y1[LAYER1-1:0] = y1_nxt[LAYER1-1:0];
+                y1[LAYER1-1:0] <= y1_nxt[LAYER1-1:0];
                 end
                 
                 ST_L2IN: begin/////////
-                y2[LAYER2-1:0] = y2_nxt[LAYER2-1:0];
+                y2[LAYER2-1:0] <= y2_nxt[LAYER2-1:0];
                 state_nxt <= ST_L3IN; // cont. waiting
                 state <=state_nxt;
                 end
                 
                 ST_L3IN: begin/////////
-                y3[LAYER3-1:0] = y3_nxt[LAYER3-1:0];
+                y3[LAYER3-1:0] <= y3_nxt[LAYER3-1:0];
                 state_nxt <= ST_L4IN; // cont. waiting
                 state <=state_nxt;
                 end
                 
                 ST_L4IN: begin/////////
-                y4[79:0] = y4_nxt[79:0];
-                //y43 = real'(y4[79:60])/FXP_SCALE; y42 = real'(y4[59:40])/FXP_SCALE; 
-                //y41 = real'(y4[39:20])/FXP_SCALE; y40 = real'(y4[19:0])/FXP_SCALE;
-                //$display("in y43 = %f y42 = %f y41 = %f y40 = %f z = %b" ,  y43,y42,y41,y40,z_prev);
+                y4[71:0] <= y4_nxt[71:0];
+
                 if ( mode == 1'b1 ) begin
                 state_nxt <= ST_L4BP;
                 state <=state_nxt;
@@ -183,8 +187,13 @@ module network_rtl(
                 state <= ST_STOP;
                 end
                                 
-                ST_STOP: begin   
+                ST_STOP: begin  
+                //y43 = real'(y4[71:54])/FXP_SCALE; y42 = real'(y4[53:36])/FXP_SCALE; 
+                //y41 = real'(y4[35:18])/FXP_SCALE; y40 = real'(y4[17:0])/FXP_SCALE;
+                //$display("in y43 = %f y42 = %f y41 = %f y40 = %f z = %b x=%h" ,  y43,y42,y41,y40,z_prev,x1_prev);               
+                 
                 ready <= 1'b1;
+                mode1 <= 0;
                 state_nxt <= ST_L2IN;
                 if(start == 1) state <= ST_START;
                 else state <= ST_STOP;
@@ -214,6 +223,14 @@ module network_rtl(
           
           end
           
+          ST_L4IN: begin
+ 
+          end
+          
+          ST_L4BP: begin
+ 
+          end
+          
           ST_L3BP: begin
           d3 = d3_nxt;
           end
@@ -230,7 +247,7 @@ module network_rtl(
           
           ST_STOP: begin
           
-          mode1 <= 0;
+          
           end                    
 
          // end
@@ -257,7 +274,7 @@ module network_rtl(
         neuron_layer1_rtl # (.LAYER1(LAYER0), .FXP_SCALE(FXP_SCALE), .FXP_SHIFT(FXP_SHIFT), .m(-0.3), .LEARNING_RATE(LEARNING_RATE) ) n1_5(.x(x1_prev) ,.d(d1_nxt[5]), .rst(rst) , .clk(clk), .y(y1_nxt[5]), .mode(mode1));
         neuron_layer1_rtl # (.LAYER1(LAYER0), .FXP_SCALE(FXP_SCALE), .FXP_SHIFT(FXP_SHIFT), .m(0.9), .LEARNING_RATE(LEARNING_RATE) ) n1_6(.x(x1_prev) ,.d(d1_nxt[6]), .rst(rst) , .clk(clk), .y(y1_nxt[6]), .mode(mode1));
         neuron_layer1_rtl # (.LAYER1(LAYER0), .FXP_SCALE(FXP_SCALE), .FXP_SHIFT(FXP_SHIFT), .m(0.4), .LEARNING_RATE(LEARNING_RATE) ) n1_7(.x(x1_prev) ,.d(d1_nxt[7]), .rst(rst) , .clk(clk), .y(y1_nxt[7]), .mode(mode1)); 
-        neuron_layer1_rtl # (.LAYER1(LAYER0), .FXP_SCALE(FXP_SCALE), .FXP_SHIFT(FXP_SHIFT), .m(0.34), .LEARNING_RATE(LEARNING_RATE) ) n1_8(.x(x1_prev) ,.d(d1_nxt[8]), .rst(rst) , .clk(clk), .y(y1_nxt[8]), .mode(mode1));
+        /*neuron_layer1_rtl # (.LAYER1(LAYER0), .FXP_SCALE(FXP_SCALE), .FXP_SHIFT(FXP_SHIFT), .m(0.34), .LEARNING_RATE(LEARNING_RATE) ) n1_8(.x(x1_prev) ,.d(d1_nxt[8]), .rst(rst) , .clk(clk), .y(y1_nxt[8]), .mode(mode1));
         neuron_layer1_rtl # (.LAYER1(LAYER0), .FXP_SCALE(FXP_SCALE), .FXP_SHIFT(FXP_SHIFT), .m(0.757), .LEARNING_RATE(LEARNING_RATE) ) n1_9(.x(x1_prev) ,.d(d1_nxt[9]), .rst(rst) , .clk(clk), .y(y1_nxt[9]), .mode(mode1));
         neuron_layer1_rtl # (.LAYER1(LAYER0), .FXP_SCALE(FXP_SCALE), .FXP_SHIFT(FXP_SHIFT), .m(0.48), .LEARNING_RATE(LEARNING_RATE) ) n1_10(.x(x1_prev) ,.d(d1_nxt[10]), .rst(rst) , .clk(clk), .y(y1_nxt[10]), .mode(mode1));
         neuron_layer1_rtl # (.LAYER1(LAYER0), .FXP_SCALE(FXP_SCALE), .FXP_SHIFT(FXP_SHIFT), .m(0.53), .LEARNING_RATE(LEARNING_RATE) ) n1_11(.x(x1_prev) ,.d(d1_nxt[11]), .rst(rst) , .clk(clk), .y(y1_nxt[11]), .mode(mode1));  
@@ -265,7 +282,7 @@ module network_rtl(
         neuron_layer1_rtl # (.LAYER1(LAYER0), .FXP_SCALE(FXP_SCALE), .FXP_SHIFT(FXP_SHIFT), .m(0.83), .LEARNING_RATE(LEARNING_RATE) ) n1_13(.x(x1_prev) ,.d(d1_nxt[13]), .rst(rst) , .clk(clk), .y(y1_nxt[13]), .mode(mode1));
         neuron_layer1_rtl # (.LAYER1(LAYER0), .FXP_SCALE(FXP_SCALE), .FXP_SHIFT(FXP_SHIFT), .m(-0.13), .LEARNING_RATE(LEARNING_RATE) ) n1_14(.x(x1_prev) ,.d(d1_nxt[14]), .rst(rst) , .clk(clk), .y(y1_nxt[14]), .mode(mode1));
         neuron_layer1_rtl # (.LAYER1(LAYER0), .FXP_SCALE(FXP_SCALE), .FXP_SHIFT(FXP_SHIFT), .m(0.912), .LEARNING_RATE(LEARNING_RATE) ) n1_15(.x(x1_prev) ,.d(d1_nxt[15]), .rst(rst) , .clk(clk), .y(y1_nxt[15]), .mode(mode1));         
-        
+        */
 // 2 layer               
         neuron_layer2_rtl # (.LAYER2(LAYER1), .FXP_SCALE(FXP_SCALE), .FXP_SHIFT(FXP_SHIFT), .m(0.89), .LEARNING_RATE(LEARNING_RATE) ) n2_0(.x(y1) ,.d(d2_nxt[0]), .rst(rst) , .clk(clk), .y(y2_nxt[0]), .mode(mode2), .g_delta(delta20));
         neuron_layer2_rtl # (.LAYER2(LAYER1), .FXP_SCALE(FXP_SCALE), .FXP_SHIFT(FXP_SHIFT), .m(1), .LEARNING_RATE(LEARNING_RATE) ) n2_1(.x(y1) ,.d(d2_nxt[1]), .rst(rst) , .clk(clk), .y(y2_nxt[1]), .mode(mode2), .g_delta(delta21));
@@ -287,38 +304,22 @@ module network_rtl(
         neuron_layer3_rtl # (.LAYER3(LAYER2), .FXP_SCALE(FXP_SCALE), .FXP_SHIFT(FXP_SHIFT), .m(0.366), .LEARNING_RATE(LEARNING_RATE) )n3_7(.x(y2) ,.d(d3_nxt[7]), .rst(rst) , .clk(clk), .y(y3_nxt[7]), .mode(mode3), .g_delta(delta38));
                
 //layer4                 
-        neuron_layer4_rtl # (.LAYER4(LAYER3), .FXP_SCALE(FXP_SCALE), .FXP_SHIFT(FXP_SHIFT), .m(0.59), .LEARNING_RATE(LEARNING_RATE) )n4_0(.x(y3) ,.z(z_prev[0]), .rst(rst) , .clk(clk), .y(y4_nxt[19:0]), .mode(mode4), .g_delta(delta41));
-        neuron_layer4_rtl # (.LAYER4(LAYER3), .FXP_SCALE(FXP_SCALE), .FXP_SHIFT(FXP_SHIFT), .m(0.67), .LEARNING_RATE(LEARNING_RATE) )n4_1(.x(y3) ,.z(z_prev[1]), .rst(rst) , .clk(clk), .y(y4_nxt[39:20]), .mode(mode4), .g_delta(delta42));
-        neuron_layer4_rtl # (.LAYER4(LAYER3), .FXP_SCALE(FXP_SCALE), .FXP_SHIFT(FXP_SHIFT), .m(0.57), .LEARNING_RATE(LEARNING_RATE) )n4_2(.x(y3) ,.z(z_prev[2]), .rst(rst) , .clk(clk), .y(y4_nxt[59:40]), .mode(mode4), .g_delta(delta43));
-        neuron_layer4_rtl # (.LAYER4(LAYER3), .FXP_SCALE(FXP_SCALE), .FXP_SHIFT(FXP_SHIFT), .m(0.76), .LEARNING_RATE(LEARNING_RATE) )n4_3(.x(y3) ,.z(z_prev[3]), .rst(rst) , .clk(clk), .y(y4_nxt[79:60]), .mode(mode4), .g_delta(delta44));         
+        neuron_layer4_rtl # (.LAYER4(LAYER3), .FXP_SCALE(FXP_SCALE), .FXP_SHIFT(FXP_SHIFT), .m(0.59), .LEARNING_RATE(LEARNING_RATE) )n4_0(.x(y3) ,.z(z_prev[0]), .rst(rst) , .clk(clk), .y(y4_nxt[17:0]), .mode(mode4), .g_delta(delta41));
+        neuron_layer4_rtl # (.LAYER4(LAYER3), .FXP_SCALE(FXP_SCALE), .FXP_SHIFT(FXP_SHIFT), .m(0.67), .LEARNING_RATE(LEARNING_RATE) )n4_1(.x(y3) ,.z(z_prev[1]), .rst(rst) , .clk(clk), .y(y4_nxt[35:18]), .mode(mode4), .g_delta(delta42));
+        neuron_layer4_rtl # (.LAYER4(LAYER3), .FXP_SCALE(FXP_SCALE), .FXP_SHIFT(FXP_SHIFT), .m(0.57), .LEARNING_RATE(LEARNING_RATE) )n4_2(.x(y3) ,.z(z_prev[2]), .rst(rst) , .clk(clk), .y(y4_nxt[53:36]), .mode(mode4), .g_delta(delta43));
+        neuron_layer4_rtl # (.LAYER4(LAYER3), .FXP_SCALE(FXP_SCALE), .FXP_SHIFT(FXP_SHIFT), .m(0.76), .LEARNING_RATE(LEARNING_RATE) )n4_3(.x(y3) ,.z(z_prev[3]), .rst(rst) , .clk(clk), .y(y4_nxt[71:54]), .mode(mode4), .g_delta(delta44));         
           
-          
-          
-               
-      /*  
-        
-        wire [LAYER1-1:0] y1;
-        genvar i;
-        //generate
-        for(i=0;i<LAYER1;i++)begin
-        neuron_layer1 # (.LAYER1(LAYER1)) n1_[i](.x(x1) ,.z(z), .rst(rst) , .clk(clk), .y(y1[i]), .mode(mode), .w_l1(w_global[ALL_LAYERS-1:ALL_LAYERS-LAYER0]));
-        end
-        //endgenerate
-        
-        //generate
-        for(i=0;i<LAYER2;i++)begin
-        neuron_layer2 # (.LAYER2(LAYER2))n2_[i](.x(y1) ,.z(z), .rst(rst) , .clk(clk), .y(y2[i]), .mode(mode), .w_l2(w_global[ALL_LAYERS-LAYER0-1:ALL_LAYERS-LAYER0-LAYER1]));
-        end
-        //endgenerate
+
+     /*   logic[3:0] a;
+        logic  b;
+        assign a=4'd10;
+        assign b=^a;
         
         
-        generate
-        for(g=0;g<LAYER3;g++)begin
-        neuron_layer3 #( .LAYER3(LAYER2), .FXP_SCALE(FXP_SCALE), .LEARNING_RATE(LEARNING_RATE) )n3_0(.x(y2) ,.z(z_prev), .rst(rst) , .clk(clk), .y(y3_nxt[g]), .mode(mode3), .g_delta(delta3[16*g+15:15*g]));
-        end
-        endgenerate  
+        parameter w=7;
+        bit [w-1] value;*/
         
-        */
+        
         
                       
 endmodule

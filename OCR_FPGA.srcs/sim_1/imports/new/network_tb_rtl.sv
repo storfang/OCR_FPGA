@@ -23,7 +23,7 @@
 module network_tb_rtl();
         reg [15:0] x;
         reg [3:0] z;
-        wire  [79:0]y;
+        wire  [71:0]y;
         reg clk;
         reg rst;
         reg mode;
@@ -53,7 +53,7 @@ module network_tb_rtl();
         network_rtl network1(
         .x1(x) ,.z(z), .rst(rst) , .clk(clk), .y4(y), .mode(mode), .start(start), .ready(ready));
 
-        parameter FXP_SCALE = 16384;
+        parameter FXP_SCALE = 16384/2;
         int i = 0;    real y43; real y42; real y41; real y40;
         reg [3:0] z_prev;
 
@@ -116,7 +116,7 @@ module network_tb_rtl();
     //x <= Z; z <= 9; #8000
     mode <= 1;
 
-        for(i=0;i<3000;i++)begin
+        for(i=0;i<5000;i++)begin
         x <= A; z <= 7; #100;
         x <= C; z <= 8; #100;
         x <= D; z <= 15; #100;
@@ -157,16 +157,6 @@ module network_tb_rtl();
     
     $finish;
     end  
-    
-    
-    always@* begin
-    if(ready==1)begin
-    z_prev = z;
-    
-    
-    
-    end
-    end
       
          always@(posedge clk)begin
        //  x[3:0] <= x_nxt[0:3];
@@ -178,13 +168,15 @@ module network_tb_rtl();
                 i = 0;
                 z <= 1;           
                 end
-            else begin i=i+1; x <= 4'b0000; z <= 0; temp2 = temp; start = 1; end*/
+            else begin i=i+1; x <= 4'b0000; z <= 0; temp2 = temp; start = 1; end*/ 
+            
        if(ready==1)begin
        start = 1;
-       //y43 = real'(y[87:66])/FXP_SCALE; y42 = real'(y[65:44])/FXP_SCALE; 
-       //y41 = real'(y[43:22])/FXP_SCALE; y40 = real'(y[21:0])/FXP_SCALE;
-       //$display(" y43 = %f y42 = %f y41 = %f y40 = %f z = %b" ,  y43,y42,y41,y40,z);
        
+       y43 = real'(y[71:54])/FXP_SCALE; y42 = real'(y[53:36])/FXP_SCALE; 
+       y41 = real'(y[35:18])/FXP_SCALE; y40 = real'(y[17:0])/FXP_SCALE;
+       $display("--- y43 = %f y42 = %f y41 = %f y40 = %f z = %b" ,  y43,y42,y41,y40,z_prev);
+       z_prev = z;
          /*if(i<0)begin
          start = 0;
          //x[15:0] <= temp2[255-(16*0):255-(16*1)+1];

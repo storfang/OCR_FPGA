@@ -11,22 +11,22 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="289707625fs"></ZoomStartTime>
-      <ZoomEndTime time="470058475fs"></ZoomEndTime>
-      <Cursor1Time time="440000000fs"></Cursor1Time>
+      <ZoomStartTime time="42967500000fs"></ZoomStartTime>
+      <ZoomEndTime time="43786500001fs"></ZoomEndTime>
+      <Cursor1Time time="43650000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="175"></NameColumnWidth>
-      <ValueColumnWidth column_width="92"></ValueColumnWidth>
+      <ValueColumnWidth column_width="80"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="8" />
+   <WVObjectSize size="17" />
    <wvobject fp_name="/network_tb_rtl/network1/n4_0/y" type="array">
-      <obj_property name="ElementShortName">y[15:0]</obj_property>
-      <obj_property name="ObjectShortName">y[15:0]</obj_property>
+      <obj_property name="ElementShortName">y[17:0]</obj_property>
+      <obj_property name="ObjectShortName">y[17:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/network_tb_rtl/network1/n4_0/g_delta" type="array">
-      <obj_property name="ElementShortName">g_delta[7:0][15:0]</obj_property>
-      <obj_property name="ObjectShortName">g_delta[7:0][15:0]</obj_property>
+      <obj_property name="ElementShortName">g_delta[7:0][17:0]</obj_property>
+      <obj_property name="ObjectShortName">g_delta[7:0][17:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/network_tb_rtl/x" type="array">
       <obj_property name="ElementShortName">x[15:0]</obj_property>
@@ -37,19 +37,55 @@
       <obj_property name="ObjectShortName">state[31:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/network_tb_rtl/network1/n4_0/y" type="array">
-      <obj_property name="ElementShortName">y[15:0]</obj_property>
-      <obj_property name="ObjectShortName">y[15:0]</obj_property>
+      <obj_property name="ElementShortName">y[17:0]</obj_property>
+      <obj_property name="ObjectShortName">y[17:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/network_tb_rtl/network1/n3_0/y" type="array">
-      <obj_property name="ElementShortName">y[15:0]</obj_property>
-      <obj_property name="ObjectShortName">y[15:0]</obj_property>
+      <obj_property name="ElementShortName">y[17:0]</obj_property>
+      <obj_property name="ObjectShortName">y[17:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/network_tb_rtl/network1/n2_0/y" type="array">
-      <obj_property name="ElementShortName">y[15:0]</obj_property>
-      <obj_property name="ObjectShortName">y[15:0]</obj_property>
+      <obj_property name="ElementShortName">y[17:0]</obj_property>
+      <obj_property name="ObjectShortName">y[17:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/network_tb_rtl/network1/n1_0/y" type="array">
-      <obj_property name="ElementShortName">y[15:0]</obj_property>
-      <obj_property name="ObjectShortName">y[15:0]</obj_property>
+      <obj_property name="ElementShortName">y[17:0]</obj_property>
+      <obj_property name="ObjectShortName">y[17:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/network_tb_rtl/network1/ready" type="logic">
+      <obj_property name="ElementShortName">ready</obj_property>
+      <obj_property name="ObjectShortName">ready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/network_tb_rtl/ready" type="logic">
+      <obj_property name="ElementShortName">ready</obj_property>
+      <obj_property name="ObjectShortName">ready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/network_tb_rtl/network1/z" type="array">
+      <obj_property name="ElementShortName">z[3:0]</obj_property>
+      <obj_property name="ObjectShortName">z[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/network_tb_rtl/network1/z_prev" type="array">
+      <obj_property name="ElementShortName">z_prev[3:0]</obj_property>
+      <obj_property name="ObjectShortName">z_prev[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/network_tb_rtl/z" type="array">
+      <obj_property name="ElementShortName">z[3:0]</obj_property>
+      <obj_property name="ObjectShortName">z[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/network_tb_rtl/z_prev" type="array">
+      <obj_property name="ElementShortName">z_prev[3:0]</obj_property>
+      <obj_property name="ObjectShortName">z_prev[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/network_tb_rtl/network1/x1_prev" type="array">
+      <obj_property name="ElementShortName">x1_prev[15:0]</obj_property>
+      <obj_property name="ObjectShortName">x1_prev[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/network_tb_rtl/network1/y4" type="array">
+      <obj_property name="ElementShortName">y4[71:0]</obj_property>
+      <obj_property name="ObjectShortName">y4[71:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/network_tb_rtl/network1/y4_nxt" type="array">
+      <obj_property name="ElementShortName">y4_nxt[71:0]</obj_property>
+      <obj_property name="ObjectShortName">y4_nxt[71:0]</obj_property>
    </wvobject>
 </wave_config>
