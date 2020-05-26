@@ -4,7 +4,8 @@ parameter FXP_SHIFT = 14 )(
     input wire  z,
     input wire rst,
     input wire clk,
-    input wire mode,
+    input wire [1:0] mode,
+    output reg [1:0] ctrl,
     output reg signed [17:0] g_delta[LAYER4-1:0],
     output reg signed [17:0]  y
     );
@@ -12,30 +13,95 @@ parameter FXP_SHIFT = 14 )(
                       -0.31*FXP_SCALE*m,-0.18*FXP_SCALE*m, -0.5794*FXP_SCALE*m, 0.37*FXP_SCALE*m, 0.35*FXP_SCALE*m};
     reg signed [17:0] w_nxt[LAYER4-1:0] ={0.4*FXP_SCALE*m, 0.32*FXP_SCALE*m, 0.486*FXP_SCALE*m,
                         -0.31*FXP_SCALE*m,-0.18*FXP_SCALE*m, -0.5794*FXP_SCALE*m, 0.37*FXP_SCALE*m, 0.35*FXP_SCALE*m};
-    reg signed [32:0] sum = 0;
+    reg signed [32:0] sum = 0; reg signed [32:0] sum_nxt = 0; reg signed [32:0] temp = 0;
     reg signed [32:0] delta = 0;
     reg signed [17:0] komparator = 0;
-    integer i =0;
-
+    integer i =0;int j=0;  int k=0;
+      enum {ST_IN, ST_FORWARD, ST_BP, ST_STOP, ST_WAIT} state = ST_STOP;
+/*
     always@(posedge clk) begin
         if(rst==1) y = 0;
         else
          begin
-             sum = ((x[0]*w[0])>>>FXP_SHIFT)+((x[1]*w[1])>>>FXP_SHIFT)+((x[2]*w[2])>>>FXP_SHIFT)+((x[3]*w[3])>>>FXP_SHIFT)+((x[4]*w[4])>>>FXP_SHIFT)+
-          ((x[5]*w[5])>>>FXP_SHIFT)+((x[6]*w[6])>>>FXP_SHIFT)+((x[7]*w[7])>>>FXP_SHIFT);
+      //       sum = ((x[0]*w[0])>>>FXP_SHIFT)+((x[1]*w[1])>>>FXP_SHIFT)+((x[2]*w[2])>>>FXP_SHIFT)+((x[3]*w[3])>>>FXP_SHIFT)+((x[4]*w[4])>>>FXP_SHIFT)+
+      //    ((x[5]*w[5])>>>FXP_SHIFT)+((x[6]*w[6])>>>FXP_SHIFT)+((x[7]*w[7])>>>FXP_SHIFT);
              if(sum<0) y=0;
             else y=sum;
          end                                        
          w[7:0] <= w_nxt[7:0];  
      end
-    always@*
+    always@(posedge clk)
     if (mode == 1) begin
     begin
      komparator = (z*FXP_SCALE) - sum;
     if(sum < 0) delta = 0;
     else delta = komparator * LEARNING_RATE;
-    for(i=0;i<LAYER4;i++)begin w_nxt[i] = ((x[i]*(delta>>>FXP_SHIFT))>>>FXP_SHIFT)+w[i];
-    g_delta[i] = ((delta>>>FXP_SHIFT)*w[i])>>>FXP_SHIFT; end          
+    if(k<7)begin
+    for(i=0;i<2;i++)begin w_nxt[i+k] = ((x[i+k]*(delta>>>FXP_SHIFT))>>>FXP_SHIFT)+w[i+k];
+    g_delta[i+k] = ((delta>>>FXP_SHIFT)*w[i+k])>>>FXP_SHIFT; end
+    k = k+2;
+    end
+    else k=0;;          
     end
     end
+    
+    always@(posedge clk) begin
+   // if(|x==1) begin
+    if(j<7)begin
+    temp<=x[j]*w[j]+x[j+1]*w[j+1]+x[j+2]*w[j+2]+x[j+3]*w[j+3];
+    sum_nxt <=sum_nxt+temp;j=j+4; 
+    end
+    else begin j<=0; sum <= sum_nxt; temp <= 0; sum_nxt<=0;end
+    end //end
+    
+    */
+    
+     always@(posedge clk) begin
+            if(rst==1) y <= 0;
+            else begin
+                case(state)
+                    ST_IN:begin
+                            if(j<9)begin
+                            temp<=((x[j]*w[j])>>>FXP_SHIFT)+((x[j+1]*w[j+1])>>>FXP_SHIFT)/*+((x[j+2]*w[j+2])>>>FXP_SHIFT)+((x[j+3]*w[j+3])>>>FXP_SHIFT)*/;
+                            sum_nxt <=sum_nxt+temp;j<=j+2; 
+                            end
+                            else begin j<=0; sum <= sum_nxt; temp <= 0; sum_nxt<=0; state<= ST_FORWARD; end
+                    end 
+            
+                    ST_FORWARD: begin     
+                    begin        
+                    if(sum<0) y<=0;
+                    else y<=sum;
+                    end                                           
+                    w[7:0] <= w_nxt[7:0];
+                    ctrl <= 2'b01;
+                    state<=ST_STOP;
+                    //if(mode==1)state <= ST_BP;
+                    //else state <= ST_IN;
+                    end
+             
+                    ST_BP: begin
+                        //if (mode == 1) begin
+                         begin
+                         komparator <= (z*FXP_SCALE) - sum;
+                            if(sum < 0) delta <= 0;
+                            else delta <= komparator * LEARNING_RATE;
+                            if(k<9)begin
+                                for(i=0;i<4;i++)begin w_nxt[i+k] <= ((x[i+k]*(delta>>>FXP_SHIFT))>>>FXP_SHIFT)+w[i+k]; 
+                                g_delta[i+k] <= ((delta>>>FXP_SHIFT)*w[i+k])>>>FXP_SHIFT;   end 
+                            k <= k+4;
+                            end
+                            else begin k<=0; state <= ST_STOP;  ctrl <= 2'b10; end          
+                    end end //end
+                    ST_STOP: begin
+                        if(mode == 2'b01) state<=ST_IN;
+                        else if(mode==2'b10) state<=ST_BP;
+                        else state<=ST_STOP;
+                    end 
+                endcase
+         end 
+         end
+
+    
+       
 endmodule

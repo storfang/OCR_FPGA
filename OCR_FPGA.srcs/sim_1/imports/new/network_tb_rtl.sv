@@ -53,7 +53,7 @@ module network_tb_rtl();
         network_rtl network1(
         .x1(x) ,.z(z), .rst(rst) , .clk(clk), .y4(y), .mode(mode), .start(start), .ready(ready));
 
-        parameter FXP_SCALE = 16384/2;
+        parameter FXP_SCALE = 16384;
         int i = 0;    real y43; real y42; real y41; real y40;
         reg [3:0] z_prev;
 
@@ -93,21 +93,21 @@ module network_tb_rtl();
     temp[255-(16*14):255-(16*15)+1] <= Y;
     temp[255-(16*15):255-(16*16)+1] <= Z;
     temp2 <= temp;
-    #300;
-    mode <=0;
+    #800;
+    mode <=1;
     start <=1;
     #15; start <= 0;
     
     //x <= C; z <= 7; #100;
     //x <= D; z <= 8; #5000;
-    //x <= A; z <= 15; #5000;
-    //x <= F; z <= 11; #5000;
+    //x <= A; z <= 15; #50000;
+    //x <= F; z <= 11; #500;
     //x <= H; z <= 6; #5000;
     //x <= I; z <= 0; #5000;
-    //x <= J; z <= 12; #5000;
-    //x <= L; z <= 1; #5000;
+    //x <= J; z <= 12; #500;
+    //x <= L; z <= 1; #50000;
     //x <= N; z <= 5; #5000;
-    //x <= O; z <= 13; #5000;
+    //x <= O; z <= 13; #50000;
     //x <= P; z <= 14; #8000;
     //x <= T; z <= 10; #8000;
     //x <= U; z <= 4; #8000;
