@@ -16,9 +16,6 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param synth.incrementalSynthesisCache C:/Users/Mateusz/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-8340-Mateusz-HP/incrSyn
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 create_project -in_memory -part xc7z020clg484-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -46,6 +43,9 @@ read_verilog -library xil_defaultlib -sv {
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
+read_xdc G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.srcs/constrs_1/new/zedboard_master.xdc
+set_property used_in_implementation false [get_files G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.srcs/constrs_1/new/zedboard_master.xdc]
+
 
 synth_design -top network_rtl -part xc7z020clg484-1
 

@@ -60,14 +60,11 @@ proc step_failed { step } {
   close $ch
 }
 
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 
 start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param synth.incrementalSynthesisCache C:/Users/Mateusz/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-8340-Mateusz-HP/incrSyn
   create_project -in_memory -part xc7z020clg484-1
   set_property board_part digilentinc.com:zedboard:part0:1.0 [current_project]
   set_property design_mode GateLvl [current_fileset]
@@ -77,6 +74,7 @@ set rc [catch {
   set_property ip_output_repo G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   add_files -quiet G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.runs/synth_1/network_rtl.dcp
+  read_xdc G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.srcs/constrs_1/new/zedboard_master.xdc
   link_design -top network_rtl -part xc7z020clg484-1
   close_msg_db -file init_design.pb
 } RESULT]

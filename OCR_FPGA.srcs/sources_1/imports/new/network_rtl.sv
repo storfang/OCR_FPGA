@@ -109,9 +109,9 @@ module network_rtl(
                 
                 
         always_ff @(posedge clk) begin: fsm
-        
             
-        
+            if(rst==1) begin state <= ST_STOP; y4<=0; end
+            else begin
                 case(state)
                 
                 ST_START: begin
@@ -204,7 +204,7 @@ module network_rtl(
                 else state <= ST_STOP;
                 end
                 endcase
-                
+             end   
          end: fsm
           
           

@@ -57,7 +57,7 @@ parameter FXP_SHIFT = 14 )(
     */
     
      always@(posedge clk) begin
-            if(rst==1) y <= 0;
+        if(rst==1) begin y <= 0; state<=ST_STOP; end
             else begin
                 case(state)
                     ST_IN:begin
