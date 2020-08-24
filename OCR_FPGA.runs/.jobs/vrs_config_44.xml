@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="design_ocr_processing_system7_0_0_synth_1" LaunchDir="G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.runs/design_ocr_processing_system7_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_ocr_axi_gpio_0_0_synth_1" LaunchDir="G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.runs/design_ocr_axi_gpio_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_ocr_axi_gpio_1_0_synth_1" LaunchDir="G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.runs/design_ocr_axi_gpio_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_ocr_axi_gpio_2_0_synth_1" LaunchDir="G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.runs/design_ocr_axi_gpio_2_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_ocr_neural_network_0_0_synth_1" LaunchDir="G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.runs/design_ocr_neural_network_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_ocr_axi_gpio_0_1_synth_1" LaunchDir="G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.runs/design_ocr_axi_gpio_0_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_ocr_clk_wiz_0_0_synth_1" LaunchDir="G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.runs/design_ocr_clk_wiz_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_ocr_axi_gpio_out1_0_synth_1" LaunchDir="G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.runs/design_ocr_axi_gpio_out1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="design_ocr_axi_gpio_2_0_synth_1"/>
+	</Run>
+	<Run Id="design_ocr_axi_gpio_out1_1_synth_1" LaunchDir="G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.runs/design_ocr_axi_gpio_out1_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="design_ocr_axi_gpio_2_0_synth_1"/>
+	</Run>
+	<Run Id="design_ocr_axi_gpio_out1_2_synth_1" LaunchDir="G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.runs/design_ocr_axi_gpio_out1_2_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="design_ocr_axi_gpio_2_0_synth_1"/>
+	</Run>
+	<Run Id="design_ocr_axi_gpio_0_2_synth_1" LaunchDir="G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.runs/design_ocr_axi_gpio_0_2_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_ocr_rst_ps7_0_100M_0_synth_1" LaunchDir="G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.runs/design_ocr_rst_ps7_0_100M_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_ocr_xbar_0_synth_1" LaunchDir="G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.runs/design_ocr_xbar_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_ocr_auto_pc_0_synth_1" LaunchDir="G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.runs/design_ocr_auto_pc_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+</Runs>
+

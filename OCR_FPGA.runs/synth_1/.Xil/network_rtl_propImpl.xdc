@@ -1,5 +1,0 @@
-set_property SRC_FILE_INFO {cfile:G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.srcs/constrs_1/new/zedboard_master.xdc rfile:../../../OCR_FPGA.srcs/constrs_1/new/zedboard_master.xdc id:1} [current_design]
-set_property src_info {type:XDC file:1 line:81 export:INPUT save:INPUT read:READ} [current_design]
-set_property PACKAGE_PIN Y9 [get_ports clk]
-set_property src_info {type:XDC file:1 line:371 export:INPUT save:INPUT read:READ} [current_design]
-set_property IOSTANDARD LVCMOS33 [get_ports -of_objects [get_iobanks 13]]

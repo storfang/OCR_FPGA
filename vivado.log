@@ -1,0 +1,820 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Fri Aug 21 12:19:53 2020
+# Process ID: 7604
+# Current directory: G:/studia/fpga/project_sdup_ocr/OCR_FPGA
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5956 G:\studia\fpga\project_sdup_ocr\OCR_FPGA\OCR_FPGA.xpr
+# Log file: G:/studia/fpga/project_sdup_ocr/OCR_FPGA/vivado.log
+# Journal file: G:/studia/fpga/project_sdup_ocr/OCR_FPGA\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.4/data/ip'.
+open_project: Time (s): cpu = 00:00:24 ; elapsed = 00:00:14 . Memory (MB): peak = 803.758 ; gain = 124.047
+update_compile_order -fileset sources_1
+open_bd_design {G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.srcs/sources_1/bd/design_ocr/design_ocr.bd}
+Adding cell -- xilinx.com:ip:microblaze:10.0 - microblaze_0
+Successfully read diagram <design_ocr> from BD file <G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.srcs/sources_1/bd/design_ocr/design_ocr.bd>
+open_bd_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 855.492 ; gain = 51.734
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0
+create_bd_cell: Time (s): cpu = 00:00:06 ; elapsed = 00:00:10 . Memory (MB): peak = 917.730 ; gain = 59.242
+endgroup
+set_property location {1 250 184} [get_bd_cells microblaze_0]
+delete_bd_objs [get_bd_cells microblaze_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_0
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:processing_system7 -config {make_external "FIXED_IO, DDR" apply_board_preset "1" Master "Disable" Slave "Disable" }  [get_bd_cells processing_system7_0]
+apply_bd_automation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 931.148 ; gain = 0.164
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_1
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_2
+endgroup
+open_bd_design {G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.srcs/sources_1/bd/design_ocr/design_ocr.bd}
+create_peripheral xilinx.com user neural_network 1.0 -dir G:/studia/fpga/project_sdup_ocr/OCR_FPGA/../ip_repo
+add_peripheral_interface S00_AXI -interface_mode slave -axi_type lite [ipx::find_open_core xilinx.com:user:neural_network:1.0]
+generate_peripheral -driver -bfm_example_design -debug_hw_example_design [ipx::find_open_core xilinx.com:user:neural_network:1.0]
+write_peripheral [ipx::find_open_core xilinx.com:user:neural_network:1.0]
+set_property  ip_repo_paths  G:/studia/fpga/project_sdup_ocr/OCR_FPGA/../ip_repo/neural_network_1.0 [current_project]
+update_ip_catalog -rebuild
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'g:/studia/fpga/project_sdup_ocr/ip_repo/neural_network_1.0'.
+ipx::edit_ip_in_project -upgrade true -name edit_neural_network_v1_0 -directory G:/studia/fpga/project_sdup_ocr/OCR_FPGA/../ip_repo g:/studia/fpga/project_sdup_ocr/ip_repo/neural_network_1.0/component.xml
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.4/data/ip'.
+create_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 966.785 ; gain = 1.262
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'g:/studia/fpga/project_sdup_ocr/ip_repo/neural_network_1.0'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+ipx::edit_ip_in_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:09 . Memory (MB): peak = 972.613 ; gain = 7.090
+update_compile_order -fileset sources_1
+current_project OCR_FPGA
+current_project edit_neural_network_v1_0
+set_property file_type SystemVerilog [get_files  g:/studia/fpga/project_sdup_ocr/ip_repo/neural_network_1.0/hdl/neural_network_v1_0_S00_AXI.v]
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'g:/studia/fpga/project_sdup_ocr/ip_repo/edit_neural_network_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'neural_network_v1_0' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'g:/studia/fpga/project_sdup_ocr/ip_repo/edit_neural_network_v1_0.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L xil_defaultlib -prj neural_network_v1_0_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "g:/studia/fpga/project_sdup_ocr/ip_repo/neural_network_1.0/hdl/neural_network_v1_0_S00_AXI.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module neural_network_v1_0_S00_AXI
+INFO: [VRFC 10-311] analyzing module network_rtl
+INFO: [VRFC 10-2263] Analyzing Verilog file "g:/studia/fpga/project_sdup_ocr/ip_repo/neural_network_1.0/hdl/neural_network_v1_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module neural_network_v1_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "g:/studia/fpga/project_sdup_ocr/ip_repo/edit_neural_network_v1_0.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '5' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'g:/studia/fpga/project_sdup_ocr/ip_repo/edit_neural_network_v1_0.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto 240ba15b3fec4aa6925647613d46e360 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot neural_network_v1_0_behav xil_defaultlib.neural_network_v1_0 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-2063] Module <neuron_layer1_rtl> not found while processing module instance <n1_0> [g:/studia/fpga/project_sdup_ocr/ip_repo/neural_network_1.0/hdl/neural_network_v1_0_S00_AXI.v:689]
+ERROR: [VRFC 10-2063] Module <neuron_layer2_rtl> not found while processing module instance <n2_0> [g:/studia/fpga/project_sdup_ocr/ip_repo/neural_network_1.0/hdl/neural_network_v1_0_S00_AXI.v:707]
+ERROR: [VRFC 10-2063] Module <neuron_layer3_rtl> not found while processing module instance <n3_0> [g:/studia/fpga/project_sdup_ocr/ip_repo/neural_network_1.0/hdl/neural_network_v1_0_S00_AXI.v:717]
+ERROR: [VRFC 10-2063] Module <neuron_layer4_rtl> not found while processing module instance <n4_0> [g:/studia/fpga/project_sdup_ocr/ip_repo/neural_network_1.0/hdl/neural_network_v1_0_S00_AXI.v:727]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-99] Step results log file:'G:/studia/fpga/project_sdup_ocr/ip_repo/edit_neural_network_v1_0.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'G:/studia/fpga/project_sdup_ocr/ip_repo/edit_neural_network_v1_0.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:11 . Memory (MB): peak = 1004.656 ; gain = 0.000
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+current_project OCR_FPGA
+current_project edit_neural_network_v1_0
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'g:/studia/fpga/project_sdup_ocr/ip_repo/edit_neural_network_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'neural_network_v1_0' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'g:/studia/fpga/project_sdup_ocr/ip_repo/edit_neural_network_v1_0.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L xil_defaultlib -prj neural_network_v1_0_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "g:/studia/fpga/project_sdup_ocr/ip_repo/neural_network_1.0/hdl/neural_network_v1_0_S00_AXI.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module neural_network_v1_0_S00_AXI
+INFO: [VRFC 10-311] analyzing module network_rtl
+INFO: [VRFC 10-311] analyzing module neuron_layer1_rtl
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'g:/studia/fpga/project_sdup_ocr/ip_repo/edit_neural_network_v1_0.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto 240ba15b3fec4aa6925647613d46e360 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot neural_network_v1_0_behav xil_defaultlib.neural_network_v1_0 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-2063] Module <neuron_layer2_rtl> not found while processing module instance <n2_0> [g:/studia/fpga/project_sdup_ocr/ip_repo/neural_network_1.0/hdl/neural_network_v1_0_S00_AXI.v:707]
+ERROR: [VRFC 10-2063] Module <neuron_layer3_rtl> not found while processing module instance <n3_0> [g:/studia/fpga/project_sdup_ocr/ip_repo/neural_network_1.0/hdl/neural_network_v1_0_S00_AXI.v:717]
+ERROR: [VRFC 10-2063] Module <neuron_layer4_rtl> not found while processing module instance <n4_0> [g:/studia/fpga/project_sdup_ocr/ip_repo/neural_network_1.0/hdl/neural_network_v1_0_S00_AXI.v:727]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'G:/studia/fpga/project_sdup_ocr/ip_repo/edit_neural_network_v1_0.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'G:/studia/fpga/project_sdup_ocr/ip_repo/edit_neural_network_v1_0.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+current_project OCR_FPGA
+current_project edit_neural_network_v1_0
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'g:/studia/fpga/project_sdup_ocr/ip_repo/edit_neural_network_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'neural_network_v1_0' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'g:/studia/fpga/project_sdup_ocr/ip_repo/edit_neural_network_v1_0.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L xil_defaultlib -prj neural_network_v1_0_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "g:/studia/fpga/project_sdup_ocr/ip_repo/neural_network_1.0/hdl/neural_network_v1_0_S00_AXI.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module neural_network_v1_0_S00_AXI
+INFO: [VRFC 10-311] analyzing module network_rtl
+INFO: [VRFC 10-311] analyzing module neuron_layer1_rtl
+INFO: [VRFC 10-311] analyzing module neuron_layer2_rtl
+WARNING: [VRFC 10-159] /* in comment [g:/studia/fpga/project_sdup_ocr/ip_repo/neural_network_1.0/hdl/neural_network_v1_0_S00_AXI.v:847]
+INFO: [VRFC 10-311] analyzing module neuron_layer3_rtl
+INFO: [VRFC 10-311] analyzing module neuron_layer4_rtl
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'g:/studia/fpga/project_sdup_ocr/ip_repo/edit_neural_network_v1_0.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto 240ba15b3fec4aa6925647613d46e360 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot neural_network_v1_0_behav xil_defaultlib.neural_network_v1_0 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 72 differs from formal bit length 1 for port mode [g:/studia/fpga/project_sdup_ocr/ip_repo/neural_network_1.0/hdl/neural_network_v1_0_S00_AXI.v:425]
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 72 for port y4 [g:/studia/fpga/project_sdup_ocr/ip_repo/neural_network_1.0/hdl/neural_network_v1_0_S00_AXI.v:428]
+WARNING: [VRFC 10-597] element index 71 into slv_wire2 is out of bounds [g:/studia/fpga/project_sdup_ocr/ip_repo/neural_network_1.0/hdl/neural_network_v1_0_S00_AXI.v:416]
+ERROR: [VRFC 10-1219] part-select direction is opposite from prefix index direction [g:/studia/fpga/project_sdup_ocr/ip_repo/neural_network_1.0/hdl/neural_network_v1_0_S00_AXI.v:421]
+ERROR: [VRFC 10-1219] part-select direction is opposite from prefix index direction [g:/studia/fpga/project_sdup_ocr/ip_repo/neural_network_1.0/hdl/neural_network_v1_0_S00_AXI.v:422]
+ERROR: [VRFC 10-1219] part-select direction is opposite from prefix index direction [g:/studia/fpga/project_sdup_ocr/ip_repo/neural_network_1.0/hdl/neural_network_v1_0_S00_AXI.v:425]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'G:/studia/fpga/project_sdup_ocr/ip_repo/edit_neural_network_v1_0.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'G:/studia/fpga/project_sdup_ocr/ip_repo/edit_neural_network_v1_0.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'g:/studia/fpga/project_sdup_ocr/ip_repo/edit_neural_network_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'neural_network_v1_0' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'g:/studia/fpga/project_sdup_ocr/ip_repo/edit_neural_network_v1_0.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L xil_defaultlib -prj neural_network_v1_0_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "g:/studia/fpga/project_sdup_ocr/ip_repo/neural_network_1.0/hdl/neural_network_v1_0_S00_AXI.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module neural_network_v1_0_S00_AXI
+INFO: [VRFC 10-311] analyzing module network_rtl
+INFO: [VRFC 10-311] analyzing module neuron_layer1_rtl
+INFO: [VRFC 10-311] analyzing module neuron_layer2_rtl
+WARNING: [VRFC 10-159] /* in comment [g:/studia/fpga/project_sdup_ocr/ip_repo/neural_network_1.0/hdl/neural_network_v1_0_S00_AXI.v:847]
+INFO: [VRFC 10-311] analyzing module neuron_layer3_rtl
+INFO: [VRFC 10-311] analyzing module neuron_layer4_rtl
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'g:/studia/fpga/project_sdup_ocr/ip_repo/edit_neural_network_v1_0.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto 240ba15b3fec4aa6925647613d46e360 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot neural_network_v1_0_behav xil_defaultlib.neural_network_v1_0 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-597] element index 71 into slv_wire2 is out of bounds [g:/studia/fpga/project_sdup_ocr/ip_repo/neural_network_1.0/hdl/neural_network_v1_0_S00_AXI.v:416]
+ERROR: [VRFC 10-1219] part-select direction is opposite from prefix index direction [g:/studia/fpga/project_sdup_ocr/ip_repo/neural_network_1.0/hdl/neural_network_v1_0_S00_AXI.v:421]
+ERROR: [VRFC 10-1219] part-select direction is opposite from prefix index direction [g:/studia/fpga/project_sdup_ocr/ip_repo/neural_network_1.0/hdl/neural_network_v1_0_S00_AXI.v:422]
+ERROR: [VRFC 10-1219] part-select direction is opposite from prefix index direction [g:/studia/fpga/project_sdup_ocr/ip_repo/neural_network_1.0/hdl/neural_network_v1_0_S00_AXI.v:428]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'G:/studia/fpga/project_sdup_ocr/ip_repo/edit_neural_network_v1_0.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'G:/studia/fpga/project_sdup_ocr/ip_repo/edit_neural_network_v1_0.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'g:/studia/fpga/project_sdup_ocr/ip_repo/edit_neural_network_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'neural_network_v1_0' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'g:/studia/fpga/project_sdup_ocr/ip_repo/edit_neural_network_v1_0.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L xil_defaultlib -prj neural_network_v1_0_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "g:/studia/fpga/project_sdup_ocr/ip_repo/neural_network_1.0/hdl/neural_network_v1_0_S00_AXI.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module neural_network_v1_0_S00_AXI
+INFO: [VRFC 10-311] analyzing module network_rtl
+INFO: [VRFC 10-311] analyzing module neuron_layer1_rtl
+INFO: [VRFC 10-311] analyzing module neuron_layer2_rtl
+WARNING: [VRFC 10-159] /* in comment [g:/studia/fpga/project_sdup_ocr/ip_repo/neural_network_1.0/hdl/neural_network_v1_0_S00_AXI.v:847]
+INFO: [VRFC 10-311] analyzing module neuron_layer3_rtl
+INFO: [VRFC 10-311] analyzing module neuron_layer4_rtl
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'g:/studia/fpga/project_sdup_ocr/ip_repo/edit_neural_network_v1_0.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto 240ba15b3fec4aa6925647613d46e360 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot neural_network_v1_0_behav xil_defaultlib.neural_network_v1_0 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-1219] part-select direction is opposite from prefix index direction [g:/studia/fpga/project_sdup_ocr/ip_repo/neural_network_1.0/hdl/neural_network_v1_0_S00_AXI.v:416]
+ERROR: [VRFC 10-1219] part-select direction is opposite from prefix index direction [g:/studia/fpga/project_sdup_ocr/ip_repo/neural_network_1.0/hdl/neural_network_v1_0_S00_AXI.v:421]
+ERROR: [VRFC 10-1219] part-select direction is opposite from prefix index direction [g:/studia/fpga/project_sdup_ocr/ip_repo/neural_network_1.0/hdl/neural_network_v1_0_S00_AXI.v:422]
+ERROR: [VRFC 10-1219] part-select direction is opposite from prefix index direction [g:/studia/fpga/project_sdup_ocr/ip_repo/neural_network_1.0/hdl/neural_network_v1_0_S00_AXI.v:428]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'G:/studia/fpga/project_sdup_ocr/ip_repo/edit_neural_network_v1_0.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'G:/studia/fpga/project_sdup_ocr/ip_repo/edit_neural_network_v1_0.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'g:/studia/fpga/project_sdup_ocr/ip_repo/edit_neural_network_v1_0.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'neural_network_v1_0' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'g:/studia/fpga/project_sdup_ocr/ip_repo/edit_neural_network_v1_0.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L xil_defaultlib -prj neural_network_v1_0_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "g:/studia/fpga/project_sdup_ocr/ip_repo/neural_network_1.0/hdl/neural_network_v1_0_S00_AXI.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module neural_network_v1_0_S00_AXI
+INFO: [VRFC 10-311] analyzing module network_rtl
+INFO: [VRFC 10-311] analyzing module neuron_layer1_rtl
+INFO: [VRFC 10-311] analyzing module neuron_layer2_rtl
+WARNING: [VRFC 10-159] /* in comment [g:/studia/fpga/project_sdup_ocr/ip_repo/neural_network_1.0/hdl/neural_network_v1_0_S00_AXI.v:847]
+INFO: [VRFC 10-311] analyzing module neuron_layer3_rtl
+INFO: [VRFC 10-311] analyzing module neuron_layer4_rtl
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'g:/studia/fpga/project_sdup_ocr/ip_repo/edit_neural_network_v1_0.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto 240ba15b3fec4aa6925647613d46e360 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot neural_network_v1_0_behav xil_defaultlib.neural_network_v1_0 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-597] element index 71 into slv_wire2 is out of bounds [g:/studia/fpga/project_sdup_ocr/ip_repo/neural_network_1.0/hdl/neural_network_v1_0_S00_AXI.v:416]
+WARNING: [VRFC 10-597] element index 71 into slv_wire3 is out of bounds [g:/studia/fpga/project_sdup_ocr/ip_repo/neural_network_1.0/hdl/neural_network_v1_0_S00_AXI.v:428]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.neuron_layer1_rtl(FXP_SCALE=1638...
+Compiling module xil_defaultlib.neuron_layer1_rtl(FXP_SCALE=1638...
+Compiling module xil_defaultlib.neuron_layer1_rtl(FXP_SCALE=1638...
+Compiling module xil_defaultlib.neuron_layer1_rtl(FXP_SCALE=1638...
+Compiling module xil_defaultlib.neuron_layer1_rtl(FXP_SCALE=1638...
+Compiling module xil_defaultlib.neuron_layer1_rtl(FXP_SCALE=1638...
+Compiling module xil_defaultlib.neuron_layer1_rtl(FXP_SCALE=1638...
+Compiling module xil_defaultlib.neuron_layer1_rtl(FXP_SCALE=1638...
+Compiling module xil_defaultlib.neuron_layer1_rtl(FXP_SCALE=1638...
+Compiling module xil_defaultlib.neuron_layer1_rtl(FXP_SCALE=1638...
+Compiling module xil_defaultlib.neuron_layer1_rtl(FXP_SCALE=1638...
+Compiling module xil_defaultlib.neuron_layer1_rtl(FXP_SCALE=1638...
+Compiling module xil_defaultlib.neuron_layer1_rtl(FXP_SCALE=1638...
+Compiling module xil_defaultlib.neuron_layer1_rtl(FXP_SCALE=1638...
+Compiling module xil_defaultlib.neuron_layer1_rtl(FXP_SCALE=1638...
+Compiling module xil_defaultlib.neuron_layer1_rtl(FXP_SCALE=1638...
+Compiling module xil_defaultlib.neuron_layer2_rtl(FXP_SCALE=1638...
+Compiling module xil_defaultlib.neuron_layer2_rtl(FXP_SCALE=1638...
+Compiling module xil_defaultlib.neuron_layer2_rtl(FXP_SCALE=1638...
+Compiling module xil_defaultlib.neuron_layer2_rtl(FXP_SCALE=1638...
+Compiling module xil_defaultlib.neuron_layer2_rtl(FXP_SCALE=1638...
+Compiling module xil_defaultlib.neuron_layer2_rtl(FXP_SCALE=1638...
+Compiling module xil_defaultlib.neuron_layer2_rtl(FXP_SCALE=1638...
+Compiling module xil_defaultlib.neuron_layer2_rtl(FXP_SCALE=1638...
+Compiling module xil_defaultlib.neuron_layer3_rtl(FXP_SCALE=1638...
+Compiling module xil_defaultlib.neuron_layer3_rtl(FXP_SCALE=1638...
+Compiling module xil_defaultlib.neuron_layer3_rtl(FXP_SCALE=1638...
+Compiling module xil_defaultlib.neuron_layer3_rtl(FXP_SCALE=1638...
+Compiling module xil_defaultlib.neuron_layer3_rtl(FXP_SCALE=1638...
+Compiling module xil_defaultlib.neuron_layer3_rtl(FXP_SCALE=1638...
+Compiling module xil_defaultlib.neuron_layer3_rtl(FXP_SCALE=1638...
+Compiling module xil_defaultlib.neuron_layer3_rtl(FXP_SCALE=1638...
+Compiling module xil_defaultlib.neuron_layer4_rtl(FXP_SCALE=1638...
+Compiling module xil_defaultlib.neuron_layer4_rtl(FXP_SCALE=1638...
+Compiling module xil_defaultlib.neuron_layer4_rtl(FXP_SCALE=1638...
+Compiling module xil_defaultlib.neuron_layer4_rtl(FXP_SCALE=1638...
+Compiling module xil_defaultlib.network_rtl_default
+Compiling module xil_defaultlib.neural_network_v1_0_S00_AXI(C_S_...
+Compiling module xil_defaultlib.neural_network_v1_0
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot neural_network_v1_0_behav
+
+****** Webtalk v2017.4 (64-bit)
+  **** SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+  **** IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source g:/studia/fpga/project_sdup_ocr/ip_repo/edit_neural_network_v1_0.sim/sim_1/behav/xsim/xsim.dir/neural_network_v1_0_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Fri Aug 21 14:31:49 2020...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:14 . Memory (MB): peak = 1021.996 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '15' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'g:/studia/fpga/project_sdup_ocr/ip_repo/edit_neural_network_v1_0.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "neural_network_v1_0_behav -key {Behavioral:sim_1:Functional:neural_network_v1_0} -tclbatch {neural_network_v1_0.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+source neural_network_v1_0.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+xsim: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 1036.879 ; gain = 14.883
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'neural_network_v1_0_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:08 ; elapsed = 00:00:24 . Memory (MB): peak = 1036.879 ; gain = 14.883
+run 20 us
+run 20 us
+run 20 us
+run 20 us
+run 20 us
+ipx::merge_project_changes files [ipx::current_core]
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "{". [g:/studia/fpga/project_sdup_ocr/ip_repo/neural_network_1.0\hdl/neural_network_v1_0_S00_AXI.v:522]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "}". [g:/studia/fpga/project_sdup_ocr/ip_repo/neural_network_1.0\hdl/neural_network_v1_0_S00_AXI.v:522]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "@". [g:/studia/fpga/project_sdup_ocr/ip_repo/neural_network_1.0\hdl/neural_network_v1_0_S00_AXI.v:526]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [g:/studia/fpga/project_sdup_ocr/ip_repo/neural_network_1.0\hdl/neural_network_v1_0_S00_AXI.v:533]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [g:/studia/fpga/project_sdup_ocr/ip_repo/neural_network_1.0\hdl/neural_network_v1_0_S00_AXI.v:534]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [g:/studia/fpga/project_sdup_ocr/ip_repo/neural_network_1.0\hdl/neural_network_v1_0_S00_AXI.v:535]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [g:/studia/fpga/project_sdup_ocr/ip_repo/neural_network_1.0\hdl/neural_network_v1_0_S00_AXI.v:546]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [g:/studia/fpga/project_sdup_ocr/ip_repo/neural_network_1.0\hdl/neural_network_v1_0_S00_AXI.v:547]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [g:/studia/fpga/project_sdup_ocr/ip_repo/neural_network_1.0\hdl/neural_network_v1_0_S00_AXI.v:552]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [g:/studia/fpga/project_sdup_ocr/ip_repo/neural_network_1.0\hdl/neural_network_v1_0_S00_AXI.v:553]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [g:/studia/fpga/project_sdup_ocr/ip_repo/neural_network_1.0\hdl/neural_network_v1_0_S00_AXI.v:554]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [g:/studia/fpga/project_sdup_ocr/ip_repo/neural_network_1.0\hdl/neural_network_v1_0_S00_AXI.v:558]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [g:/studia/fpga/project_sdup_ocr/ip_repo/neural_network_1.0\hdl/neural_network_v1_0_S00_AXI.v:559]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [g:/studia/fpga/project_sdup_ocr/ip_repo/neural_network_1.0\hdl/neural_network_v1_0_S00_AXI.v:560]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [g:/studia/fpga/project_sdup_ocr/ip_repo/neural_network_1.0\hdl/neural_network_v1_0_S00_AXI.v:564]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [g:/studia/fpga/project_sdup_ocr/ip_repo/neural_network_1.0\hdl/neural_network_v1_0_S00_AXI.v:565]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [g:/studia/fpga/project_sdup_ocr/ip_repo/neural_network_1.0\hdl/neural_network_v1_0_S00_AXI.v:566]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [g:/studia/fpga/project_sdup_ocr/ip_repo/neural_network_1.0\hdl/neural_network_v1_0_S00_AXI.v:571]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [g:/studia/fpga/project_sdup_ocr/ip_repo/neural_network_1.0\hdl/neural_network_v1_0_S00_AXI.v:572]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [g:/studia/fpga/project_sdup_ocr/ip_repo/neural_network_1.0\hdl/neural_network_v1_0_S00_AXI.v:573]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [g:/studia/fpga/project_sdup_ocr/ip_repo/neural_network_1.0\hdl/neural_network_v1_0_S00_AXI.v:574]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [g:/studia/fpga/project_sdup_ocr/ip_repo/neural_network_1.0\hdl/neural_network_v1_0_S00_AXI.v:582]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [g:/studia/fpga/project_sdup_ocr/ip_repo/neural_network_1.0\hdl/neural_network_v1_0_S00_AXI.v:586]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [g:/studia/fpga/project_sdup_ocr/ip_repo/neural_network_1.0\hdl/neural_network_v1_0_S00_AXI.v:588]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [g:/studia/fpga/project_sdup_ocr/ip_repo/neural_network_1.0\hdl/neural_network_v1_0_S00_AXI.v:593]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [g:/studia/fpga/project_sdup_ocr/ip_repo/neural_network_1.0\hdl/neural_network_v1_0_S00_AXI.v:595]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [g:/studia/fpga/project_sdup_ocr/ip_repo/neural_network_1.0\hdl/neural_network_v1_0_S00_AXI.v:599]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [g:/studia/fpga/project_sdup_ocr/ip_repo/neural_network_1.0\hdl/neural_network_v1_0_S00_AXI.v:601]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [g:/studia/fpga/project_sdup_ocr/ip_repo/neural_network_1.0\hdl/neural_network_v1_0_S00_AXI.v:605]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [g:/studia/fpga/project_sdup_ocr/ip_repo/neural_network_1.0\hdl/neural_network_v1_0_S00_AXI.v:607]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [g:/studia/fpga/project_sdup_ocr/ip_repo/neural_network_1.0\hdl/neural_network_v1_0_S00_AXI.v:615]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [g:/studia/fpga/project_sdup_ocr/ip_repo/neural_network_1.0\hdl/neural_network_v1_0_S00_AXI.v:618]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "<=". [g:/studia/fpga/project_sdup_ocr/ip_repo/neural_network_1.0\hdl/neural_network_v1_0_S00_AXI.v:619]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "end". [g:/studia/fpga/project_sdup_ocr/ip_repo/neural_network_1.0\hdl/neural_network_v1_0_S00_AXI.v:623]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "=". [g:/studia/fpga/project_sdup_ocr/ip_repo/neural_network_1.0\hdl/neural_network_v1_0_S00_AXI.v:631]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "=". [g:/studia/fpga/project_sdup_ocr/ip_repo/neural_network_1.0\hdl/neural_network_v1_0_S00_AXI.v:655]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "=". [g:/studia/fpga/project_sdup_ocr/ip_repo/neural_network_1.0\hdl/neural_network_v1_0_S00_AXI.v:660]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "=". [g:/studia/fpga/project_sdup_ocr/ip_repo/neural_network_1.0\hdl/neural_network_v1_0_S00_AXI.v:665]
+CRITICAL WARNING: [HDL 9-806] Syntax error near ":". [g:/studia/fpga/project_sdup_ocr/ip_repo/neural_network_1.0\hdl/neural_network_v1_0_S00_AXI.v:674]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "+". [g:/studia/fpga/project_sdup_ocr/ip_repo/neural_network_1.0\hdl/neural_network_v1_0_S00_AXI.v:681]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "+". [g:/studia/fpga/project_sdup_ocr/ip_repo/neural_network_1.0\hdl/neural_network_v1_0_S00_AXI.v:682]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "+". [g:/studia/fpga/project_sdup_ocr/ip_repo/neural_network_1.0\hdl/neural_network_v1_0_S00_AXI.v:683]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "{". [g:/studia/fpga/project_sdup_ocr/ip_repo/neural_network_1.0\hdl/neural_network_v1_0_S00_AXI.v:766]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "}". [g:/studia/fpga/project_sdup_ocr/ip_repo/neural_network_1.0\hdl/neural_network_v1_0_S00_AXI.v:766]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "+". [g:/studia/fpga/project_sdup_ocr/ip_repo/neural_network_1.0\hdl/neural_network_v1_0_S00_AXI.v:800]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "{". [g:/studia/fpga/project_sdup_ocr/ip_repo/neural_network_1.0\hdl/neural_network_v1_0_S00_AXI.v:841]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "}". [g:/studia/fpga/project_sdup_ocr/ip_repo/neural_network_1.0\hdl/neural_network_v1_0_S00_AXI.v:841]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "+". [g:/studia/fpga/project_sdup_ocr/ip_repo/neural_network_1.0\hdl/neural_network_v1_0_S00_AXI.v:909]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "{". [g:/studia/fpga/project_sdup_ocr/ip_repo/neural_network_1.0\hdl/neural_network_v1_0_S00_AXI.v:953]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "}". [g:/studia/fpga/project_sdup_ocr/ip_repo/neural_network_1.0\hdl/neural_network_v1_0_S00_AXI.v:953]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "+". [g:/studia/fpga/project_sdup_ocr/ip_repo/neural_network_1.0\hdl/neural_network_v1_0_S00_AXI.v:1020]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "{". [g:/studia/fpga/project_sdup_ocr/ip_repo/neural_network_1.0\hdl/neural_network_v1_0_S00_AXI.v:1062]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "}". [g:/studia/fpga/project_sdup_ocr/ip_repo/neural_network_1.0\hdl/neural_network_v1_0_S00_AXI.v:1062]
+CRITICAL WARNING: [HDL 9-806] Syntax error near "+". [g:/studia/fpga/project_sdup_ocr/ip_repo/neural_network_1.0\hdl/neural_network_v1_0_S00_AXI.v:1132]
+ipx::merge_project_changes: Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 1036.879 ; gain = 0.000
+set_property core_revision 2 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+close_project -delete
+ERROR: [Project 1-161] Failed to remove the directory 'g:/studia/fpga/project_sdup_ocr/ip_repo/edit_neural_network_v1_0.sim'. The directory might be in use by some other process.
+open_bd_design {G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.srcs/sources_1/bd/design_ocr/design_ocr.bd}
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:user:neural_network:1.0 neural_network_0
+endgroup
+set_property location {5 1154 -291} [get_bd_cells neural_network_0]
+set_property name axi_gpio_expected [get_bd_cells axi_gpio_1]
+set_property name axi_gpio_in [get_bd_cells axi_gpio_0]
+set_property name axi_gpio_out [get_bd_cells axi_gpio_2]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_0
+endgroup
+set_property name axi_gpio_mode [get_bd_cells axi_gpio_0]
+apply_bd_automation -rule xilinx.com:bd_rule:processing_system7 -config {make_external "FIXED_IO, DDR" apply_board_preset "1" Master "Disable" Slave "Disable" }  [get_bd_cells processing_system7_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:5.4 clk_wiz_0
+create_bd_cell: Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1194.535 ; gain = 138.375
+endgroup
+set_property CONFIG.C_GPIO_WIDTH 16 [get_bd_cells /axi_gpio_in]
+set_property CONFIG.C_GPIO_WIDTH 1 [get_bd_cells /axi_gpio_mode]
+set_property CONFIG.C_GPIO_WIDTH 72 [get_bd_cells /axi_gpio_out]
+ERROR: [IP_Flow 19-3458] Validation failed for parameter 'GPIO Width(C_GPIO_WIDTH)' for BD Cell 'axi_gpio_out'. Value '72' is out of the range (1,32)
+INFO: [IP_Flow 19-3438] Customization errors found on 'axi_gpio_out'. Restoring to previous valid configuration.
+ERROR: [BD 41-245] set_property error - Validation failed for parameter 'GPIO Width(C_GPIO_WIDTH)' for BD Cell 'axi_gpio_out'. Value '72' is out of the range (1,32)
+Customization errors found on 'axi_gpio_out'. Restoring to previous valid configuration.
+
+ERROR: [Common 17-39] 'set_property' failed due to earlier errors.
+set_property CONFIG.C_GPIO_WIDTH 33 [get_bd_cells /axi_gpio_out]
+ERROR: [IP_Flow 19-3458] Validation failed for parameter 'GPIO Width(C_GPIO_WIDTH)' for BD Cell 'axi_gpio_out'. Value '33' is out of the range (1,32)
+INFO: [IP_Flow 19-3438] Customization errors found on 'axi_gpio_out'. Restoring to previous valid configuration.
+ERROR: [BD 41-245] set_property error - Validation failed for parameter 'GPIO Width(C_GPIO_WIDTH)' for BD Cell 'axi_gpio_out'. Value '33' is out of the range (1,32)
+Customization errors found on 'axi_gpio_out'. Restoring to previous valid configuration.
+
+ERROR: [Common 17-39] 'set_property' failed due to earlier errors.
+set_property CONFIG.C_GPIO_WIDTH 18 [get_bd_cells /axi_gpio_out]
+set_property name axi_gpio_out1 [get_bd_cells axi_gpio_out]
+copy_bd_objs /  [get_bd_cells {axi_gpio_out1}]
+copy_bd_objs /  [get_bd_cells {axi_gpio_out1}]
+copy_bd_objs /  [get_bd_cells {axi_gpio_out1}]
+set_property location {6 1206 176} [get_bd_cells axi_gpio_mode]
+set_property location {6 1186 -33} [get_bd_cells axi_gpio_out3]
+set_property location {6 1393 177} [get_bd_cells axi_gpio_out4]
+set_property location {3 982 -225} [get_bd_cells clk_wiz_0]
+set_property location {4 1375 -153} [get_bd_cells axi_gpio_out1]
+set_property CONFIG.C_GPIO_WIDTH 4 [get_bd_cells /axi_gpio_expected]
+set_property -dict [list CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {80.000} CONFIG.MMCM_DIVCLK_DIVIDE {1} CONFIG.MMCM_CLKOUT0_DIVIDE_F {12.500} CONFIG.CLKOUT1_JITTER {137.143}] [get_bd_cells clk_wiz_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_0
+endgroup
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty-s7-25:part0:1.0 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/arty-s7-25/E.0/board.xml as part xc7s25csga324-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty-s7-25:part0:1.0 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/arty-s7-25/E.0/board.xml as part xc7s25csga324-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty-s7-25:part0:1.0 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/arty-s7-25/E.0/board.xml as part xc7s25csga324-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty-s7-25:part0:1.0 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/arty-s7-25/E.0/board.xml as part xc7s25csga324-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty-s7-25:part0:1.0 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/arty-s7-25/E.0/board.xml as part xc7s25csga324-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty-s7-25:part0:1.0 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/arty-s7-25/E.0/board.xml as part xc7s25csga324-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty-s7-25:part0:1.0 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/arty-s7-25/E.0/board.xml as part xc7s25csga324-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty-s7-25:part0:1.0 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/arty-s7-25/E.0/board.xml as part xc7s25csga324-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty-s7-25:part0:1.0 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/arty-s7-25/E.0/board.xml as part xc7s25csga324-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty-s7-25:part0:1.0 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/arty-s7-25/E.0/board.xml as part xc7s25csga324-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty-s7-25:part0:1.0 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/arty-s7-25/E.0/board.xml as part xc7s25csga324-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty-s7-25:part0:1.0 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/arty-s7-25/E.0/board.xml as part xc7s25csga324-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty-s7-25:part0:1.0 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/arty-s7-25/E.0/board.xml as part xc7s25csga324-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty-s7-25:part0:1.0 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/arty-s7-25/E.0/board.xml as part xc7s25csga324-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty-s7-25:part0:1.0 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/arty-s7-25/E.0/board.xml as part xc7s25csga324-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty-s7-25:part0:1.0 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/arty-s7-25/E.0/board.xml as part xc7s25csga324-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty-s7-25:part0:1.0 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/arty-s7-25/E.0/board.xml as part xc7s25csga324-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty-s7-25:part0:1.0 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/arty-s7-25/E.0/board.xml as part xc7s25csga324-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty-s7-25:part0:1.0 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/arty-s7-25/E.0/board.xml as part xc7s25csga324-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty-s7-25:part0:1.0 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/arty-s7-25/E.0/board.xml as part xc7s25csga324-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty-s7-25:part0:1.0 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/arty-s7-25/E.0/board.xml as part xc7s25csga324-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty-s7-25:part0:1.0 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/arty-s7-25/E.0/board.xml as part xc7s25csga324-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty-s7-25:part0:1.0 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/arty-s7-25/E.0/board.xml as part xc7s25csga324-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty-s7-25:part0:1.0 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/arty-s7-25/E.0/board.xml as part xc7s25csga324-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty-s7-25:part0:1.0 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/arty-s7-25/E.0/board.xml as part xc7s25csga324-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty-s7-25:part0:1.0 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/arty-s7-25/E.0/board.xml as part xc7s25csga324-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty-s7-25:part0:1.0 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/arty-s7-25/E.0/board.xml as part xc7s25csga324-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+set_property -dict [list CONFIG.C_GPIO_WIDTH {8} CONFIG.C_GPIO2_WIDTH {8} CONFIG.C_IS_DUAL {1} CONFIG.C_ALL_INPUTS_2 {1} CONFIG.GPIO_BOARD_INTERFACE {leds_8bits} CONFIG.GPIO2_BOARD_INTERFACE {sws_8bits}] [get_bd_cells axi_gpio_0]
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty-s7-25:part0:1.0 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/arty-s7-25/E.0/board.xml as part xc7s25csga324-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty-s7-25:part0:1.0 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/arty-s7-25/E.0/board.xml as part xc7s25csga324-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty-s7-25:part0:1.0 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/arty-s7-25/E.0/board.xml as part xc7s25csga324-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty-s7-25:part0:1.0 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/arty-s7-25/E.0/board.xml as part xc7s25csga324-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty-s7-25:part0:1.0 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/arty-s7-25/E.0/board.xml as part xc7s25csga324-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty-s7-25:part0:1.0 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/arty-s7-25/E.0/board.xml as part xc7s25csga324-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty-s7-25:part0:1.0 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/arty-s7-25/E.0/board.xml as part xc7s25csga324-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty-s7-25:part0:1.0 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/arty-s7-25/E.0/board.xml as part xc7s25csga324-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty-s7-25:part0:1.0 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/arty-s7-25/E.0/board.xml as part xc7s25csga324-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty-s7-25:part0:1.0 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/arty-s7-25/E.0/board.xml as part xc7s25csga324-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty-s7-25:part0:1.0 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/arty-s7-25/E.0/board.xml as part xc7s25csga324-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty-s7-25:part0:1.0 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/arty-s7-25/E.0/board.xml as part xc7s25csga324-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty-s7-25:part0:1.0 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/arty-s7-25/E.0/board.xml as part xc7s25csga324-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty-s7-25:part0:1.0 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/arty-s7-25/E.0/board.xml as part xc7s25csga324-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty-s7-25:part0:1.0 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/arty-s7-25/E.0/board.xml as part xc7s25csga324-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty-s7-25:part0:1.0 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/arty-s7-25/E.0/board.xml as part xc7s25csga324-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty-s7-25:part0:1.0 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/arty-s7-25/E.0/board.xml as part xc7s25csga324-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty-s7-25:part0:1.0 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/arty-s7-25/E.0/board.xml as part xc7s25csga324-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty-s7-25:part0:1.0 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/arty-s7-25/E.0/board.xml as part xc7s25csga324-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty-s7-25:part0:1.0 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/arty-s7-25/E.0/board.xml as part xc7s25csga324-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty-s7-25:part0:1.0 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/arty-s7-25/E.0/board.xml as part xc7s25csga324-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty-s7-25:part0:1.0 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/arty-s7-25/E.0/board.xml as part xc7s25csga324-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty-s7-25:part0:1.0 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/arty-s7-25/E.0/board.xml as part xc7s25csga324-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+INFO: [Common 17-14] Message 'Board 49-26' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+set_property location {5 1715 302} [get_bd_cells axi_gpio_0]
+set_property name axi_gpio_leds [get_bd_cells axi_gpio_0]
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config {Master "/processing_system7_0/M_AXI_GP0" intc_ip "New AXI Interconnect" Clk_xbar "Auto" Clk_master "Auto" Clk_slave "Auto" }  [get_bd_intf_pins axi_gpio_in/S_AXI]
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+</axi_gpio_in/S_AXI/Reg> is being mapped into </processing_system7_0/Data> at <0x41200000 [ 64K ]>
+apply_bd_automation -rule xilinx.com:bd_rule:board -config {Board_Interface "Custom" }  [get_bd_intf_pins axi_gpio_in/GPIO]
+INFO: [board_rule 100-100] set_property CONFIG.USE_BOARD_FLOW true [get_bd_cells /axi_gpio_in]
+INFO: [board_rule 100-100] set_property CONFIG.GPIO_BOARD_INTERFACE Custom [get_bd_cells /axi_gpio_in]
+INFO: [board_rule 100-100] create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 gpio_rtl
+INFO: [board_rule 100-100] connect_bd_intf_net /gpio_rtl /axi_gpio_in/GPIO
+WARNING: [board_rule 100-100] Board automation did not generate location constraint for /axi_gpio_in/GPIO. Users may need to specify the location constraint manually.
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config {Master "/processing_system7_0/M_AXI_GP0" intc_ip "New AXI Interconnect" Clk_xbar "Auto" Clk_master "Auto" Clk_slave "Auto" }  [get_bd_intf_pins axi_gpio_expected/S_AXI]
+</axi_gpio_expected/S_AXI/Reg> is being mapped into </processing_system7_0/Data> at <0x41210000 [ 64K ]>
+apply_bd_automation -rule xilinx.com:bd_rule:board -config {Board_Interface "Custom" }  [get_bd_intf_pins axi_gpio_expected/GPIO]
+INFO: [board_rule 100-100] set_property CONFIG.USE_BOARD_FLOW true [get_bd_cells /axi_gpio_expected]
+INFO: [board_rule 100-100] set_property CONFIG.GPIO_BOARD_INTERFACE Custom [get_bd_cells /axi_gpio_expected]
+INFO: [board_rule 100-100] create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 gpio_rtl_0
+INFO: [board_rule 100-100] connect_bd_intf_net /gpio_rtl_0 /axi_gpio_expected/GPIO
+WARNING: [board_rule 100-100] Board automation did not generate location constraint for /axi_gpio_expected/GPIO. Users may need to specify the location constraint manually.
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config {Master "/processing_system7_0/M_AXI_GP0" intc_ip "New AXI Interconnect" Clk_xbar "Auto" Clk_master "Auto" Clk_slave "Auto" }  [get_bd_intf_pins axi_gpio_out1/S_AXI]
+</axi_gpio_out1/S_AXI/Reg> is being mapped into </processing_system7_0/Data> at <0x41220000 [ 64K ]>
+apply_bd_automation -rule xilinx.com:bd_rule:board -config {Board_Interface "Custom" }  [get_bd_intf_pins axi_gpio_out1/GPIO]
+INFO: [board_rule 100-100] set_property CONFIG.USE_BOARD_FLOW true [get_bd_cells /axi_gpio_out1]
+INFO: [board_rule 100-100] set_property CONFIG.GPIO_BOARD_INTERFACE Custom [get_bd_cells /axi_gpio_out1]
+INFO: [board_rule 100-100] create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 gpio_rtl_1
+INFO: [board_rule 100-100] connect_bd_intf_net /gpio_rtl_1 /axi_gpio_out1/GPIO
+WARNING: [board_rule 100-100] Board automation did not generate location constraint for /axi_gpio_out1/GPIO. Users may need to specify the location constraint manually.
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config {Master "/processing_system7_0/M_AXI_GP0" intc_ip "New AXI Interconnect" Clk_xbar "Auto" Clk_master "Auto" Clk_slave "Auto" }  [get_bd_intf_pins neural_network_0/S00_AXI]
+</neural_network_0/S00_AXI/S00_AXI_reg> is being mapped into </processing_system7_0/Data> at <0x43C00000 [ 64K ]>
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config {Master "/processing_system7_0/M_AXI_GP0" intc_ip "New AXI Interconnect" Clk_xbar "Auto" Clk_master "Auto" Clk_slave "Auto" }  [get_bd_intf_pins axi_gpio_mode/S_AXI]
+</axi_gpio_mode/S_AXI/Reg> is being mapped into </processing_system7_0/Data> at <0x41230000 [ 64K ]>
+apply_bd_automation -rule xilinx.com:bd_rule:board -config {Board_Interface "Custom" }  [get_bd_intf_pins axi_gpio_mode/GPIO]
+INFO: [board_rule 100-100] set_property CONFIG.USE_BOARD_FLOW true [get_bd_cells /axi_gpio_mode]
+INFO: [board_rule 100-100] set_property CONFIG.GPIO_BOARD_INTERFACE Custom [get_bd_cells /axi_gpio_mode]
+INFO: [board_rule 100-100] create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 gpio_rtl_2
+INFO: [board_rule 100-100] connect_bd_intf_net /gpio_rtl_2 /axi_gpio_mode/GPIO
+WARNING: [board_rule 100-100] Board automation did not generate location constraint for /axi_gpio_mode/GPIO. Users may need to specify the location constraint manually.
+apply_bd_automation -rule xilinx.com:bd_rule:board -config {rst_polarity "ACTIVE_HIGH" }  [get_bd_pins clk_wiz_0/reset]
+INFO: [board_rule 100-100] create_bd_port -dir I reset_rtl -type rst
+INFO: [board_rule 100-100] set_property CONFIG.POLARITY  /reset_rtl
+INFO: [board_rule 100-100] connect_bd_net /reset_rtl /clk_wiz_0/reset
+INFO: [board_rule 100-100] set_property CONFIG.POLARITY ACTIVE_HIGH /reset_rtl
+WARNING: [board_rule 100-100] Board automation did not generate location constraint for /clk_wiz_0/reset. Users may need to specify the location constraint manually.
+apply_bd_automation -rule xilinx.com:bd_rule:board -config {Board_Interface "sys_clock ( System clock ) " }  [get_bd_pins clk_wiz_0/clk_in1]
+INFO: [board_rule 100-100] set_property CONFIG.USE_BOARD_FLOW true [get_bd_cells /clk_wiz_0]
+INFO: [board_rule 100-100] set_property CONFIG.CLK_IN1_BOARD_INTERFACE sys_clock [get_bd_cells /clk_wiz_0]
+INFO: [board_rule 100-100] create_bd_port -dir I sys_clock -type clk
+INFO: [board_rule 100-100] set_property CONFIG.FREQ_HZ 100000000 /sys_clock
+INFO: [board_rule 100-100] set_property CONFIG.PHASE 0.000 /sys_clock
+INFO: [board_rule 100-100] connect_bd_net /sys_clock /clk_wiz_0/clk_in1
+INFO: [board_rule 100-100] set_property CONFIG.FREQ_HZ 100000000 /sys_clock
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config {Master "/processing_system7_0/M_AXI_GP0" intc_ip "New AXI Interconnect" Clk_xbar "Auto" Clk_master "Auto" Clk_slave "Auto" }  [get_bd_intf_pins axi_gpio_out2/S_AXI]
+</axi_gpio_out2/S_AXI/Reg> is being mapped into </processing_system7_0/Data> at <0x41240000 [ 64K ]>
+apply_bd_automation -rule xilinx.com:bd_rule:board -config {Board_Interface "Custom" }  [get_bd_intf_pins axi_gpio_out2/GPIO]
+INFO: [board_rule 100-100] set_property CONFIG.USE_BOARD_FLOW true [get_bd_cells /axi_gpio_out2]
+INFO: [board_rule 100-100] set_property CONFIG.GPIO_BOARD_INTERFACE Custom [get_bd_cells /axi_gpio_out2]
+INFO: [board_rule 100-100] create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 gpio_rtl_3
+INFO: [board_rule 100-100] connect_bd_intf_net /gpio_rtl_3 /axi_gpio_out2/GPIO
+WARNING: [board_rule 100-100] Board automation did not generate location constraint for /axi_gpio_out2/GPIO. Users may need to specify the location constraint manually.
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config {Master "/processing_system7_0/M_AXI_GP0" intc_ip "New AXI Interconnect" Clk_xbar "Auto" Clk_master "Auto" Clk_slave "Auto" }  [get_bd_intf_pins axi_gpio_out3/S_AXI]
+</axi_gpio_out3/S_AXI/Reg> is being mapped into </processing_system7_0/Data> at <0x41250000 [ 64K ]>
+apply_bd_automation -rule xilinx.com:bd_rule:board -config {Board_Interface "Custom" }  [get_bd_intf_pins axi_gpio_out3/GPIO]
+INFO: [board_rule 100-100] set_property CONFIG.USE_BOARD_FLOW true [get_bd_cells /axi_gpio_out3]
+INFO: [board_rule 100-100] set_property CONFIG.GPIO_BOARD_INTERFACE Custom [get_bd_cells /axi_gpio_out3]
+INFO: [board_rule 100-100] create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 gpio_rtl_4
+INFO: [board_rule 100-100] connect_bd_intf_net /gpio_rtl_4 /axi_gpio_out3/GPIO
+WARNING: [board_rule 100-100] Board automation did not generate location constraint for /axi_gpio_out3/GPIO. Users may need to specify the location constraint manually.
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config {Master "/processing_system7_0/M_AXI_GP0" intc_ip "New AXI Interconnect" Clk_xbar "Auto" Clk_master "Auto" Clk_slave "Auto" }  [get_bd_intf_pins axi_gpio_out4/S_AXI]
+</axi_gpio_out4/S_AXI/Reg> is being mapped into </processing_system7_0/Data> at <0x41260000 [ 64K ]>
+apply_bd_automation -rule xilinx.com:bd_rule:board -config {Board_Interface "Custom" }  [get_bd_intf_pins axi_gpio_out4/GPIO]
+INFO: [board_rule 100-100] set_property CONFIG.USE_BOARD_FLOW true [get_bd_cells /axi_gpio_out4]
+INFO: [board_rule 100-100] set_property CONFIG.GPIO_BOARD_INTERFACE Custom [get_bd_cells /axi_gpio_out4]
+INFO: [board_rule 100-100] create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 gpio_rtl_5
+INFO: [board_rule 100-100] connect_bd_intf_net /gpio_rtl_5 /axi_gpio_out4/GPIO
+WARNING: [board_rule 100-100] Board automation did not generate location constraint for /axi_gpio_out4/GPIO. Users may need to specify the location constraint manually.
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config {Master "/processing_system7_0/M_AXI_GP0" intc_ip "New AXI Interconnect" Clk_xbar "Auto" Clk_master "Auto" Clk_slave "Auto" }  [get_bd_intf_pins axi_gpio_leds/S_AXI]
+</axi_gpio_leds/S_AXI/Reg> is being mapped into </processing_system7_0/Data> at <0x41270000 [ 64K ]>
+apply_bd_automation -rule xilinx.com:bd_rule:board -config {Board_Interface "leds_8bits ( LED ) " }  [get_bd_intf_pins axi_gpio_leds/GPIO]
+INFO: [board_rule 100-100] set_property CONFIG.USE_BOARD_FLOW true [get_bd_cells /axi_gpio_leds]
+INFO: [board_rule 100-100] set_property CONFIG.GPIO_BOARD_INTERFACE leds_8bits [get_bd_cells /axi_gpio_leds]
+INFO: [board_rule 100-100] create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 leds_8bits
+INFO: [board_rule 100-100] connect_bd_intf_net /leds_8bits /axi_gpio_leds/GPIO
+apply_bd_automation -rule xilinx.com:bd_rule:board -config {Board_Interface "sws_8bits ( DIP switches ) " }  [get_bd_intf_pins axi_gpio_leds/GPIO2]
+INFO: [board_rule 100-100] set_property CONFIG.GPIO2_BOARD_INTERFACE sws_8bits [get_bd_cells /axi_gpio_leds]
+INFO: [board_rule 100-100] create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 sws_8bits
+INFO: [board_rule 100-100] connect_bd_intf_net /sws_8bits /axi_gpio_leds/GPIO2
+endgroup
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+startgroup
+endgroup
+save_bd_design
+Wrote  : <G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.srcs/sources_1/bd/design_ocr/design_ocr.bd> 
+Wrote  : <G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.srcs/sources_1/bd/design_ocr/ui/bd_5f918b5d.ui> 
+set_property name gpio_expected [get_bd_intf_ports gpio_rtl_0]
+set_property name gpio_in [get_bd_intf_ports gpio_rtl]
+set_property name gpio_out1 [get_bd_intf_ports gpio_rtl_1]
+set_property name gpio_mode [get_bd_intf_ports gpio_rtl_2]
+set_property name gpio_out2 [get_bd_intf_ports gpio_rtl_3]
+set_property name gpio_out3 [get_bd_intf_ports gpio_rtl_4]
+set_property name gpio_out4 [get_bd_intf_ports gpio_rtl_5]
+save_bd_design
+Wrote  : <G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.srcs/sources_1/bd/design_ocr/design_ocr.bd> 
+Wrote  : <G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.srcs/sources_1/bd/design_ocr/ui/bd_5f918b5d.ui> 
+open_bd_design {G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.srcs/sources_1/bd/design_ocr/design_ocr.bd}
+make_wrapper -files [get_files G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.srcs/sources_1/bd/design_ocr/design_ocr.bd] -top
+Wrote  : <G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.srcs/sources_1/bd/design_ocr/design_ocr.bd> 
+VHDL Output written to : G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.srcs/sources_1/bd/design_ocr/synth/design_ocr.v
+VHDL Output written to : G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.srcs/sources_1/bd/design_ocr/sim/design_ocr.v
+VHDL Output written to : G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.srcs/sources_1/bd/design_ocr/hdl/design_ocr_wrapper.v
+make_wrapper: Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1386.270 ; gain = 73.066
+add_files -norecurse G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.srcs/sources_1/bd/design_ocr/hdl/design_ocr_wrapper.v
+update_compile_order -fileset sources_1
+open_bd_design {G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.srcs/sources_1/bd/design_ocr/design_ocr.bd}
+open_bd_design {G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.srcs/sources_1/bd/design_ocr/design_ocr.bd}
+set_property top design_ocr_wrapper [current_fileset]
+update_compile_order -fileset sources_1
+generate_target all [get_files  G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.srcs/sources_1/bd/design_ocr/design_ocr.bd]
+INFO: [BD 41-1662] The design 'design_ocr.bd' is already validated. Therefore parameter propagation will not be re-run.
+Wrote  : <G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.srcs/sources_1/bd/design_ocr/ui/bd_5f918b5d.ui> 
+VHDL Output written to : G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.srcs/sources_1/bd/design_ocr/synth/design_ocr.v
+VHDL Output written to : G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.srcs/sources_1/bd/design_ocr/sim/design_ocr.v
+VHDL Output written to : G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.srcs/sources_1/bd/design_ocr/hdl/design_ocr_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_in .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_expected .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_out1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block neural_network_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_mode .
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty-s7-25:part0:1.0 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/arty-s7-25/E.0/board.xml as part xc7s25csga324-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty-s7-25:part0:1.0 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/arty-s7-25/E.0/board.xml as part xc7s25csga324-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty-s7-25:part0:1.0 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/arty-s7-25/E.0/board.xml as part xc7s25csga324-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_out2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_out3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_out4 .
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty-s7-25:part0:1.0 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/arty-s7-25/E.0/board.xml as part xc7s25csga324-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty-s7-25:part0:1.0 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/arty-s7-25/E.0/board.xml as part xc7s25csga324-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty-s7-25:part0:1.0 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/arty-s7-25/E.0/board.xml as part xc7s25csga324-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty-s7-25:part0:1.0 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/arty-s7-25/E.0/board.xml as part xc7s25csga324-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty-s7-25:part0:1.0 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/arty-s7-25/E.0/board.xml as part xc7s25csga324-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty-s7-25:part0:1.0 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/arty-s7-25/E.0/board.xml as part xc7s25csga324-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty-s7-25:part0:1.0 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/arty-s7-25/E.0/board.xml as part xc7s25csga324-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:arty-s7-25:part0:1.0 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/arty-s7-25/E.0/board.xml as part xc7s25csga324-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part digilentinc.com:genesys2:part0:1.1 available at C:/Xilinx/Vivado/2017.4/data/boards/board_files/genesys2/H/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_leds .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_100M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'g:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.srcs/sources_1/bd/design_ocr/ip/design_ocr_auto_pc_0/design_ocr_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.srcs/sources_1/bd/design_ocr/hw_handoff/design_ocr.hwh
+Generated Block Design Tcl file G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.srcs/sources_1/bd/design_ocr/hw_handoff/design_ocr_bd.tcl
+Generated Hardware Definition File G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.srcs/sources_1/bd/design_ocr/synth/design_ocr.hwdef
+generate_target: Time (s): cpu = 00:00:44 ; elapsed = 00:00:51 . Memory (MB): peak = 1503.875 ; gain = 67.609
+catch { config_ip_cache -export [get_ips -all design_ocr_processing_system7_0_0] }
+catch { config_ip_cache -export [get_ips -all design_ocr_axi_gpio_0_0] }
+catch { config_ip_cache -export [get_ips -all design_ocr_axi_gpio_1_0] }
+catch { config_ip_cache -export [get_ips -all design_ocr_axi_gpio_2_0] }
+catch { config_ip_cache -export [get_ips -all design_ocr_neural_network_0_0] }
+catch { config_ip_cache -export [get_ips -all design_ocr_axi_gpio_0_1] }
+catch { config_ip_cache -export [get_ips -all design_ocr_clk_wiz_0_0] }
+catch { config_ip_cache -export [get_ips -all design_ocr_axi_gpio_out1_0] }
+catch { config_ip_cache -export [get_ips -all design_ocr_axi_gpio_out1_1] }
+catch { config_ip_cache -export [get_ips -all design_ocr_axi_gpio_out1_2] }
+catch { config_ip_cache -export [get_ips -all design_ocr_axi_gpio_0_2] }
+catch { config_ip_cache -export [get_ips -all design_ocr_rst_ps7_0_100M_0] }
+catch { config_ip_cache -export [get_ips -all design_ocr_xbar_0] }
+catch { config_ip_cache -export [get_ips -all design_ocr_auto_pc_0] }
+export_ip_user_files -of_objects [get_files G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.srcs/sources_1/bd/design_ocr/design_ocr.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.srcs/sources_1/bd/design_ocr/design_ocr.bd]
+create_ip_run: Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 1505.691 ; gain = 1.816
+launch_runs -jobs 4 {design_ocr_processing_system7_0_0_synth_1 design_ocr_axi_gpio_0_0_synth_1 design_ocr_axi_gpio_1_0_synth_1 design_ocr_axi_gpio_2_0_synth_1 design_ocr_neural_network_0_0_synth_1 design_ocr_axi_gpio_0_1_synth_1 design_ocr_clk_wiz_0_0_synth_1 design_ocr_axi_gpio_out1_0_synth_1 design_ocr_axi_gpio_out1_1_synth_1 design_ocr_axi_gpio_out1_2_synth_1 design_ocr_axi_gpio_0_2_synth_1 design_ocr_rst_ps7_0_100M_0_synth_1 design_ocr_xbar_0_synth_1 design_ocr_auto_pc_0_synth_1}
+[Fri Aug 21 16:17:27 2020] Launched design_ocr_processing_system7_0_0_synth_1, design_ocr_axi_gpio_0_0_synth_1, design_ocr_axi_gpio_1_0_synth_1, design_ocr_axi_gpio_2_0_synth_1, design_ocr_neural_network_0_0_synth_1, design_ocr_axi_gpio_0_1_synth_1, design_ocr_clk_wiz_0_0_synth_1, design_ocr_axi_gpio_out1_0_synth_1, design_ocr_axi_gpio_out1_1_synth_1, design_ocr_axi_gpio_out1_2_synth_1, design_ocr_axi_gpio_0_2_synth_1, design_ocr_rst_ps7_0_100M_0_synth_1, design_ocr_xbar_0_synth_1, design_ocr_auto_pc_0_synth_1...
+Run output will be captured here:
+design_ocr_processing_system7_0_0_synth_1: G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.runs/design_ocr_processing_system7_0_0_synth_1/runme.log
+design_ocr_axi_gpio_0_0_synth_1: G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.runs/design_ocr_axi_gpio_0_0_synth_1/runme.log
+design_ocr_axi_gpio_1_0_synth_1: G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.runs/design_ocr_axi_gpio_1_0_synth_1/runme.log
+design_ocr_axi_gpio_2_0_synth_1: G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.runs/design_ocr_axi_gpio_2_0_synth_1/runme.log
+design_ocr_neural_network_0_0_synth_1: G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.runs/design_ocr_neural_network_0_0_synth_1/runme.log
+design_ocr_axi_gpio_0_1_synth_1: G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.runs/design_ocr_axi_gpio_0_1_synth_1/runme.log
+design_ocr_clk_wiz_0_0_synth_1: G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.runs/design_ocr_clk_wiz_0_0_synth_1/runme.log
+design_ocr_axi_gpio_out1_0_synth_1: G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.runs/design_ocr_axi_gpio_out1_0_synth_1/runme.log
+design_ocr_axi_gpio_out1_1_synth_1: G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.runs/design_ocr_axi_gpio_out1_1_synth_1/runme.log
+design_ocr_axi_gpio_out1_2_synth_1: G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.runs/design_ocr_axi_gpio_out1_2_synth_1/runme.log
+design_ocr_axi_gpio_0_2_synth_1: G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.runs/design_ocr_axi_gpio_0_2_synth_1/runme.log
+design_ocr_rst_ps7_0_100M_0_synth_1: G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.runs/design_ocr_rst_ps7_0_100M_0_synth_1/runme.log
+design_ocr_xbar_0_synth_1: G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.runs/design_ocr_xbar_0_synth_1/runme.log
+design_ocr_auto_pc_0_synth_1: G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.runs/design_ocr_auto_pc_0_synth_1/runme.log
+launch_runs: Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1505.691 ; gain = 0.000
+export_simulation -of_objects [get_files G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.srcs/sources_1/bd/design_ocr/design_ocr.bd] -directory G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.ip_user_files/sim_scripts -ip_user_files_dir G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.ip_user_files -ipstatic_source_dir G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.ip_user_files/ipstatic -lib_map_path [list {modelsim=G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.cache/compile_simlib/modelsim} {questa=G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.cache/compile_simlib/questa} {riviera=G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.cache/compile_simlib/riviera} {activehdl=G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+file mkdir G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.sdk
+write_hwdef -force  -file G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.sdk/design_ocr_wrapper.hdf
+launch_sdk -workspace G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.sdk -hwspec G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.sdk/design_ocr_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.sdk -hwspec G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.sdk/design_ocr_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+ERROR: [Vivado 12-4452] The hardware handoff file (.sysdef) does not exist. It may not have been generated due to: 
+ 1. A bitstream might not have been generated. Generate Bitstream and export again, or do not request a bitstream to be included in export.
+ 2. There are no block design hardware handoff files. Check the vivado log messages for more details. 
+ERROR: [Vivado 12-4452] The hardware handoff file (.sysdef) does not exist. It may not have been generated due to: 
+ 1. A bitstream might not have been generated. Generate Bitstream and export again, or do not request a bitstream to be included in export.
+ 2. There are no block design hardware handoff files. Check the vivado log messages for more details. 
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.runs/synth_1
+
+reset_run design_ocr_neural_network_0_0_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Fri Aug 21 17:27:55 2020] Launched design_ocr_neural_network_0_0_synth_1, synth_1...
+Run output will be captured here:
+design_ocr_neural_network_0_0_synth_1: G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.runs/design_ocr_neural_network_0_0_synth_1/runme.log
+synth_1: G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.runs/synth_1/runme.log
+[Fri Aug 21 17:27:56 2020] Launched impl_1...
+Run output will be captured here: G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.runs/impl_1/runme.log
+set_property top network_rtl [current_fileset]
+update_compile_order -fileset sources_1
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.runs/synth_1
+
+reset_run design_ocr_neural_network_0_0_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Fri Aug 21 17:32:25 2020] Launched design_ocr_neural_network_0_0_synth_1, synth_1...
+Run output will be captured here:
+design_ocr_neural_network_0_0_synth_1: G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.runs/design_ocr_neural_network_0_0_synth_1/runme.log
+synth_1: G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.runs/synth_1/runme.log
+[Fri Aug 21 17:32:25 2020] Launched impl_1...
+Run output will be captured here: G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.runs/impl_1/runme.log
+reset_run design_ocr_neural_network_0_0_synth_1
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.runs/synth_1
+
+launch_runs synth_1 -jobs 4
+[Fri Aug 21 17:34:34 2020] Launched design_ocr_neural_network_0_0_synth_1...
+Run output will be captured here: G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.runs/design_ocr_neural_network_0_0_synth_1/runme.log
+[Fri Aug 21 17:34:34 2020] Launched synth_1...
+Run output will be captured here: G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.runs/synth_1/runme.log
+reset_run design_ocr_neural_network_0_0_synth_1
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.runs/synth_1
+
+launch_runs synth_1 -jobs 4
+[Fri Aug 21 17:44:58 2020] Launched design_ocr_neural_network_0_0_synth_1...
+Run output will be captured here: G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.runs/design_ocr_neural_network_0_0_synth_1/runme.log
+[Fri Aug 21 17:44:58 2020] Launched synth_1...
+Run output will be captured here: G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.runs/synth_1/runme.log
+The simulator has terminated in an unexpected manner with exit code 1073807364.  Please review the simulation log (xsim.log) for details.
