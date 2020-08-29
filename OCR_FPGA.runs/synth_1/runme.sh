@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log network_rtl.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source network_rtl.tcl
+EAStep vivado -log design_ocr_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_ocr_wrapper.tcl

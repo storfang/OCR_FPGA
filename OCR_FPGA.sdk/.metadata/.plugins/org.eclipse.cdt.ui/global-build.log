@@ -213,3 +213,1113 @@ arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=non
 c:/xilinx/sdk/2017.4/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/6.2.1/../../../../arm-none-eabi/bin/ld.exe: cannot open output file ocr_c.elf: Invalid argument
 collect2.exe: error: ld returned 1 exit status
 make: *** [ocr_c.elf] B³¹d 1
+15:54:26 **** Auto Build of project ocr_c_bsp ****
+make -k all 
+"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_5/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/emacps_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/gpio_v4_3/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/neural_network_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/neural_network_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_4/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scugic_v3_8/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_8/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/sdps_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v3_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/standalone_v6_5/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v6_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/ttcps_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling coresightps_dcc"
+arm-none-eabi-ar: creating ../../../lib/libxil.a
+"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_5/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling cpu_cortexa9"
+"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling ddrps"
+"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling devcfg"
+"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling dmaps"
+"Running Make libs in ps7_cortexa9_0/libsrc/emacps_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling emacps"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpio_v4_3/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling gpio"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling gpiops"
+"Running Make libs in ps7_cortexa9_0/libsrc/neural_network_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/neural_network_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling neural_network..."
+neural_network_selftest.c: In function 'NEURAL_NETWORK_Reg_SelfTest':
+neural_network_selftest.c:52:63: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    if ( NEURAL_NETWORK_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
+                                                               ^~
+neural_network_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_4/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling qspips"
+"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_8/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_8/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling scugic"
+"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling scutimer"
+"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling scuwdt"
+"Running Make libs in ps7_cortexa9_0/libsrc/sdps_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v3_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling sdps"
+"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v6_5/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v6_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling standalone"
+"Running Make libs in ps7_cortexa9_0/libsrc/ttcps_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling ttcps"
+"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling uartps"
+"Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling usbps"
+"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling xadcps"
+'Finished building libraries'
+15:55:50 **** Auto Build of configuration Debug for project ocr_c ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/testperiph.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../ocr_c_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
+../src/testperiph.c: In function 'main':
+../src/testperiph.c:99:34: error: 'XPAR_AXI_GPIO_IN_DEVICE_ID' undeclared (first use in this function)
+       status = GpioOutputExample(XPAR_AXI_GPIO_IN_DEVICE_ID,16);
+                                  ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/testperiph.c:99:34: note: each undeclared identifier is reported only once for each function it appears in
+../src/testperiph.c:116:34: error: 'XPAR_AXI_GPIO_LEDS_DEVICE_ID' undeclared (first use in this function)
+       status = GpioOutputExample(XPAR_AXI_GPIO_LEDS_DEVICE_ID,8);
+                                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/testperiph.c:133:34: error: 'XPAR_AXI_GPIO_MODE_DEVICE_ID' undeclared (first use in this function)
+       status = GpioOutputExample(XPAR_AXI_GPIO_MODE_DEVICE_ID,1);
+                                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/testperiph.c:150:34: error: 'XPAR_AXI_GPIO_OUT1_DEVICE_ID' undeclared (first use in this function)
+       status = GpioOutputExample(XPAR_AXI_GPIO_OUT1_DEVICE_ID,18);
+                                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/testperiph.c:167:34: error: 'XPAR_AXI_GPIO_OUT2_DEVICE_ID' undeclared (first use in this function)
+       status = GpioOutputExample(XPAR_AXI_GPIO_OUT2_DEVICE_ID,18);
+                                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/testperiph.c:184:34: error: 'XPAR_AXI_GPIO_OUT3_DEVICE_ID' undeclared (first use in this function)
+       status = GpioOutputExample(XPAR_AXI_GPIO_OUT3_DEVICE_ID,18);
+                                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/testperiph.c:201:34: error: 'XPAR_AXI_GPIO_OUT4_DEVICE_ID' undeclared (first use in this function)
+       status = GpioOutputExample(XPAR_AXI_GPIO_OUT4_DEVICE_ID,18);
+                                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/testperiph.c:288:34: error: 'XPAR_AXI_GPIO_EXPECTED_DEVICE_ID' undeclared (first use in this function)
+       status = GpioOutputExample(XPAR_AXI_GPIO_EXPECTED_DEVICE_ID,4);
+                                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [src/testperiph.o] B³¹d 1
+16:02:02 **** Build of project neural_test_bsp ****
+make -k all 
+"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_5/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/emacps_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/gpio_v4_3/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/neural_network_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/neural_network_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_4/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scugic_v3_8/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_8/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/sdps_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v3_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/standalone_v6_5/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v6_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/ttcps_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling coresightps_dcc"
+arm-none-eabi-ar: creating ../../../lib/libxil.a
+"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_5/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling cpu_cortexa9"
+"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling ddrps"
+"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling devcfg"
+"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling dmaps"
+"Running Make libs in ps7_cortexa9_0/libsrc/emacps_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling emacps"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpio_v4_3/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling gpio"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling gpiops"
+"Running Make libs in ps7_cortexa9_0/libsrc/neural_network_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/neural_network_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling neural_network..."
+neural_network_selftest.c: In function 'NEURAL_NETWORK_Reg_SelfTest':
+neural_network_selftest.c:52:63: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    if ( NEURAL_NETWORK_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
+                                                               ^~
+neural_network_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_4/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling qspips"
+"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_8/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_8/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling scugic"
+"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling scutimer"
+"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling scuwdt"
+"Running Make libs in ps7_cortexa9_0/libsrc/sdps_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v3_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling sdps"
+"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v6_5/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v6_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling standalone"
+"Running Make libs in ps7_cortexa9_0/libsrc/ttcps_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling ttcps"
+"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling uartps"
+"Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling usbps"
+"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling xadcps"
+'Finished building libraries'
+16:02:58 **** Auto Build of project neural_test_bsp ****
+make -k all 
+"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_5/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/emacps_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/gpio_v4_3/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/neural_network_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/neural_network_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_4/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scugic_v3_8/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_8/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/sdps_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v3_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/standalone_v6_5/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v6_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/ttcps_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling coresightps_dcc"
+"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_5/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling cpu_cortexa9"
+"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling ddrps"
+"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling devcfg"
+"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling dmaps"
+"Running Make libs in ps7_cortexa9_0/libsrc/emacps_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling emacps"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpio_v4_3/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling gpio"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling gpiops"
+"Running Make libs in ps7_cortexa9_0/libsrc/neural_network_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/neural_network_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling neural_network..."
+neural_network_selftest.c: In function 'NEURAL_NETWORK_Reg_SelfTest':
+neural_network_selftest.c:52:63: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    if ( NEURAL_NETWORK_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
+                                                               ^~
+neural_network_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_4/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling qspips"
+"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_8/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_8/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling scugic"
+"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling scutimer"
+"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling scuwdt"
+"Running Make libs in ps7_cortexa9_0/libsrc/sdps_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v3_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling sdps"
+"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v6_5/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v6_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling standalone"
+"Running Make libs in ps7_cortexa9_0/libsrc/ttcps_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling ttcps"
+"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling uartps"
+"Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling usbps"
+"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling xadcps"
+'Finished building libraries'
+16:03:56 **** Build of configuration Debug for project neural_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: neural_test.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../neural_test_bsp/ps7_cortexa9_0/lib -o "neural_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: neural_test.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size neural_test.elf  |tee "neural_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19384	   1148	  22568	  43100	   a85c	neural_test.elf
+'Finished building: neural_test.elf.size'
+' '
+16:04:03 **** Auto Build of configuration Debug for project neural_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nie ma nic do zrobienia w `main-build'.
+16:05:50 **** Incremental Build of configuration Debug for project neural_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nie ma nic do zrobienia w `main-build'.
+16:06:28 **** Incremental Build of configuration Debug for project neural_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nie ma nic do zrobienia w `main-build'.
+16:07:23 **** Incremental Build of configuration Debug for project neural_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nie ma nic do zrobienia w `main-build'.
+16:08:01 **** Incremental Build of configuration Debug for project neural_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nie ma nic do zrobienia w `main-build'.
+16:22:42 **** Auto Build of configuration Debug for project neural_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../calculateCordicVal.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"calculateCordicVal.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"calculateCordicVal.d" -MT"calculateCordicVal.o" -o "calculateCordicVal.o" "../calculateCordicVal.c"
+../calculateCordicVal.c:4:23: fatal error: cordic_ip.h: No such file or directory
+ #include "cordic_ip.h"
+                       ^
+compilation terminated.
+make: *** [calculateCordicVal.o] B³¹d 1
+16:28:50 **** Auto Build of configuration Debug for project neural_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../calculateCordicVal.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"calculateCordicVal.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"calculateCordicVal.d" -MT"calculateCordicVal.o" -o "calculateCordicVal.o" "../calculateCordicVal.c"
+../calculateCordicVal.c: In function 'calculateCordicVal':
+../calculateCordicVal.c:45:2: warning: implicit declaration of function 'CORDIC_IP_mWriteReg' [-Wimplicit-function-declaration]
+  CORDIC_IP_mWriteReg(CORDIC_BASE_ADDR, ANGLE_REG_OFFSET, data);
+  ^~~~~~~~~~~~~~~~~~~
+../calculateCordicVal.c:9:31: error: 'XPAR_CORDIC_IP_0_S00_AXI_BASEADDR' undeclared (first use in this function)
+ #define CORDIC_BASE_ADDR      XPAR_CORDIC_IP_0_S00_AXI_BASEADDR
+                               ^
+../calculateCordicVal.c:9:31: note: in definition of macro 'CORDIC_BASE_ADDR'
+ #define CORDIC_BASE_ADDR      XPAR_CORDIC_IP_0_S00_AXI_BASEADDR
+                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../calculateCordicVal.c:9:31: note: each undeclared identifier is reported only once for each function it appears in
+ #define CORDIC_BASE_ADDR      XPAR_CORDIC_IP_0_S00_AXI_BASEADDR
+                               ^
+../calculateCordicVal.c:9:31: note: in definition of macro 'CORDIC_BASE_ADDR'
+ #define CORDIC_BASE_ADDR      XPAR_CORDIC_IP_0_S00_AXI_BASEADDR
+                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../calculateCordicVal.c:12:31: error: 'CORDIC_IP_S00_AXI_SLV_REG1_OFFSET' undeclared (first use in this function)
+ #define ANGLE_REG_OFFSET      CORDIC_IP_S00_AXI_SLV_REG1_OFFSET
+                               ^
+../calculateCordicVal.c:12:31: note: in definition of macro 'ANGLE_REG_OFFSET'
+ #define ANGLE_REG_OFFSET      CORDIC_IP_S00_AXI_SLV_REG1_OFFSET
+                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../calculateCordicVal.c:11:31: error: 'CORDIC_IP_S00_AXI_SLV_REG0_OFFSET' undeclared (first use in this function)
+ #define CONTROL_REG_OFFSET    CORDIC_IP_S00_AXI_SLV_REG0_OFFSET
+                               ^
+../calculateCordicVal.c:11:31: note: in definition of macro 'CONTROL_REG_OFFSET'
+ #define CONTROL_REG_OFFSET    CORDIC_IP_S00_AXI_SLV_REG0_OFFSET
+                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../calculateCordicVal.c:50:10: warning: implicit declaration of function 'CORDIC_IP_mReadReg' [-Wimplicit-function-declaration]
+  while( (CORDIC_IP_mReadReg(CORDIC_BASE_ADDR, STATUS_REG_OFFSET) & STATUS_REG_READY_MASK) == 0);
+          ^~~~~~~~~~~~~~~~~~
+../calculateCordicVal.c:13:31: error: 'CORDIC_IP_S00_AXI_SLV_REG2_OFFSET' undeclared (first use in this function)
+ #define STATUS_REG_OFFSET     CORDIC_IP_S00_AXI_SLV_REG2_OFFSET
+                               ^
+../calculateCordicVal.c:13:31: note: in definition of macro 'STATUS_REG_OFFSET'
+ #define STATUS_REG_OFFSET     CORDIC_IP_S00_AXI_SLV_REG2_OFFSET
+                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../calculateCordicVal.c:14:30: error: 'CORDIC_IP_S00_AXI_SLV_REG3_OFFSET' undeclared (first use in this function)
+ #define RESULT_REG_OFFSET    CORDIC_IP_S00_AXI_SLV_REG3_OFFSET
+                              ^
+../calculateCordicVal.c:14:30: note: in definition of macro 'RESULT_REG_OFFSET'
+ #define RESULT_REG_OFFSET    CORDIC_IP_S00_AXI_SLV_REG3_OFFSET
+                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [calculateCordicVal.o] B³¹d 1
+20:41:58 **** Auto Build of project neural_test_bsp ****
+make -k all 
+"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_5/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/emacps_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/gpio_v4_3/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/neural_network_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/neural_network_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_4/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scugic_v3_8/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_8/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/sdps_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v3_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/standalone_v6_5/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v6_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/ttcps_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling coresightps_dcc"
+arm-none-eabi-ar: creating ../../../lib/libxil.a
+"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_5/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling cpu_cortexa9"
+"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling ddrps"
+"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling devcfg"
+"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling dmaps"
+"Running Make libs in ps7_cortexa9_0/libsrc/emacps_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling emacps"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpio_v4_3/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling gpio"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling gpiops"
+"Running Make libs in ps7_cortexa9_0/libsrc/neural_network_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/neural_network_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling neural_network..."
+neural_network_selftest.c: In function 'NEURAL_NETWORK_Reg_SelfTest':
+neural_network_selftest.c:52:63: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    if ( NEURAL_NETWORK_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
+                                                               ^~
+neural_network_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_4/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling qspips"
+"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_8/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_8/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling scugic"
+"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling scutimer"
+"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling scuwdt"
+"Running Make libs in ps7_cortexa9_0/libsrc/sdps_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v3_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling sdps"
+"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v6_5/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v6_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling standalone"
+"Running Make libs in ps7_cortexa9_0/libsrc/ttcps_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling ttcps"
+"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling uartps"
+"Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling usbps"
+"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling xadcps"
+'Finished building libraries'
+20:43:12 **** Auto Build of configuration Debug for project neural_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building file: ../calculateCordicVal.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"calculateCordicVal.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"calculateCordicVal.d" -MT"calculateCordicVal.o" -o "calculateCordicVal.o" "../calculateCordicVal.c"
+../calculateCordicVal.c: In function 'calculateCordicVal':
+../calculateCordicVal.c:45:2: warning: implicit declaration of function 'CORDIC_IP_mWriteReg' [-Wimplicit-function-declaration]
+  CORDIC_IP_mWriteReg(CORDIC_BASE_ADDR, ANGLE_REG_OFFSET, data);
+  ^~~~~~~~~~~~~~~~~~~
+../calculateCordicVal.c:9:31: error: 'XPAR_CORDIC_IP_0_S00_AXI_BASEADDR' undeclared (first use in this function)
+ #define CORDIC_BASE_ADDR      XPAR_CORDIC_IP_0_S00_AXI_BASEADDR
+                               ^
+../calculateCordicVal.c:9:31: note: in definition of macro 'CORDIC_BASE_ADDR'
+ #define CORDIC_BASE_ADDR      XPAR_CORDIC_IP_0_S00_AXI_BASEADDR
+                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../calculateCordicVal.c:9:31: note: each undeclared identifier is reported only once for each function it appears in
+ #define CORDIC_BASE_ADDR      XPAR_CORDIC_IP_0_S00_AXI_BASEADDR
+                               ^
+../calculateCordicVal.c:9:31: note: in definition of macro 'CORDIC_BASE_ADDR'
+ #define CORDIC_BASE_ADDR      XPAR_CORDIC_IP_0_S00_AXI_BASEADDR
+                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../calculateCordicVal.c:12:31: error: 'CORDIC_IP_S00_AXI_SLV_REG1_OFFSET' undeclared (first use in this function)
+ #define ANGLE_REG_OFFSET      CORDIC_IP_S00_AXI_SLV_REG1_OFFSET
+                               ^
+../calculateCordicVal.c:12:31: note: in definition of macro 'ANGLE_REG_OFFSET'
+ #define ANGLE_REG_OFFSET      CORDIC_IP_S00_AXI_SLV_REG1_OFFSET
+                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../calculateCordicVal.c:11:31: error: 'CORDIC_IP_S00_AXI_SLV_REG0_OFFSET' undeclared (first use in this function)
+ #define CONTROL_REG_OFFSET    CORDIC_IP_S00_AXI_SLV_REG0_OFFSET
+                               ^
+../calculateCordicVal.c:11:31: note: in definition of macro 'CONTROL_REG_OFFSET'
+ #define CONTROL_REG_OFFSET    CORDIC_IP_S00_AXI_SLV_REG0_OFFSET
+                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../calculateCordicVal.c:50:10: warning: implicit declaration of function 'CORDIC_IP_mReadReg' [-Wimplicit-function-declaration]
+  while( (CORDIC_IP_mReadReg(CORDIC_BASE_ADDR, STATUS_REG_OFFSET) & STATUS_REG_READY_MASK) == 0);
+          ^~~~~~~~~~~~~~~~~~
+../calculateCordicVal.c:13:31: error: 'CORDIC_IP_S00_AXI_SLV_REG2_OFFSET' undeclared (first use in this function)
+ #define STATUS_REG_OFFSET     CORDIC_IP_S00_AXI_SLV_REG2_OFFSET
+                               ^
+../calculateCordicVal.c:13:31: note: in definition of macro 'STATUS_REG_OFFSET'
+ #define STATUS_REG_OFFSET     CORDIC_IP_S00_AXI_SLV_REG2_OFFSET
+                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../calculateCordicVal.c:14:30: error: 'CORDIC_IP_S00_AXI_SLV_REG3_OFFSET' undeclared (first use in this function)
+ #define RESULT_REG_OFFSET    CORDIC_IP_S00_AXI_SLV_REG3_OFFSET
+                              ^
+../calculateCordicVal.c:14:30: note: in definition of macro 'RESULT_REG_OFFSET'
+ #define RESULT_REG_OFFSET    CORDIC_IP_S00_AXI_SLV_REG3_OFFSET
+                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [calculateCordicVal.o] B³¹d 1
+20:43:53 **** Auto Build of configuration Debug for project neural_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../calculateCordicVal.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"calculateCordicVal.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"calculateCordicVal.d" -MT"calculateCordicVal.o" -o "calculateCordicVal.o" "../calculateCordicVal.c"
+../calculateCordicVal.c: In function 'calculateCordicVal':
+../calculateCordicVal.c:45:2: warning: implicit declaration of function 'CORDIC_IP_mWriteReg' [-Wimplicit-function-declaration]
+  CORDIC_IP_mWriteReg(CORDIC_BASE_ADDR, ANGLE_REG_OFFSET, data);
+  ^~~~~~~~~~~~~~~~~~~
+../calculateCordicVal.c:12:31: error: 'CORDIC_IP_S00_AXI_SLV_REG1_OFFSET' undeclared (first use in this function)
+ #define ANGLE_REG_OFFSET      CORDIC_IP_S00_AXI_SLV_REG1_OFFSET
+                               ^
+../calculateCordicVal.c:12:31: note: in definition of macro 'ANGLE_REG_OFFSET'
+ #define ANGLE_REG_OFFSET      CORDIC_IP_S00_AXI_SLV_REG1_OFFSET
+                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../calculateCordicVal.c:12:31: note: each undeclared identifier is reported only once for each function it appears in
+ #define ANGLE_REG_OFFSET      CORDIC_IP_S00_AXI_SLV_REG1_OFFSET
+                               ^
+../calculateCordicVal.c:12:31: note: in definition of macro 'ANGLE_REG_OFFSET'
+ #define ANGLE_REG_OFFSET      CORDIC_IP_S00_AXI_SLV_REG1_OFFSET
+                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../calculateCordicVal.c:11:31: error: 'CORDIC_IP_S00_AXI_SLV_REG0_OFFSET' undeclared (first use in this function)
+ #define CONTROL_REG_OFFSET    CORDIC_IP_S00_AXI_SLV_REG0_OFFSET
+                               ^
+../calculateCordicVal.c:11:31: note: in definition of macro 'CONTROL_REG_OFFSET'
+ #define CONTROL_REG_OFFSET    CORDIC_IP_S00_AXI_SLV_REG0_OFFSET
+                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../calculateCordicVal.c:50:10: warning: implicit declaration of function 'CORDIC_IP_mReadReg' [-Wimplicit-function-declaration]
+  while( (CORDIC_IP_mReadReg(CORDIC_BASE_ADDR, STATUS_REG_OFFSET) & STATUS_REG_READY_MASK) == 0);
+          ^~~~~~~~~~~~~~~~~~
+../calculateCordicVal.c:13:31: error: 'CORDIC_IP_S00_AXI_SLV_REG2_OFFSET' undeclared (first use in this function)
+ #define STATUS_REG_OFFSET     CORDIC_IP_S00_AXI_SLV_REG2_OFFSET
+                               ^
+../calculateCordicVal.c:13:31: note: in definition of macro 'STATUS_REG_OFFSET'
+ #define STATUS_REG_OFFSET     CORDIC_IP_S00_AXI_SLV_REG2_OFFSET
+                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../calculateCordicVal.c:14:30: error: 'CORDIC_IP_S00_AXI_SLV_REG3_OFFSET' undeclared (first use in this function)
+ #define RESULT_REG_OFFSET    CORDIC_IP_S00_AXI_SLV_REG3_OFFSET
+                              ^
+../calculateCordicVal.c:14:30: note: in definition of macro 'RESULT_REG_OFFSET'
+ #define RESULT_REG_OFFSET    CORDIC_IP_S00_AXI_SLV_REG3_OFFSET
+                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [calculateCordicVal.o] B³¹d 1
+20:48:15 **** Auto Build of configuration Debug for project neural_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../calculateCordicVal.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"calculateCordicVal.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"calculateCordicVal.d" -MT"calculateCordicVal.o" -o "calculateCordicVal.o" "../calculateCordicVal.c"
+../calculateCordicVal.c: In function 'calculateCordicVal':
+../calculateCordicVal.c:45:2: warning: implicit declaration of function 'CORDIC_IP_mWriteReg' [-Wimplicit-function-declaration]
+  CORDIC_IP_mWriteReg(CORDIC_BASE_ADDR, ANGLE_REG_OFFSET, data);
+  ^~~~~~~~~~~~~~~~~~~
+../calculateCordicVal.c:45:22: error: 'CORDIC_BASE_ADDR' undeclared (first use in this function)
+  CORDIC_IP_mWriteReg(CORDIC_BASE_ADDR, ANGLE_REG_OFFSET, data);
+                      ^~~~~~~~~~~~~~~~
+../calculateCordicVal.c:45:22: note: each undeclared identifier is reported only once for each function it appears in
+../calculateCordicVal.c:12:31: error: 'CORDIC_IP_S00_AXI_SLV_REG1_OFFSET' undeclared (first use in this function)
+ #define ANGLE_REG_OFFSET      CORDIC_IP_S00_AXI_SLV_REG1_OFFSET
+                               ^
+../calculateCordicVal.c:12:31: note: in definition of macro 'ANGLE_REG_OFFSET'
+ #define ANGLE_REG_OFFSET      CORDIC_IP_S00_AXI_SLV_REG1_OFFSET
+                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../calculateCordicVal.c:50:10: warning: implicit declaration of function 'CORDIC_IP_mReadReg' [-Wimplicit-function-declaration]
+  while( (CORDIC_IP_mReadReg(CORDIC_BASE_ADDR, STATUS_REG_OFFSET) & STATUS_REG_READY_MASK) == 0);
+          ^~~~~~~~~~~~~~~~~~
+../calculateCordicVal.c:13:31: error: 'CORDIC_IP_S00_AXI_SLV_REG2_OFFSET' undeclared (first use in this function)
+ #define STATUS_REG_OFFSET     CORDIC_IP_S00_AXI_SLV_REG2_OFFSET
+                               ^
+../calculateCordicVal.c:13:31: note: in definition of macro 'STATUS_REG_OFFSET'
+ #define STATUS_REG_OFFSET     CORDIC_IP_S00_AXI_SLV_REG2_OFFSET
+                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../calculateCordicVal.c:14:30: error: 'CORDIC_IP_S00_AXI_SLV_REG3_OFFSET' undeclared (first use in this function)
+ #define RESULT_REG_OFFSET    CORDIC_IP_S00_AXI_SLV_REG3_OFFSET
+                              ^
+../calculateCordicVal.c:14:30: note: in definition of macro 'RESULT_REG_OFFSET'
+ #define RESULT_REG_OFFSET    CORDIC_IP_S00_AXI_SLV_REG3_OFFSET
+                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [calculateCordicVal.o] B³¹d 1
+20:56:15 **** Auto Build of configuration Debug for project neural_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../calculateCordicVal.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"calculateCordicVal.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"calculateCordicVal.d" -MT"calculateCordicVal.o" -o "calculateCordicVal.o" "../calculateCordicVal.c"
+../calculateCordicVal.c:12:13: warning: ISO C99 requires whitespace after the macro name
+ #define MODE/START_REG_OFFSET      NEURAL_NETWORK_S00_AXI_SLV_REG1_OFFSET
+             ^
+../calculateCordicVal.c: In function 'calculateCordicVal':
+../calculateCordicVal.c:48:2: warning: implicit declaration of function 'CORDIC_IP_mWriteReg' [-Wimplicit-function-declaration]
+  CORDIC_IP_mWriteReg(CORDIC_BASE_ADDR, ANGLE_REG_OFFSET, data);
+  ^~~~~~~~~~~~~~~~~~~
+../calculateCordicVal.c:48:22: error: 'CORDIC_BASE_ADDR' undeclared (first use in this function)
+  CORDIC_IP_mWriteReg(CORDIC_BASE_ADDR, ANGLE_REG_OFFSET, data);
+                      ^~~~~~~~~~~~~~~~
+../calculateCordicVal.c:48:22: note: each undeclared identifier is reported only once for each function it appears in
+../calculateCordicVal.c:48:40: error: 'ANGLE_REG_OFFSET' undeclared (first use in this function)
+  CORDIC_IP_mWriteReg(CORDIC_BASE_ADDR, ANGLE_REG_OFFSET, data);
+                                        ^~~~~~~~~~~~~~~~
+../calculateCordicVal.c:50:40: error: 'CONTROL_REG_OFFSET' undeclared (first use in this function)
+  CORDIC_IP_mWriteReg(CORDIC_BASE_ADDR, CONTROL_REG_OFFSET, CONTROL_REG_START_MASK);
+                                        ^~~~~~~~~~~~~~~~~~
+../calculateCordicVal.c:53:10: warning: implicit declaration of function 'CORDIC_IP_mReadReg' [-Wimplicit-function-declaration]
+  while( (CORDIC_IP_mReadReg(CORDIC_BASE_ADDR, STATUS_REG_OFFSET) & STATUS_REG_READY_MASK) == 0);
+          ^~~~~~~~~~~~~~~~~~
+../calculateCordicVal.c:53:47: error: 'STATUS_REG_OFFSET' undeclared (first use in this function)
+  while( (CORDIC_IP_mReadReg(CORDIC_BASE_ADDR, STATUS_REG_OFFSET) & STATUS_REG_READY_MASK) == 0);
+                                               ^~~~~~~~~~~~~~~~~
+../calculateCordicVal.c:55:48: error: 'RESULT_REG_OFFSET' undeclared (first use in this function)
+  result = CORDIC_IP_mReadReg(CORDIC_BASE_ADDR, RESULT_REG_OFFSET);
+                                                ^~~~~~~~~~~~~~~~~
+make: *** [calculateCordicVal.o] B³¹d 1
+20:56:36 **** Auto Build of configuration Debug for project neural_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../calculateCordicVal.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"calculateCordicVal.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"calculateCordicVal.d" -MT"calculateCordicVal.o" -o "calculateCordicVal.o" "../calculateCordicVal.c"
+../calculateCordicVal.c: In function 'calculateCordicVal':
+../calculateCordicVal.c:48:2: warning: implicit declaration of function 'CORDIC_IP_mWriteReg' [-Wimplicit-function-declaration]
+  CORDIC_IP_mWriteReg(CORDIC_BASE_ADDR, ANGLE_REG_OFFSET, data);
+  ^~~~~~~~~~~~~~~~~~~
+../calculateCordicVal.c:48:22: error: 'CORDIC_BASE_ADDR' undeclared (first use in this function)
+  CORDIC_IP_mWriteReg(CORDIC_BASE_ADDR, ANGLE_REG_OFFSET, data);
+                      ^~~~~~~~~~~~~~~~
+../calculateCordicVal.c:48:22: note: each undeclared identifier is reported only once for each function it appears in
+../calculateCordicVal.c:48:40: error: 'ANGLE_REG_OFFSET' undeclared (first use in this function)
+  CORDIC_IP_mWriteReg(CORDIC_BASE_ADDR, ANGLE_REG_OFFSET, data);
+                                        ^~~~~~~~~~~~~~~~
+../calculateCordicVal.c:50:40: error: 'CONTROL_REG_OFFSET' undeclared (first use in this function)
+  CORDIC_IP_mWriteReg(CORDIC_BASE_ADDR, CONTROL_REG_OFFSET, CONTROL_REG_START_MASK);
+                                        ^~~~~~~~~~~~~~~~~~
+../calculateCordicVal.c:53:10: warning: implicit declaration of function 'CORDIC_IP_mReadReg' [-Wimplicit-function-declaration]
+  while( (CORDIC_IP_mReadReg(CORDIC_BASE_ADDR, STATUS_REG_OFFSET) & STATUS_REG_READY_MASK) == 0);
+          ^~~~~~~~~~~~~~~~~~
+../calculateCordicVal.c:53:47: error: 'STATUS_REG_OFFSET' undeclared (first use in this function)
+  while( (CORDIC_IP_mReadReg(CORDIC_BASE_ADDR, STATUS_REG_OFFSET) & STATUS_REG_READY_MASK) == 0);
+                                               ^~~~~~~~~~~~~~~~~
+../calculateCordicVal.c:55:48: error: 'RESULT_REG_OFFSET' undeclared (first use in this function)
+  result = CORDIC_IP_mReadReg(CORDIC_BASE_ADDR, RESULT_REG_OFFSET);
+                                                ^~~~~~~~~~~~~~~~~
+make: *** [calculateCordicVal.o] B³¹d 1
+20:56:47 **** Auto Build of configuration Debug for project neural_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../calculateCordicVal.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"calculateCordicVal.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"calculateCordicVal.d" -MT"calculateCordicVal.o" -o "calculateCordicVal.o" "../calculateCordicVal.c"
+../calculateCordicVal.c: In function 'calculateCordicVal':
+../calculateCordicVal.c:48:2: warning: implicit declaration of function 'CORDIC_IP_mWriteReg' [-Wimplicit-function-declaration]
+  CORDIC_IP_mWriteReg(CORDIC_BASE_ADDR, ANGLE_REG_OFFSET, data);
+  ^~~~~~~~~~~~~~~~~~~
+../calculateCordicVal.c:48:22: error: 'CORDIC_BASE_ADDR' undeclared (first use in this function)
+  CORDIC_IP_mWriteReg(CORDIC_BASE_ADDR, ANGLE_REG_OFFSET, data);
+                      ^~~~~~~~~~~~~~~~
+../calculateCordicVal.c:48:22: note: each undeclared identifier is reported only once for each function it appears in
+../calculateCordicVal.c:48:40: error: 'ANGLE_REG_OFFSET' undeclared (first use in this function)
+  CORDIC_IP_mWriteReg(CORDIC_BASE_ADDR, ANGLE_REG_OFFSET, data);
+                                        ^~~~~~~~~~~~~~~~
+../calculateCordicVal.c:50:40: error: 'CONTROL_REG_OFFSET' undeclared (first use in this function)
+  CORDIC_IP_mWriteReg(CORDIC_BASE_ADDR, CONTROL_REG_OFFSET, CONTROL_REG_START_MASK);
+                                        ^~~~~~~~~~~~~~~~~~
+../calculateCordicVal.c:53:10: warning: implicit declaration of function 'CORDIC_IP_mReadReg' [-Wimplicit-function-declaration]
+  while( (CORDIC_IP_mReadReg(CORDIC_BASE_ADDR, STATUS_REG_OFFSET) & STATUS_REG_READY_MASK) == 0);
+          ^~~~~~~~~~~~~~~~~~
+../calculateCordicVal.c:53:47: error: 'STATUS_REG_OFFSET' undeclared (first use in this function)
+  while( (CORDIC_IP_mReadReg(CORDIC_BASE_ADDR, STATUS_REG_OFFSET) & STATUS_REG_READY_MASK) == 0);
+                                               ^~~~~~~~~~~~~~~~~
+../calculateCordicVal.c:55:48: error: 'RESULT_REG_OFFSET' undeclared (first use in this function)
+  result = CORDIC_IP_mReadReg(CORDIC_BASE_ADDR, RESULT_REG_OFFSET);
+                                                ^~~~~~~~~~~~~~~~~
+make: *** [calculateCordicVal.o] B³¹d 1
+21:10:27 **** Auto Build of configuration Debug for project neural_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../calculateCordicVal.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"calculateCordicVal.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"calculateCordicVal.d" -MT"calculateCordicVal.o" -o "calculateCordicVal.o" "../calculateCordicVal.c"
+../calculateCordicVal.c: In function 'calculateCordicVal':
+../calculateCordicVal.c:48:2: warning: implicit declaration of function 'CORDIC_IP_mWriteReg' [-Wimplicit-function-declaration]
+  CORDIC_IP_mWriteReg(NEURO_BASE_ADDR, INPUT_REG_OFFSET, data);
+  ^~~~~~~~~~~~~~~~~~~
+../calculateCordicVal.c:50:39: error: 'CONTROL_REG_OFFSET' undeclared (first use in this function)
+  CORDIC_IP_mWriteReg(NEURO_BASE_ADDR, CONTROL_REG_OFFSET, CONTROL_REG_START_MASK);
+                                       ^~~~~~~~~~~~~~~~~~
+../calculateCordicVal.c:50:39: note: each undeclared identifier is reported only once for each function it appears in
+../calculateCordicVal.c:53:10: warning: implicit declaration of function 'CORDIC_IP_mReadReg' [-Wimplicit-function-declaration]
+  while( (CORDIC_IP_mReadReg(NEURO_BASE_ADDR, STATUS_REG_OFFSET) & STATUS_REG_READY_MASK) == 0);
+          ^~~~~~~~~~~~~~~~~~
+../calculateCordicVal.c:53:46: error: 'STATUS_REG_OFFSET' undeclared (first use in this function)
+  while( (CORDIC_IP_mReadReg(NEURO_BASE_ADDR, STATUS_REG_OFFSET) & STATUS_REG_READY_MASK) == 0);
+                                              ^~~~~~~~~~~~~~~~~
+../calculateCordicVal.c:55:47: error: 'RESULT_REG_OFFSET' undeclared (first use in this function)
+  result = CORDIC_IP_mReadReg(NEURO_BASE_ADDR, RESULT_REG_OFFSET);
+                                               ^~~~~~~~~~~~~~~~~
+make: *** [calculateCordicVal.o] B³¹d 1
+21:13:35 **** Auto Build of configuration Debug for project neural_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../calculateCordicVal.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"calculateCordicVal.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"calculateCordicVal.d" -MT"calculateCordicVal.o" -o "calculateCordicVal.o" "../calculateCordicVal.c"
+In file included from ../calculateCordicVal.c:4:0:
+../calculateCordicVal.c: In function 'calculateCordicVal':
+../calculateCordicVal.c:50:43: error: 'CONTROL_REG_OFFSET' undeclared (first use in this function)
+ NEURAL_NETWORK_mWriteReg(NEURO_BASE_ADDR, CONTROL_REG_OFFSET, CONTROL_REG_START_MASK);
+                                           ^
+../../neural_test_bsp/ps7_cortexa9_0/include/neural_network.h:38:31: note: in definition of macro 'NEURAL_NETWORK_mWriteReg'
+    Xil_Out32((BaseAddress) + (RegOffset), (u32)(Data))
+                               ^~~~~~~~~
+../calculateCordicVal.c:50:43: note: each undeclared identifier is reported only once for each function it appears in
+ NEURAL_NETWORK_mWriteReg(NEURO_BASE_ADDR, CONTROL_REG_OFFSET, CONTROL_REG_START_MASK);
+                                           ^
+../../neural_test_bsp/ps7_cortexa9_0/include/neural_network.h:38:31: note: in definition of macro 'NEURAL_NETWORK_mWriteReg'
+    Xil_Out32((BaseAddress) + (RegOffset), (u32)(Data))
+                               ^~~~~~~~~
+../calculateCordicVal.c:53:10: warning: implicit declaration of function 'CORDIC_IP_mReadReg' [-Wimplicit-function-declaration]
+  while( (CORDIC_IP_mReadReg(NEURO_BASE_ADDR, STATUS_REG_OFFSET) & STATUS_REG_READY_MASK) == 0);
+          ^~~~~~~~~~~~~~~~~~
+../calculateCordicVal.c:53:46: error: 'STATUS_REG_OFFSET' undeclared (first use in this function)
+  while( (CORDIC_IP_mReadReg(NEURO_BASE_ADDR, STATUS_REG_OFFSET) & STATUS_REG_READY_MASK) == 0);
+                                              ^~~~~~~~~~~~~~~~~
+../calculateCordicVal.c:55:47: error: 'RESULT_REG_OFFSET' undeclared (first use in this function)
+  result = CORDIC_IP_mReadReg(NEURO_BASE_ADDR, RESULT_REG_OFFSET);
+                                               ^~~~~~~~~~~~~~~~~
+make: *** [calculateCordicVal.o] B³¹d 1
+21:13:50 **** Auto Build of configuration Debug for project neural_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../calculateCordicVal.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"calculateCordicVal.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"calculateCordicVal.d" -MT"calculateCordicVal.o" -o "calculateCordicVal.o" "../calculateCordicVal.c"
+In file included from ../calculateCordicVal.c:4:0:
+../calculateCordicVal.c: In function 'calculateCordicVal':
+../calculateCordicVal.c:50:43: error: 'CONTROL_REG_OFFSET' undeclared (first use in this function)
+ NEURAL_NETWORK_mWriteReg(NEURO_BASE_ADDR, CONTROL_REG_OFFSET, CONTROL_REG_START_MASK);
+                                           ^
+../../neural_test_bsp/ps7_cortexa9_0/include/neural_network.h:38:31: note: in definition of macro 'NEURAL_NETWORK_mWriteReg'
+    Xil_Out32((BaseAddress) + (RegOffset), (u32)(Data))
+                               ^~~~~~~~~
+../calculateCordicVal.c:50:43: note: each undeclared identifier is reported only once for each function it appears in
+ NEURAL_NETWORK_mWriteReg(NEURO_BASE_ADDR, CONTROL_REG_OFFSET, CONTROL_REG_START_MASK);
+                                           ^
+../../neural_test_bsp/ps7_cortexa9_0/include/neural_network.h:38:31: note: in definition of macro 'NEURAL_NETWORK_mWriteReg'
+    Xil_Out32((BaseAddress) + (RegOffset), (u32)(Data))
+                               ^~~~~~~~~
+../calculateCordicVal.c:53:69: error: macro "NEURAL_NETWORK_mWriteReg" requires 3 arguments, but only 2 given
+  while( (NEURAL_NETWORK_mWriteReg(NEURO_BASE_ADDR, STATUS_REG_OFFSET) & STATUS_REG_READY_MASK) == 0);
+                                                                     ^
+../calculateCordicVal.c:53:10: error: 'NEURAL_NETWORK_mWriteReg' undeclared (first use in this function)
+  while( (NEURAL_NETWORK_mWriteReg(NEURO_BASE_ADDR, STATUS_REG_OFFSET) & STATUS_REG_READY_MASK) == 0);
+          ^~~~~~~~~~~~~~~~~~~~~~~~
+../calculateCordicVal.c:55:70: error: macro "NEURAL_NETWORK_mWriteReg" requires 3 arguments, but only 2 given
+  result = NEURAL_NETWORK_mWriteReg(NEURO_BASE_ADDR, RESULT_REG_OFFSET);
+                                                                      ^
+make: *** [calculateCordicVal.o] B³¹d 1
+14:59:57 **** Auto Build of configuration Debug for project neural_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../calculateCordicVal.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"calculateCordicVal.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"calculateCordicVal.d" -MT"calculateCordicVal.o" -o "calculateCordicVal.o" "../calculateCordicVal.c"
+../calculateCordicVal.c: In function 'calculateCordicVal':
+../calculateCordicVal.c:53:69: error: macro "NEURAL_NETWORK_mWriteReg" requires 3 arguments, but only 2 given
+  while( (NEURAL_NETWORK_mWriteReg(NEURO_BASE_ADDR, STATUS_REG_OFFSET) & STATUS_REG_READY_MASK) == 0);
+                                                                     ^
+../calculateCordicVal.c:53:10: error: 'NEURAL_NETWORK_mWriteReg' undeclared (first use in this function)
+  while( (NEURAL_NETWORK_mWriteReg(NEURO_BASE_ADDR, STATUS_REG_OFFSET) & STATUS_REG_READY_MASK) == 0);
+          ^~~~~~~~~~~~~~~~~~~~~~~~
+../calculateCordicVal.c:53:10: note: each undeclared identifier is reported only once for each function it appears in
+../calculateCordicVal.c:55:70: error: macro "NEURAL_NETWORK_mWriteReg" requires 3 arguments, but only 2 given
+  result = NEURAL_NETWORK_mWriteReg(NEURO_BASE_ADDR, RESULT_REG_OFFSET);
+                                                                      ^
+make: *** [calculateCordicVal.o] B³¹d 1
+15:01:45 **** Auto Build of configuration Debug for project neural_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../calculateCordicVal.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"calculateCordicVal.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"calculateCordicVal.d" -MT"calculateCordicVal.o" -o "calculateCordicVal.o" "../calculateCordicVal.c"
+In file included from ../calculateCordicVal.c:4:0:
+../calculateCordicVal.c: In function 'calculateCordicVal':
+../calculateCordicVal.c:53:51: error: 'STATUS_REG_OFFSET' undeclared (first use in this function)
+  while( (NEURAL_NETWORK_mReadReg(NEURO_BASE_ADDR, STATUS_REG_OFFSET) & STATUS_REG_READY_MASK) == 0);
+                                                   ^
+../../neural_test_bsp/ps7_cortexa9_0/include/neural_network.h:58:31: note: in definition of macro 'NEURAL_NETWORK_mReadReg'
+     Xil_In32((BaseAddress) + (RegOffset))
+                               ^~~~~~~~~
+../calculateCordicVal.c:53:51: note: each undeclared identifier is reported only once for each function it appears in
+  while( (NEURAL_NETWORK_mReadReg(NEURO_BASE_ADDR, STATUS_REG_OFFSET) & STATUS_REG_READY_MASK) == 0);
+                                                   ^
+../../neural_test_bsp/ps7_cortexa9_0/include/neural_network.h:58:31: note: in definition of macro 'NEURAL_NETWORK_mReadReg'
+     Xil_In32((BaseAddress) + (RegOffset))
+                               ^~~~~~~~~
+../calculateCordicVal.c:55:52: error: 'RESULT_REG_OFFSET' undeclared (first use in this function)
+  result = NEURAL_NETWORK_mReadReg(NEURO_BASE_ADDR, RESULT_REG_OFFSET);
+                                                    ^
+../../neural_test_bsp/ps7_cortexa9_0/include/neural_network.h:58:31: note: in definition of macro 'NEURAL_NETWORK_mReadReg'
+     Xil_In32((BaseAddress) + (RegOffset))
+                               ^~~~~~~~~
+make: *** [calculateCordicVal.o] B³¹d 1
+15:02:24 **** Auto Build of configuration Debug for project neural_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../calculateCordicVal.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"calculateCordicVal.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"calculateCordicVal.d" -MT"calculateCordicVal.o" -o "calculateCordicVal.o" "../calculateCordicVal.c"
+'Finished building: ../calculateCordicVal.c'
+' '
+'Building file: ../main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+../main.c: In function 'main':
+../main.c:77:32: warning: pointer targets in passing argument 2 of 'calculateCordicVal' differ in signedness [-Wpointer-sign]
+      calculateCordicVal(angle, &sin, &cos);
+                                ^
+../main.c:26:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 's32 * {aka long int *}'
+ int calculateCordicVal(u32 angle, u32* sin,  u32* cos);
+     ^~~~~~~~~~~~~~~~~~
+../main.c:77:38: warning: pointer targets in passing argument 3 of 'calculateCordicVal' differ in signedness [-Wpointer-sign]
+      calculateCordicVal(angle, &sin, &cos);
+                                      ^
+../main.c:26:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 's32 * {aka long int *}'
+ int calculateCordicVal(u32 angle, u32* sin,  u32* cos);
+     ^~~~~~~~~~~~~~~~~~
+'Finished building: ../main.c'
+' '
+'Building file: ../platform.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"platform.d" -MT"platform.o" -o "platform.o" "../platform.c"
+'Finished building: ../platform.c'
+' '
+'Building target: neural_test.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../neural_test_bsp/ps7_cortexa9_0/lib -o "neural_test.elf"  ./src/helloworld.o ./src/platform.o  ./calculateCordicVal.o ./main.o ./platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./main.o: In function `main':
+G:\studia\fpga\project_sdup_ocr\OCR_FPGA\OCR_FPGA.sdk\neural_test\Debug/../main.c:61: multiple definition of `main'
+./src/helloworld.o:G:\studia\fpga\project_sdup_ocr\OCR_FPGA\OCR_FPGA.sdk\neural_test\Debug/../src/helloworld.c:54: first defined here
+./platform.o: In function `enable_caches':
+G:\studia\fpga\project_sdup_ocr\OCR_FPGA\OCR_FPGA.sdk\neural_test\Debug/../platform.c:54: multiple definition of `enable_caches'
+./src/platform.o:G:\studia\fpga\project_sdup_ocr\OCR_FPGA\OCR_FPGA.sdk\neural_test\Debug/../src/platform.c:54: first defined here
+./platform.o: In function `disable_caches':
+G:\studia\fpga\project_sdup_ocr\OCR_FPGA\OCR_FPGA.sdk\neural_test\Debug/../platform.c:70: multiple definition of `disable_caches'
+./src/platform.o:G:\studia\fpga\project_sdup_ocr\OCR_FPGA\OCR_FPGA.sdk\neural_test\Debug/../src/platform.c:70: first defined here
+./platform.o: In function `init_uart':
+G:\studia\fpga\project_sdup_ocr\OCR_FPGA\OCR_FPGA.sdk\neural_test\Debug/../platform.c:77: multiple definition of `init_uart'
+./src/platform.o:G:\studia\fpga\project_sdup_ocr\OCR_FPGA\OCR_FPGA.sdk\neural_test\Debug/../src/platform.c:83: first defined here
+./platform.o: In function `init_platform':
+G:\studia\fpga\project_sdup_ocr\OCR_FPGA\OCR_FPGA.sdk\neural_test\Debug/../platform.c:87: multiple definition of `init_platform'
+./src/platform.o:G:\studia\fpga\project_sdup_ocr\OCR_FPGA\OCR_FPGA.sdk\neural_test\Debug/../src/platform.c:93: first defined here
+./platform.o: In function `cleanup_platform':
+G:\studia\fpga\project_sdup_ocr\OCR_FPGA\OCR_FPGA.sdk\neural_test\Debug/../platform.c:103: multiple definition of `cleanup_platform'
+./src/platform.o:G:\studia\fpga\project_sdup_ocr\OCR_FPGA\OCR_FPGA.sdk\neural_test\Debug/../src/platform.c:109: first defined here
+collect2.exe: error: ld returned 1 exit status
+make: *** [neural_test.elf] B³¹d 1
+15:03:56 **** Clean-only build of configuration Debug for project neural_test ****
+make clean 
+rm -rf  ./src/helloworld.o ./src/platform.o  ./calculateCordicVal.o ./main.o ./platform.o  ./src/helloworld.d ./src/platform.d  ./calculateCordicVal.d ./main.d ./platform.d  neural_test.elf.size  neural_test.elf
+' '
+15:03:58 **** Auto Build of configuration Debug for project neural_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:49:0:
+../src/platform.h:36:29: fatal error: platform_config.h: No such file or directory
+ #include "platform_config.h"
+                             ^
+compilation terminated.
+make: *** [src/helloworld.o] B³¹d 1
+15:04:12 **** Clean-only build of configuration Debug for project neural_test ****
+make clean 
+rm -rf  ./src/helloworld.o ./src/platform.o  ./calculateCordicVal.o ./main.o ./platform.o  ./src/helloworld.d ./src/platform.d  ./calculateCordicVal.d ./main.d ./platform.d  neural_test.elf.size  neural_test.elf
+' '
+15:04:13 **** Auto Build of configuration Debug for project neural_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:49:0:
+../src/platform.h:36:29: fatal error: platform_config.h: No such file or directory
+ #include "platform_config.h"
+                             ^
+compilation terminated.
+make: *** [src/helloworld.o] B³¹d 1
+15:04:22 **** Clean-only build of configuration Debug for project neural_test ****
+make clean 
+rm -rf  ./src/helloworld.o  ./calculateCordicVal.o ./main.o ./platform.o  ./src/helloworld.d  ./calculateCordicVal.d ./main.d ./platform.d  neural_test.elf.size  neural_test.elf
+' '
+15:04:23 **** Auto Build of configuration Debug for project neural_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:49:22: fatal error: platform.h: No such file or directory
+ #include "platform.h"
+                      ^
+compilation terminated.
+make: *** [src/helloworld.o] B³¹d 1
+15:04:30 **** Clean-only build of configuration Debug for project neural_test ****
+make clean 
+rm -rf  ./src/helloworld.o  ./calculateCordicVal.o ./main.o ./platform.o  ./src/helloworld.d  ./calculateCordicVal.d ./main.d ./platform.d  neural_test.elf.size  neural_test.elf
+' '
+15:04:32 **** Auto Build of configuration Debug for project neural_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../calculateCordicVal.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"calculateCordicVal.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"calculateCordicVal.d" -MT"calculateCordicVal.o" -o "calculateCordicVal.o" "../calculateCordicVal.c"
+'Finished building: ../calculateCordicVal.c'
+' '
+'Building file: ../main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+../main.c: In function 'main':
+../main.c:77:32: warning: pointer targets in passing argument 2 of 'calculateCordicVal' differ in signedness [-Wpointer-sign]
+      calculateCordicVal(angle, &sin, &cos);
+                                ^
+../main.c:26:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 's32 * {aka long int *}'
+ int calculateCordicVal(u32 angle, u32* sin,  u32* cos);
+     ^~~~~~~~~~~~~~~~~~
+../main.c:77:38: warning: pointer targets in passing argument 3 of 'calculateCordicVal' differ in signedness [-Wpointer-sign]
+      calculateCordicVal(angle, &sin, &cos);
+                                      ^
+../main.c:26:5: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 's32 * {aka long int *}'
+ int calculateCordicVal(u32 angle, u32* sin,  u32* cos);
+     ^~~~~~~~~~~~~~~~~~
+'Finished building: ../main.c'
+' '
+'Building file: ../platform.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"platform.d" -MT"platform.o" -o "platform.o" "../platform.c"
+'Finished building: ../platform.c'
+' '
+'Building target: neural_test.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../neural_test_bsp/ps7_cortexa9_0/lib -o "neural_test.elf"  ./calculateCordicVal.o ./main.o ./platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: neural_test.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size neural_test.elf  |tee "neural_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  26040	   1148	  22568	  49756	   c25c	neural_test.elf
+'Finished building: neural_test.elf.size'
+' '
+15:04:44 **** Incremental Build of configuration Debug for project neural_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nie ma nic do zrobienia w `main-build'.
+15:05:05 **** Incremental Build of configuration Debug for project neural_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nie ma nic do zrobienia w `main-build'.
+16:48:45 **** Incremental Build of configuration Debug for project neural_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nie ma nic do zrobienia w `main-build'.

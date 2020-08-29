@@ -1,7 +1,7 @@
 //Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-//Date        : Wed Aug 26 18:22:34 2020
+//Date        : Thu Aug 27 18:44:41 2020
 //Host        : Mateusz-HP running 64-bit Service Pack 1  (build 7601)
 //Command     : generate_target design_ocr.bd
 //Design      : design_ocr
@@ -1467,7 +1467,7 @@ module s00_couplers_imp_1C77F22
   assign s00_couplers_to_auto_pc_WLAST = S_AXI_wlast;
   assign s00_couplers_to_auto_pc_WSTRB = S_AXI_wstrb[3:0];
   assign s00_couplers_to_auto_pc_WVALID = S_AXI_wvalid;
-  design_ocr_auto_pc_1 auto_pc
+  design_ocr_auto_pc_0 auto_pc
        (.aclk(S_ACLK_1),
         .aresetn(S_ARESETN_1),
         .m_axi_araddr(auto_pc_to_s00_couplers_ARADDR),

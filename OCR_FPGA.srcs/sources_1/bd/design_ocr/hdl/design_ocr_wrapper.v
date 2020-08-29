@@ -1,7 +1,7 @@
 //Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-//Date        : Wed Aug 26 18:22:34 2020
+//Date        : Thu Aug 27 18:44:41 2020
 //Host        : Mateusz-HP running 64-bit Service Pack 1  (build 7601)
 //Command     : generate_target design_ocr_wrapper.bd
 //Design      : design_ocr_wrapper

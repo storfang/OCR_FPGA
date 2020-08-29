@@ -58,8 +58,23 @@
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
       <Filter Type="Srcs"/>
+      <File Path="$PSRCDIR/sources_1/bd/design_ocr/design_ocr.bd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/bd/design_ocr/hdl/design_ocr_wrapper.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PSRCDIR/sources_1/imports/new/neuron_layer1_rtl.sv">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/neuron_layer1_rtl.sv"/>
           <Attr Name="ImportTime" Val="1589357063"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -69,6 +84,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/new/neuron_layer2_rtl.sv">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/neuron_layer2_rtl.sv"/>
           <Attr Name="ImportTime" Val="1589357063"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -78,6 +94,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/new/neuron_layer3_rtl.sv">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/neuron_layer3_rtl.sv"/>
           <Attr Name="ImportTime" Val="1589357040"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -87,6 +104,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/new/neuron_layer4_rtl.sv">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/neuron_layer4_rtl.sv"/>
           <Attr Name="ImportTime" Val="1589297243"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -96,24 +114,9 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/new/network_rtl.sv">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/network_rtl.sv"/>
           <Attr Name="ImportTime" Val="1589354526"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/bd/design_ocr/design_ocr.bd">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/bd/design_ocr/hdl/design_ocr_wrapper.v">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -179,17 +182,11 @@
       </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="network_rtl"/>
+        <Option Name="TopModule" Val="design_ocr_wrapper"/>
       </Config>
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
       <Filter Type="Constrs"/>
-      <File Path="$PSRCDIR/constrs_1/new/zedboard_master.xdc">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-        </FileInfo>
-      </File>
       <Config>
         <Option Name="ConstrsType" Val="XDC"/>
       </Config>

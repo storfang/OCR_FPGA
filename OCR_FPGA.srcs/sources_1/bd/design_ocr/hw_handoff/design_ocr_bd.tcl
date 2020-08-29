@@ -158,108 +158,25 @@ proc create_root_design { parentCell } {
   # Create interface ports
   set DDR [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:ddrx_rtl:1.0 DDR ]
   set FIXED_IO [ create_bd_intf_port -mode Master -vlnv xilinx.com:display_processing_system7:fixedio_rtl:1.0 FIXED_IO ]
-  set gpio_expected [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 gpio_expected ]
-  set gpio_in [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 gpio_in ]
-  set gpio_mode [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 gpio_mode ]
-  set gpio_out1 [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 gpio_out1 ]
-  set gpio_out2 [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 gpio_out2 ]
-  set gpio_out3 [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 gpio_out3 ]
-  set gpio_out4 [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 gpio_out4 ]
+  set btns_5bits [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 btns_5bits ]
   set leds_8bits [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 leds_8bits ]
-  set sws_8bits [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 sws_8bits ]
 
   # Create ports
-  set reset_rtl [ create_bd_port -dir I -type rst reset_rtl ]
-  set_property -dict [ list \
-   CONFIG.POLARITY {ACTIVE_HIGH} \
- ] $reset_rtl
-  set sys_clock [ create_bd_port -dir I -type clk sys_clock ]
-  set_property -dict [ list \
-   CONFIG.FREQ_HZ {100000000} \
-   CONFIG.PHASE {0.000} \
- ] $sys_clock
 
-  # Create instance: axi_gpio_expected, and set properties
-  set axi_gpio_expected [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_expected ]
-  set_property -dict [ list \
-   CONFIG.C_GPIO_WIDTH {4} \
-   CONFIG.GPIO_BOARD_INTERFACE {Custom} \
-   CONFIG.USE_BOARD_FLOW {true} \
- ] $axi_gpio_expected
-
-  # Create instance: axi_gpio_in, and set properties
-  set axi_gpio_in [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_in ]
-  set_property -dict [ list \
-   CONFIG.C_GPIO_WIDTH {16} \
-   CONFIG.GPIO_BOARD_INTERFACE {Custom} \
-   CONFIG.USE_BOARD_FLOW {true} \
- ] $axi_gpio_in
-
-  # Create instance: axi_gpio_leds, and set properties
-  set axi_gpio_leds [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_leds ]
+  # Create instance: axi_gpio_0, and set properties
+  set axi_gpio_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_0 ]
   set_property -dict [ list \
    CONFIG.C_ALL_INPUTS_2 {1} \
-   CONFIG.C_GPIO2_WIDTH {8} \
+   CONFIG.C_GPIO2_WIDTH {5} \
    CONFIG.C_GPIO_WIDTH {8} \
    CONFIG.C_IS_DUAL {1} \
-   CONFIG.GPIO2_BOARD_INTERFACE {sws_8bits} \
+   CONFIG.GPIO2_BOARD_INTERFACE {btns_5bits} \
    CONFIG.GPIO_BOARD_INTERFACE {leds_8bits} \
    CONFIG.USE_BOARD_FLOW {true} \
- ] $axi_gpio_leds
-
-  # Create instance: axi_gpio_mode, and set properties
-  set axi_gpio_mode [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_mode ]
-  set_property -dict [ list \
-   CONFIG.C_GPIO_WIDTH {1} \
-   CONFIG.GPIO_BOARD_INTERFACE {Custom} \
-   CONFIG.USE_BOARD_FLOW {true} \
- ] $axi_gpio_mode
-
-  # Create instance: axi_gpio_out1, and set properties
-  set axi_gpio_out1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_out1 ]
-  set_property -dict [ list \
-   CONFIG.C_GPIO_WIDTH {18} \
-   CONFIG.GPIO_BOARD_INTERFACE {Custom} \
-   CONFIG.USE_BOARD_FLOW {true} \
- ] $axi_gpio_out1
-
-  # Create instance: axi_gpio_out2, and set properties
-  set axi_gpio_out2 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_out2 ]
-  set_property -dict [ list \
-   CONFIG.C_GPIO_WIDTH {18} \
-   CONFIG.GPIO_BOARD_INTERFACE {Custom} \
-   CONFIG.USE_BOARD_FLOW {true} \
- ] $axi_gpio_out2
-
-  # Create instance: axi_gpio_out3, and set properties
-  set axi_gpio_out3 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_out3 ]
-  set_property -dict [ list \
-   CONFIG.C_GPIO_WIDTH {18} \
-   CONFIG.GPIO_BOARD_INTERFACE {Custom} \
-   CONFIG.USE_BOARD_FLOW {true} \
- ] $axi_gpio_out3
-
-  # Create instance: axi_gpio_out4, and set properties
-  set axi_gpio_out4 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_out4 ]
-  set_property -dict [ list \
-   CONFIG.C_GPIO_WIDTH {18} \
-   CONFIG.GPIO_BOARD_INTERFACE {Custom} \
-   CONFIG.USE_BOARD_FLOW {true} \
- ] $axi_gpio_out4
-
-  # Create instance: clk_wiz_0, and set properties
-  set clk_wiz_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:5.4 clk_wiz_0 ]
-  set_property -dict [ list \
-   CONFIG.CLKOUT1_JITTER {137.143} \
-   CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {80.000} \
-   CONFIG.CLK_IN1_BOARD_INTERFACE {sys_clock} \
-   CONFIG.MMCM_CLKOUT0_DIVIDE_F {12.500} \
-   CONFIG.MMCM_DIVCLK_DIVIDE {1} \
-   CONFIG.USE_BOARD_FLOW {true} \
- ] $clk_wiz_0
+ ] $axi_gpio_0
 
   # Create instance: neural_network_0, and set properties
-  set neural_network_0 [ create_bd_cell -type ip -vlnv xilinx.com:user:neural_network:1.0 neural_network_0 ]
+  set neural_network_0 [ create_bd_cell -type ip -vlnv xilinx.com:user:neural_network:1.1 neural_network_0 ]
 
   # Create instance: processing_system7_0, and set properties
   set processing_system7_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0 ]
@@ -269,7 +186,7 @@ proc create_root_design { parentCell } {
    CONFIG.PCW_ACT_DCI_PERIPHERAL_FREQMHZ {10.158730} \
    CONFIG.PCW_ACT_ENET0_PERIPHERAL_FREQMHZ {125.000000} \
    CONFIG.PCW_ACT_ENET1_PERIPHERAL_FREQMHZ {10.000000} \
-   CONFIG.PCW_ACT_FPGA0_PERIPHERAL_FREQMHZ {100.000000} \
+   CONFIG.PCW_ACT_FPGA0_PERIPHERAL_FREQMHZ {83.333336} \
    CONFIG.PCW_ACT_FPGA1_PERIPHERAL_FREQMHZ {10.000000} \
    CONFIG.PCW_ACT_FPGA2_PERIPHERAL_FREQMHZ {10.000000} \
    CONFIG.PCW_ACT_FPGA3_PERIPHERAL_FREQMHZ {10.000000} \
@@ -292,7 +209,7 @@ proc create_root_design { parentCell } {
    CONFIG.PCW_CAN_PERIPHERAL_DIVISOR0 {1} \
    CONFIG.PCW_CAN_PERIPHERAL_DIVISOR1 {1} \
    CONFIG.PCW_CAN_PERIPHERAL_FREQMHZ {100} \
-   CONFIG.PCW_CLK0_FREQ {100000000} \
+   CONFIG.PCW_CLK0_FREQ {83333336} \
    CONFIG.PCW_CLK1_FREQ {10000000} \
    CONFIG.PCW_CLK2_FREQ {10000000} \
    CONFIG.PCW_CLK3_FREQ {10000000} \
@@ -325,15 +242,15 @@ proc create_root_design { parentCell } {
    CONFIG.PCW_EN_TTC0 {1} \
    CONFIG.PCW_EN_UART1 {1} \
    CONFIG.PCW_EN_USB0 {1} \
-   CONFIG.PCW_FCLK0_PERIPHERAL_DIVISOR0 {5} \
-   CONFIG.PCW_FCLK0_PERIPHERAL_DIVISOR1 {2} \
+   CONFIG.PCW_FCLK0_PERIPHERAL_DIVISOR0 {12} \
+   CONFIG.PCW_FCLK0_PERIPHERAL_DIVISOR1 {1} \
    CONFIG.PCW_FCLK1_PERIPHERAL_DIVISOR0 {1} \
    CONFIG.PCW_FCLK1_PERIPHERAL_DIVISOR1 {1} \
    CONFIG.PCW_FCLK2_PERIPHERAL_DIVISOR0 {1} \
    CONFIG.PCW_FCLK2_PERIPHERAL_DIVISOR1 {1} \
    CONFIG.PCW_FCLK3_PERIPHERAL_DIVISOR0 {1} \
    CONFIG.PCW_FCLK3_PERIPHERAL_DIVISOR1 {1} \
-   CONFIG.PCW_FPGA0_PERIPHERAL_FREQMHZ {100.000000} \
+   CONFIG.PCW_FPGA0_PERIPHERAL_FREQMHZ {81.000000} \
    CONFIG.PCW_FPGA1_PERIPHERAL_FREQMHZ {150.000000} \
    CONFIG.PCW_FPGA2_PERIPHERAL_FREQMHZ {50.000000} \
    CONFIG.PCW_FPGA_FCLK0_ENABLE {1} \
@@ -659,52 +576,29 @@ proc create_root_design { parentCell } {
   # Create instance: ps7_0_axi_periph, and set properties
   set ps7_0_axi_periph [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_interconnect:2.1 ps7_0_axi_periph ]
   set_property -dict [ list \
-   CONFIG.NUM_MI {9} \
+   CONFIG.NUM_MI {2} \
  ] $ps7_0_axi_periph
 
-  # Create instance: rst_ps7_0_100M, and set properties
-  set rst_ps7_0_100M [ create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 rst_ps7_0_100M ]
+  # Create instance: rst_ps7_0_50M, and set properties
+  set rst_ps7_0_50M [ create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 rst_ps7_0_50M ]
 
   # Create interface connections
-  connect_bd_intf_net -intf_net axi_gpio_expected_GPIO [get_bd_intf_ports gpio_expected] [get_bd_intf_pins axi_gpio_expected/GPIO]
-  connect_bd_intf_net -intf_net axi_gpio_in_GPIO [get_bd_intf_ports gpio_in] [get_bd_intf_pins axi_gpio_in/GPIO]
-  connect_bd_intf_net -intf_net axi_gpio_leds_GPIO [get_bd_intf_ports leds_8bits] [get_bd_intf_pins axi_gpio_leds/GPIO]
-  connect_bd_intf_net -intf_net axi_gpio_leds_GPIO2 [get_bd_intf_ports sws_8bits] [get_bd_intf_pins axi_gpio_leds/GPIO2]
-  connect_bd_intf_net -intf_net axi_gpio_mode_GPIO [get_bd_intf_ports gpio_mode] [get_bd_intf_pins axi_gpio_mode/GPIO]
-  connect_bd_intf_net -intf_net axi_gpio_out1_GPIO [get_bd_intf_ports gpio_out1] [get_bd_intf_pins axi_gpio_out1/GPIO]
-  connect_bd_intf_net -intf_net axi_gpio_out2_GPIO [get_bd_intf_ports gpio_out2] [get_bd_intf_pins axi_gpio_out2/GPIO]
-  connect_bd_intf_net -intf_net axi_gpio_out3_GPIO [get_bd_intf_ports gpio_out3] [get_bd_intf_pins axi_gpio_out3/GPIO]
-  connect_bd_intf_net -intf_net axi_gpio_out4_GPIO [get_bd_intf_ports gpio_out4] [get_bd_intf_pins axi_gpio_out4/GPIO]
+  connect_bd_intf_net -intf_net axi_gpio_0_GPIO [get_bd_intf_ports leds_8bits] [get_bd_intf_pins axi_gpio_0/GPIO]
+  connect_bd_intf_net -intf_net axi_gpio_0_GPIO2 [get_bd_intf_ports btns_5bits] [get_bd_intf_pins axi_gpio_0/GPIO2]
   connect_bd_intf_net -intf_net processing_system7_0_DDR [get_bd_intf_ports DDR] [get_bd_intf_pins processing_system7_0/DDR]
   connect_bd_intf_net -intf_net processing_system7_0_FIXED_IO [get_bd_intf_ports FIXED_IO] [get_bd_intf_pins processing_system7_0/FIXED_IO]
   connect_bd_intf_net -intf_net processing_system7_0_M_AXI_GP0 [get_bd_intf_pins processing_system7_0/M_AXI_GP0] [get_bd_intf_pins ps7_0_axi_periph/S00_AXI]
-  connect_bd_intf_net -intf_net ps7_0_axi_periph_M00_AXI [get_bd_intf_pins axi_gpio_in/S_AXI] [get_bd_intf_pins ps7_0_axi_periph/M00_AXI]
-  connect_bd_intf_net -intf_net ps7_0_axi_periph_M01_AXI [get_bd_intf_pins axi_gpio_expected/S_AXI] [get_bd_intf_pins ps7_0_axi_periph/M01_AXI]
-  connect_bd_intf_net -intf_net ps7_0_axi_periph_M02_AXI [get_bd_intf_pins axi_gpio_out1/S_AXI] [get_bd_intf_pins ps7_0_axi_periph/M02_AXI]
-  connect_bd_intf_net -intf_net ps7_0_axi_periph_M03_AXI [get_bd_intf_pins neural_network_0/S00_AXI] [get_bd_intf_pins ps7_0_axi_periph/M03_AXI]
-  connect_bd_intf_net -intf_net ps7_0_axi_periph_M04_AXI [get_bd_intf_pins axi_gpio_mode/S_AXI] [get_bd_intf_pins ps7_0_axi_periph/M04_AXI]
-  connect_bd_intf_net -intf_net ps7_0_axi_periph_M05_AXI [get_bd_intf_pins axi_gpio_out2/S_AXI] [get_bd_intf_pins ps7_0_axi_periph/M05_AXI]
-  connect_bd_intf_net -intf_net ps7_0_axi_periph_M06_AXI [get_bd_intf_pins axi_gpio_out3/S_AXI] [get_bd_intf_pins ps7_0_axi_periph/M06_AXI]
-  connect_bd_intf_net -intf_net ps7_0_axi_periph_M07_AXI [get_bd_intf_pins axi_gpio_out4/S_AXI] [get_bd_intf_pins ps7_0_axi_periph/M07_AXI]
-  connect_bd_intf_net -intf_net ps7_0_axi_periph_M08_AXI [get_bd_intf_pins axi_gpio_leds/S_AXI] [get_bd_intf_pins ps7_0_axi_periph/M08_AXI]
+  connect_bd_intf_net -intf_net ps7_0_axi_periph_M00_AXI [get_bd_intf_pins neural_network_0/S00_AXI] [get_bd_intf_pins ps7_0_axi_periph/M00_AXI]
+  connect_bd_intf_net -intf_net ps7_0_axi_periph_M01_AXI [get_bd_intf_pins axi_gpio_0/S_AXI] [get_bd_intf_pins ps7_0_axi_periph/M01_AXI]
 
   # Create port connections
-  connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins axi_gpio_expected/s_axi_aclk] [get_bd_pins axi_gpio_in/s_axi_aclk] [get_bd_pins axi_gpio_leds/s_axi_aclk] [get_bd_pins axi_gpio_mode/s_axi_aclk] [get_bd_pins axi_gpio_out1/s_axi_aclk] [get_bd_pins axi_gpio_out2/s_axi_aclk] [get_bd_pins axi_gpio_out3/s_axi_aclk] [get_bd_pins axi_gpio_out4/s_axi_aclk] [get_bd_pins neural_network_0/s00_axi_aclk] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins ps7_0_axi_periph/ACLK] [get_bd_pins ps7_0_axi_periph/M00_ACLK] [get_bd_pins ps7_0_axi_periph/M01_ACLK] [get_bd_pins ps7_0_axi_periph/M02_ACLK] [get_bd_pins ps7_0_axi_periph/M03_ACLK] [get_bd_pins ps7_0_axi_periph/M04_ACLK] [get_bd_pins ps7_0_axi_periph/M05_ACLK] [get_bd_pins ps7_0_axi_periph/M06_ACLK] [get_bd_pins ps7_0_axi_periph/M07_ACLK] [get_bd_pins ps7_0_axi_periph/M08_ACLK] [get_bd_pins ps7_0_axi_periph/S00_ACLK] [get_bd_pins rst_ps7_0_100M/slowest_sync_clk]
-  connect_bd_net -net processing_system7_0_FCLK_RESET0_N [get_bd_pins processing_system7_0/FCLK_RESET0_N] [get_bd_pins rst_ps7_0_100M/ext_reset_in]
-  connect_bd_net -net reset_rtl_1 [get_bd_ports reset_rtl] [get_bd_pins clk_wiz_0/reset]
-  connect_bd_net -net rst_ps7_0_100M_interconnect_aresetn [get_bd_pins ps7_0_axi_periph/ARESETN] [get_bd_pins rst_ps7_0_100M/interconnect_aresetn]
-  connect_bd_net -net rst_ps7_0_100M_peripheral_aresetn [get_bd_pins axi_gpio_expected/s_axi_aresetn] [get_bd_pins axi_gpio_in/s_axi_aresetn] [get_bd_pins axi_gpio_leds/s_axi_aresetn] [get_bd_pins axi_gpio_mode/s_axi_aresetn] [get_bd_pins axi_gpio_out1/s_axi_aresetn] [get_bd_pins axi_gpio_out2/s_axi_aresetn] [get_bd_pins axi_gpio_out3/s_axi_aresetn] [get_bd_pins axi_gpio_out4/s_axi_aresetn] [get_bd_pins neural_network_0/s00_axi_aresetn] [get_bd_pins ps7_0_axi_periph/M00_ARESETN] [get_bd_pins ps7_0_axi_periph/M01_ARESETN] [get_bd_pins ps7_0_axi_periph/M02_ARESETN] [get_bd_pins ps7_0_axi_periph/M03_ARESETN] [get_bd_pins ps7_0_axi_periph/M04_ARESETN] [get_bd_pins ps7_0_axi_periph/M05_ARESETN] [get_bd_pins ps7_0_axi_periph/M06_ARESETN] [get_bd_pins ps7_0_axi_periph/M07_ARESETN] [get_bd_pins ps7_0_axi_periph/M08_ARESETN] [get_bd_pins ps7_0_axi_periph/S00_ARESETN] [get_bd_pins rst_ps7_0_100M/peripheral_aresetn]
-  connect_bd_net -net sys_clock_1 [get_bd_ports sys_clock] [get_bd_pins clk_wiz_0/clk_in1]
+  connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins axi_gpio_0/s_axi_aclk] [get_bd_pins neural_network_0/s00_axi_aclk] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins ps7_0_axi_periph/ACLK] [get_bd_pins ps7_0_axi_periph/M00_ACLK] [get_bd_pins ps7_0_axi_periph/M01_ACLK] [get_bd_pins ps7_0_axi_periph/S00_ACLK] [get_bd_pins rst_ps7_0_50M/slowest_sync_clk]
+  connect_bd_net -net processing_system7_0_FCLK_RESET0_N [get_bd_pins processing_system7_0/FCLK_RESET0_N] [get_bd_pins rst_ps7_0_50M/ext_reset_in]
+  connect_bd_net -net rst_ps7_0_50M_interconnect_aresetn [get_bd_pins ps7_0_axi_periph/ARESETN] [get_bd_pins rst_ps7_0_50M/interconnect_aresetn]
+  connect_bd_net -net rst_ps7_0_50M_peripheral_aresetn [get_bd_pins axi_gpio_0/s_axi_aresetn] [get_bd_pins neural_network_0/s00_axi_aresetn] [get_bd_pins ps7_0_axi_periph/M00_ARESETN] [get_bd_pins ps7_0_axi_periph/M01_ARESETN] [get_bd_pins ps7_0_axi_periph/S00_ARESETN] [get_bd_pins rst_ps7_0_50M/peripheral_aresetn]
 
   # Create address segments
-  create_bd_addr_seg -range 0x00010000 -offset 0x41210000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs axi_gpio_expected/S_AXI/Reg] SEG_axi_gpio_expected_Reg
-  create_bd_addr_seg -range 0x00010000 -offset 0x41200000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs axi_gpio_in/S_AXI/Reg] SEG_axi_gpio_in_Reg
-  create_bd_addr_seg -range 0x00010000 -offset 0x41270000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs axi_gpio_leds/S_AXI/Reg] SEG_axi_gpio_leds_Reg
-  create_bd_addr_seg -range 0x00010000 -offset 0x41230000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs axi_gpio_mode/S_AXI/Reg] SEG_axi_gpio_mode_Reg
-  create_bd_addr_seg -range 0x00010000 -offset 0x41220000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs axi_gpio_out1/S_AXI/Reg] SEG_axi_gpio_out1_Reg
-  create_bd_addr_seg -range 0x00010000 -offset 0x41240000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs axi_gpio_out2/S_AXI/Reg] SEG_axi_gpio_out2_Reg
-  create_bd_addr_seg -range 0x00010000 -offset 0x41250000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs axi_gpio_out3/S_AXI/Reg] SEG_axi_gpio_out3_Reg
-  create_bd_addr_seg -range 0x00010000 -offset 0x41260000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs axi_gpio_out4/S_AXI/Reg] SEG_axi_gpio_out4_Reg
+  create_bd_addr_seg -range 0x00010000 -offset 0x41200000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs axi_gpio_0/S_AXI/Reg] SEG_axi_gpio_0_Reg
   create_bd_addr_seg -range 0x00010000 -offset 0x43C00000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs neural_network_0/S00_AXI/S00_AXI_reg] SEG_neural_network_0_S00_AXI_reg
 
 

@@ -23,7 +23,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 ISEStep( "vivado",
-         "-log network_rtl.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source network_rtl.tcl" );
+         "-log design_ocr_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_ocr_wrapper.tcl" );
 
 
 

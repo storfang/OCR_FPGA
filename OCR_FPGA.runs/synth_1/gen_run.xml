@@ -1,18 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1598462260">
-  <File Type="PA-TCL" Name="network_rtl.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="network_rtl_drc_synth.rpt"/>
-  <File Type="REPORTS-TCL" Name="network_rtl_reports.tcl"/>
-  <File Type="RDS-RDS" Name="network_rtl.vds"/>
-  <File Type="RDS-UTIL" Name="network_rtl_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="network_rtl_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="network_rtl.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="network_rtl_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="network_rtl_timing_summary_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1598546727">
+  <File Type="PA-TCL" Name="design_ocr_wrapper.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="design_ocr_wrapper_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="design_ocr_wrapper_reports.tcl"/>
+  <File Type="RDS-RDS" Name="design_ocr_wrapper.vds"/>
+  <File Type="RDS-UTIL" Name="design_ocr_wrapper_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="design_ocr_wrapper_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="design_ocr_wrapper.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="design_ocr_wrapper_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="design_ocr_wrapper_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/bd/design_ocr/design_ocr.bd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/design_ocr/hdl/design_ocr_wrapper.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/imports/new/neuron_layer1_rtl.sv">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/neuron_layer1_rtl.sv"/>
         <Attr Name="ImportTime" Val="1589357063"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -22,6 +37,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/new/neuron_layer2_rtl.sv">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/neuron_layer2_rtl.sv"/>
         <Attr Name="ImportTime" Val="1589357063"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -31,6 +47,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/new/neuron_layer3_rtl.sv">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/neuron_layer3_rtl.sv"/>
         <Attr Name="ImportTime" Val="1589357040"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -40,6 +57,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/new/neuron_layer4_rtl.sv">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/neuron_layer4_rtl.sv"/>
         <Attr Name="ImportTime" Val="1589297243"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -49,24 +67,9 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/new/network_rtl.sv">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/network_rtl.sv"/>
         <Attr Name="ImportTime" Val="1589354526"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/bd/design_ocr/design_ocr.bd">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/bd/design_ocr/hdl/design_ocr_wrapper.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -132,17 +135,11 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="network_rtl"/>
+      <Option Name="TopModule" Val="design_ocr_wrapper"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
     <Filter Type="Constrs"/>
-    <File Path="$PSRCDIR/constrs_1/new/zedboard_master.xdc">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-      </FileInfo>
-    </File>
     <Config>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>
