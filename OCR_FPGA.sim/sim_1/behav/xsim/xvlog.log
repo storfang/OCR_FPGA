@@ -11,3 +11,5 @@ INFO: [VRFC 10-2263] Analyzing SystemVerilog file "G:/studia/fpga/project_sdup_o
 INFO: [VRFC 10-311] analyzing module neuron_layer4_rtl
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.srcs/sim_1/imports/new/network_tb_rtl.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module network_tb_rtl
+INFO: [VRFC 10-2263] Analyzing Verilog file "G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

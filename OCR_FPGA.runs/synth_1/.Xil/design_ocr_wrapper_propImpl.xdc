@@ -1,6 +1,6 @@
 set_property SRC_FILE_INFO {cfile:g:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.srcs/sources_1/bd/design_ocr/ip/design_ocr_processing_system7_0_1/design_ocr_processing_system7_0_1.xdc rfile:../../../OCR_FPGA.srcs/sources_1/bd/design_ocr/ip/design_ocr_processing_system7_0_1/design_ocr_processing_system7_0_1.xdc id:1 order:EARLY scoped_inst:design_ocr_i/processing_system7_0/inst} [current_design]
 set_property src_info {type:SCOPED_XDC file:1 line:21 export:INPUT save:INPUT read:READ} [current_design]
-set_input_jitter clk_fpga_0 0.36
+set_input_jitter clk_fpga_0 0.42
 set_property src_info {type:SCOPED_XDC file:1 line:31 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN "C12" [get_ports "MIO[53]"]
 set_property src_info {type:SCOPED_XDC file:1 line:37 export:INPUT save:INPUT read:READ} [current_design]

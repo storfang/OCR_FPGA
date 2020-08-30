@@ -1,0 +1,81 @@
+/***************************** Include Files *********************************/
+#include "xil_io.h"
+#include "xparameters.h"
+#include "neural_network.h"
+
+/**************************** user definitions ********************************/
+
+//Neural module base addres redefinition
+#define NEURO_BASE_ADDR       XPAR_NEURAL_NETWORK_0_S00_AXI_BASEADDR
+//Neural module registers' offset redefinition
+#define INPUT_REG_OFFSET      NEURAL_NETWORK_S00_AXI_SLV_REG0_OFFSET
+#define MSTART_REG_OFFSET     NEURAL_NETWORK_S00_AXI_SLV_REG1_OFFSET
+#define READY_REG_OFFSET      NEURAL_NETWORK_S00_AXI_SLV_REG2_OFFSET
+#define RESULT1_REG_OFFSET    NEURAL_NETWORK_S00_AXI_SLV_REG3_OFFSET
+#define RESULT2_REG_OFFSET    NEURAL_NETWORK_S00_AXI_SLV_REG4_OFFSET
+#define RESULT3_REG_OFFSET    NEURAL_NETWORK_S00_AXI_SLV_REG5_OFFSET
+#define RESULT4_REG_OFFSET    NEURAL_NETWORK_S00_AXI_SLV_REG6_OFFSET
+//Neural module bits masks
+#define CONTROL_REG_START_MASK (u32)(0x01)
+#define MODE_ON_REG_START_MASK (u32)(0x02)
+#define STATUS_REG_READY_MASK  (u32)(0x01) ///
+
+/*// Macors to extract outputss values from the accelerator output data register
+// Shift left and right to fill msb of int32_t with ones - arithmetic shift  
+#define RESULT_REG_SIN(param)  ((((s32)param & (s32)0x00000FFF)<<20)>>20)
+#define RESULT_REG_COS(param)  ((((s32)param & (s32)0x0FFF0000)<< 4)>>20)
+*/
+
+/***************************** calculateOutputVal function **********************
+* The function runs the neural accelerator IP
+* Argument:
+* input - input values [19:0] bit format - [19:16] z, [15:0] x
+* mode - set network in learning or working mode
+* Return values:
+* y1 - output1 value. Fixed-point(18:14) format
+* y2 - output2 value. Fixed-point(18:14) format
+* y3 - output3 value. Fixed-point(18:14) format
+* y4 - output4 value. Fixed-point(18:14) format
+*/
+
+int calculateOutputVal(u32 input, int mode, s32* y1,  s32* y2, s32* y3, s32* y4)
+{
+u32 data  = input;
+u32 yo1;
+u32 yo2;
+u32 yo3;
+u32 yo4;
+
+//Debug
+//	result = CORDIC_IP_mReadReg(CORDIC_BASE_ADDR, RESULT_REG_OFFSET);
+xil_printf("data value was %d", data);
+print("\n\r");
+
+//Send data to data register of neural processor
+NEURAL_NETWORK_mWriteReg(NEURO_BASE_ADDR, INPUT_REG_OFFSET, data);
+
+//Start cordic processor - pulse start bit in control register
+NEURAL_NETWORK_mWriteReg(NEURO_BASE_ADDR, MSTART_REG_OFFSET, CONTROL_REG_START_MASK);
+if(mode==1){
+	print("jestem w ifie");
+NEURAL_NETWORK_mWriteReg(NEURO_BASE_ADDR, MSTART_REG_OFFSET, MODE_ON_REG_START_MASK);
+}
+else{
+	print("hi there");
+NEURAL_NETWORK_mWriteReg(NEURO_BASE_ADDR, MSTART_REG_OFFSET, (~MODE_ON_REG_START_MASK&NEURO_BASE_ADDR));
+}
+NEURAL_NETWORK_mWriteReg(NEURO_BASE_ADDR, MSTART_REG_OFFSET, (NEURO_BASE_ADDR & ~CONTROL_REG_START_MASK));
+//Wait for ready bit in status register
+	while( (NEURAL_NETWORK_mReadReg(NEURO_BASE_ADDR, READY_REG_OFFSET) & STATUS_REG_READY_MASK) == 0);
+//Get results
+	yo1 = NEURAL_NETWORK_mReadReg(NEURO_BASE_ADDR, RESULT1_REG_OFFSET);
+	yo2 = NEURAL_NETWORK_mReadReg(NEURO_BASE_ADDR, RESULT2_REG_OFFSET);
+	yo3 = NEURAL_NETWORK_mReadReg(NEURO_BASE_ADDR, RESULT3_REG_OFFSET);
+	yo4 = NEURAL_NETWORK_mReadReg(NEURO_BASE_ADDR, RESULT4_REG_OFFSET);
+//Extract sin and cos from 32-bit register data
+	*y1 = yo1;
+	*y2 = yo2;
+	*y3 = yo3;
+	*y4 = yo4;
+	return 1;
+}

@@ -4,3 +4,6 @@
 1598619852564	Delete resource 'neural_test/src/platform.c'
 1598619862011	Delete resource 'neural_test/src/platform.h'
 1598619870622	Delete resource 'neural_test/src/helloworld.c'
+1598797691719	Delete resource 'button'
+1598797698956	Delete resource 'button_bsp'
+1598808662880	Delete resource 'neural_test_bsp_xgpiops_intr_example_1'

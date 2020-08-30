@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;neural_test/calculateCordicVal.c&apos; to &apos;calculateOutputVal.c&apos;" description="Rename resource &apos;calculateCordicVal.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="calculateCordicVal.c" name="calculateOutputVal.c" stamp="1598776546419" updateReferences="true"/>
+</session>

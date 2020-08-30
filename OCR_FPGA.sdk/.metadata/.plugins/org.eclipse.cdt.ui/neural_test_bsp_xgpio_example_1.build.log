@@ -1,0 +1,8 @@
+19:31:15 **** Incremental Build of configuration Debug for project neural_test_bsp_xgpio_example_1 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nie ma nic do zrobienia w `main-build'.
+
+19:31:16 Build Finished (took 970ms)
+

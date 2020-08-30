@@ -1,8 +1,23 @@
-16:48:45 **** Incremental Build of configuration Debug for project neural_test ****
+21:06:57 **** Auto Build of configuration Debug for project neural_test ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
-make: Nie ma nic do zrobienia w `main-build'.
+'Building file: ../calculateOutputVal.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"calculateOutputVal.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"calculateOutputVal.d" -MT"calculateOutputVal.o" -o "calculateOutputVal.o" "../calculateOutputVal.c"
+'Finished building: ../calculateOutputVal.c'
+' '
+'Building target: neural_test.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../neural_test_bsp/ps7_cortexa9_0/lib -o "neural_test.elf"  ./calculateOutputVal.o ./main.o ./platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: neural_test.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size neural_test.elf  |tee "neural_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  26364	   1148	  22568	  50080	   c3a0	neural_test.elf
+'Finished building: neural_test.elf.size'
+' '
 
-16:48:46 Build Finished (took 918ms)
+21:07:00 Build Finished (took 3s.610ms)
 
