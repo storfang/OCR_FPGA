@@ -1,0 +1,162 @@
+/*
+ * main.c: simple test application
+ *
+ * This application configures UART 16550 to baud rate 9600.
+ * PS7 UART (Zynq) is not initialized by this application, since
+ * bootrom/bsp configures it to baud rate 115200
+ *
+ * ------------------------------------------------
+ * | UART TYPE   BAUD RATE                        |
+ * ------------------------------------------------
+ *   uartns550   9600
+ *   uartlite    Configurable only in HW design
+ *   ps7_uart    115200 (configured by bootrom/bsp)
+ */
+
+#include <stdio.h>
+#include "platform.h"
+#include "xil_printf.h"
+#include "xparameters.h"
+#include "xgpio.h"
+
+
+#define LED 0x01
+#define SW 0x01
+#define BTN 0x01
+#define LED_CHANNEL 1
+#define BTN_CHANNEL 2
+#define SW_CHANNEL 1
+#define GPIO_EXAMPLE_DEVICE_ID  XPAR_GPIO_0_DEVICE_ID
+//Define PI in fxp(12:10)
+#define PI 3215
+//[19:16] expected value [15:0] input value
+#define  A 0b01110110100111111001 //0111
+#define  C 0b10001111000100011111//1000
+#define  D 0b11110111100110010111//1111
+#define  F 0b10111111000111110001//1011
+#define  H 0b01101001111111111001//0110
+#define  I 0b00000110011001100110//0000
+#define  J 0b10101111100010011110//1010
+#define  L 0b00010001000100011111//0001
+#define  N 0b01011001101111011001//0101
+#define  O 0b11011111100110011111//1101
+#define  P 0b11101111100111110001//1110
+#define  T 0b10101111011001100110//1010
+#define  U 0b01001001100110010110//0100
+#define  X 0b00111001011001101001//0011
+#define  Y 0b00101001011001100110//0010
+#define  Z 0b10011111010000101111//1001
+
+/**
+ *
+ */
+int calculateOutputVal(u32 input, int mode, s32* y1,  s32* y2, s32* y3, s32* y4);
+
+int valuesT[16] = {0b11110111100110010111,0b01110110100111111001,0b10001111000100011111,
+		0b10111111000111110001,0b01101001111111111001,0b00000110011001100110,
+		0b00010001000100011111,0b10101111100010011110,0b01011001101111011001,
+		0b11011111100110011111,0b11101111100111110001,0b10101111011001100110,
+		0b00111001011001101001,0b01001001100110010110,0b00101001011001100110,
+		0b10011111010000101111};
+
+/**
+ *
+ */
+u32 read2DigitDecVal(){
+u32 ret = 0;
+char8 c;
+    outbyte ( c = inbyte() );
+    ret += 10 * (c - '0');
+    outbyte ( c = inbyte() );
+    ret += (c - '0');
+    return ret;
+}
+
+/**
+ *  printDecimalFXPVal - print fixed-point value in decimal format
+ *  val - value to print out in radix-2 fixed-point
+ *  scale - Fixed-point scaling factor
+ *	nbr_of_decimal_digit - number precision. The number of digits after decimal point
+ */
+
+void printDecimalFXPVal(s32 val, u32 scale, u8 nbr_of_decimal_digit ){
+u32 i;
+	//Change radix 2 to radix 10 fixed-point. Spare one more decimal point for rounding
+	for( i=0; i<nbr_of_decimal_digit+1; i++ ) val=val*10; //Multiply by 10^nbr_of_decimal_digit+1
+	val /= (s32) scale;
+	if(val>=1){
+
+	}
+	//Round target fixed-point to nearst integer
+	val = (val +5 )/10;
+
+	xil_printf("%dE-%u", val, nbr_of_decimal_digit );//}
+	//else print("1");
+
+}
+    XGpio Gpio1;
+    XGpio Gpio2;
+int main()
+{
+u32 angle = 0;
+u32 input = C; //0b00010001000100011111;
+s32 y1, y2, y3, y4;
+u8 z;
+int i, j, mode;
+
+	XGpio_Initialize(&Gpio1, XPAR_GPIO_0_DEVICE_ID);
+	XGpio_Initialize(&Gpio2, XPAR_GPIO_1_DEVICE_ID);
+    init_platform();
+
+	XGpio_SetDataDirection(&Gpio1, LED_CHANNEL, ~LED);
+	XGpio_SetDataDirection(&Gpio2, SW_CHANNEL, ~SW);
+	XGpio_SetDataDirection(&Gpio1, BTN_CHANNEL, ~BTN);
+
+    while(1){
+
+    	if(XGpio_DiscreteRead(&Gpio2, SW_CHANNEL)==1){
+    		print("learning mode ON");
+    		print("\n\r");
+    		mode = 1;
+    	}
+    	else mode = 0;
+
+		XGpio_DiscreteWrite(&Gpio1, LED_CHANNEL, LED);
+    	angle = read2DigitDecVal();
+
+
+    	for(j=0;j<16;j++){
+    		print("Next epoch (any key)");
+    		//angle = read2DigitDecVal();
+    		print("\n\r");
+    		//Convert to radians fxp(12:10)
+    		//angle *= 1024; 	//Fixed-point (12:10)
+    		//angle = (angle * PI ) >> 10; //Fixed-point multiplication
+    		//angle /= 180; 	//angle in radians
+    		input=valuesT[j];
+    		z = input >> 16;
+    		XGpio_DiscreteClear(&Gpio1, LED_CHANNEL, LED);
+    			for(i=angle;i<1;i++){
+    				calculateOutputVal(input, mode, &y1, &y2, &y3, &y4);
+    				xil_printf("next iteration %d",i);
+    				print("\n\r");
+    				xil_printf("z value was %d", z);
+    				print("\n\r");
+    				print("y4 value is ");
+    				printDecimalFXPVal(y1, 16384, 5);
+    				print("\n\r");
+    				print("y3 value is ");
+    				printDecimalFXPVal(y2, 16384, 5);
+    				print("\n\r");
+    				print("y2 value is ");
+    				printDecimalFXPVal(y3, 16384, 5);
+    				print("\n\r");
+    				print("y1 value is ");
+    				printDecimalFXPVal(y4, 16384, 5);
+    				print("\n\r");
+    				print("\n\r");
+    			}
+    	}
+    }
+
+}

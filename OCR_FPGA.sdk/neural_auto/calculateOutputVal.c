@@ -49,8 +49,8 @@ u32 yo4;
 
 //Debug
 //	result = CORDIC_IP_mReadReg(CORDIC_BASE_ADDR, RESULT_REG_OFFSET);
-xil_printf("data value was %d", data);
-print("\n\r");
+//xil_printf("data value was %d", data);
+//print("\n\r");
 
 //Send data to data register of neural processor
 NEURAL_NETWORK_mWriteReg(NEURO_BASE_ADDR, INPUT_REG_OFFSET, data);
@@ -58,13 +58,13 @@ NEURAL_NETWORK_mWriteReg(NEURO_BASE_ADDR, INPUT_REG_OFFSET, data);
 //Start cordic processor - pulse start bit in control register
 NEURAL_NETWORK_mWriteReg(NEURO_BASE_ADDR, MSTART_REG_OFFSET, CONTROL_REG_START_MASK);
 if(mode==1){
-	xil_printf("jestem w ifie %d", mode);
-	print("\n\r");
+//	xil_printf("jestem w ifie %d", mode);
+//	print("\n\r");
 NEURAL_NETWORK_mWriteReg(NEURO_BASE_ADDR, MSTART_REG_OFFSET, MODE_ON_REG_START_MASK);
 }
 else{
-	print("hi there");
-	print("\n\r");
+//	print("hi there");
+//	print("\n\r");
 NEURAL_NETWORK_mWriteReg(NEURO_BASE_ADDR, MSTART_REG_OFFSET, (~MODE_ON_REG_START_MASK&NEURO_BASE_ADDR));
 }
 NEURAL_NETWORK_mWriteReg(NEURO_BASE_ADDR, MSTART_REG_OFFSET, (NEURO_BASE_ADDR & ~CONTROL_REG_START_MASK));

@@ -7471,3 +7471,1869 @@ make pre-build main-build
 a9-linaro-pre-build-step
 ' '
 make: Nie ma nic do zrobienia w `main-build'.
+15:45:26 **** Clean-only build of project neural_test_bsp ****
+make -k clean 
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s clean 
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_5/src -s clean 
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s clean 
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s clean 
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s clean 
+make -C ps7_cortexa9_0/libsrc/emacps_v3_6/src -s clean 
+make -C ps7_cortexa9_0/libsrc/gpio_v4_3/src -s clean 
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_3/src -s clean 
+make -C ps7_cortexa9_0/libsrc/neural_network_v1_0/src -s clean 
+rm: nie mo¿na wykonaæ lstat na `*.o': Invalid argument
+make[1]: *** [clean] B³¹d 1
+make -C ps7_cortexa9_0/libsrc/qspips_v3_4/src -s clean 
+make: *** [ps7_cortexa9_0/libsrc/neural_network_v1_0/src/make.clean] B³¹d 2
+make -C ps7_cortexa9_0/libsrc/scugic_v3_8/src -s clean 
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s clean 
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s clean 
+make -C ps7_cortexa9_0/libsrc/sdps_v3_3/src -s clean 
+make -C ps7_cortexa9_0/libsrc/standalone_v6_5/src -s clean 
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_5/src -s clean 
+make -C ps7_cortexa9_0/libsrc/uartps_v3_5/src -s clean 
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s clean 
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s clean 
+make: Obiekt `clean' nie zosta³ wykonany z powodu b³êdów.
+15:45:33 **** Clean-only build of configuration Debug for project neural_auto ****
+make clean 
+rm -rf  ./calculateOutputVal.o ./main.o ./platform.o  ./calculateOutputVal.d ./main.d ./platform.d  neural_auto.elf.size  neural_auto.elf
+' '
+15:45:33 **** Clean-only build of configuration Debug for project neural_test ****
+make clean 
+rm -rf  ./calculateOutputVal.o ./main.o ./platform.o  ./calculateOutputVal.d ./main.d ./platform.d  neural_test.elf.size  neural_test.elf
+' '
+15:45:34 **** Clean-only build of configuration Debug for project neural_test_bsp_xgpio_example_1 ****
+make clean 
+rm -rf  ./src/xgpio_example.o  ./src/xgpio_example.d  neural_test_bsp_xgpio_example_1.elf.size  neural_test_bsp_xgpio_example_1.elf
+' '
+15:45:35 **** Build of project neural_test_bsp ****
+make -k all 
+"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_5/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/emacps_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/gpio_v4_3/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/neural_network_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/neural_network_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_4/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scugic_v3_8/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_8/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/sdps_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v3_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/standalone_v6_5/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v6_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/ttcps_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling coresightps_dcc"
+arm-none-eabi-ar: creating ../../../lib/libxil.a
+"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_5/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling cpu_cortexa9"
+"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling ddrps"
+"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling devcfg"
+"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling dmaps"
+"Running Make libs in ps7_cortexa9_0/libsrc/emacps_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling emacps"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpio_v4_3/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling gpio"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling gpiops"
+"Running Make libs in ps7_cortexa9_0/libsrc/neural_network_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/neural_network_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling neural_network..."
+neural_network_selftest.c: In function 'NEURAL_NETWORK_Reg_SelfTest':
+neural_network_selftest.c:52:63: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    if ( NEURAL_NETWORK_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
+                                                               ^~
+neural_network_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_4/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling qspips"
+"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_8/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_8/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling scugic"
+"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling scutimer"
+"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling scuwdt"
+"Running Make libs in ps7_cortexa9_0/libsrc/sdps_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v3_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling sdps"
+"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v6_5/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v6_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling standalone"
+"Running Make libs in ps7_cortexa9_0/libsrc/ttcps_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling ttcps"
+"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling uartps"
+"Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling usbps"
+"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling xadcps"
+'Finished building libraries'
+15:46:37 **** Build of configuration Debug for project neural_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../calculateOutputVal.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"calculateOutputVal.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"calculateOutputVal.d" -MT"calculateOutputVal.o" -o "calculateOutputVal.o" "../calculateOutputVal.c"
+'Finished building: ../calculateOutputVal.c'
+' '
+'Building file: ../main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+'Finished building: ../main.c'
+' '
+'Building file: ../platform.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"platform.d" -MT"platform.o" -o "platform.o" "../platform.c"
+'Finished building: ../platform.c'
+' '
+'Building target: neural_test.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../neural_test_bsp/ps7_cortexa9_0/lib -o "neural_test.elf"  ./calculateOutputVal.o ./main.o ./platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: neural_test.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size neural_test.elf  |tee "neural_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  26364	   1148	  22568	  50080	   c3a0	neural_test.elf
+'Finished building: neural_test.elf.size'
+' '
+15:46:44 **** Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../calculateOutputVal.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"calculateOutputVal.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"calculateOutputVal.d" -MT"calculateOutputVal.o" -o "calculateOutputVal.o" "../calculateOutputVal.c"
+'Finished building: ../calculateOutputVal.c'
+' '
+'Building file: ../main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+'Finished building: ../main.c'
+' '
+'Building file: ../platform.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"platform.d" -MT"platform.o" -o "platform.o" "../platform.c"
+'Finished building: ../platform.c'
+' '
+'Building target: neural_auto.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../neural_test_bsp/ps7_cortexa9_0/lib -o "neural_auto.elf"  ./calculateOutputVal.o ./main.o ./platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: neural_auto.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size neural_auto.elf  |tee "neural_auto.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28340	   1252	  22600	  52192	   cbe0	neural_auto.elf
+'Finished building: neural_auto.elf.size'
+' '
+15:46:50 **** Build of configuration Debug for project neural_test_bsp_xgpio_example_1 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/xgpio_example.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xgpio_example.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/xgpio_example.d" -MT"src/xgpio_example.o" -o "src/xgpio_example.o" "../src/xgpio_example.c"
+'Finished building: ../src/xgpio_example.c'
+' '
+'Building target: neural_test_bsp_xgpio_example_1.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../neural_test_bsp/ps7_cortexa9_0/lib -o "neural_test_bsp_xgpio_example_1.elf"  ./src/xgpio_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: neural_test_bsp_xgpio_example_1.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size neural_test_bsp_xgpio_example_1.elf  |tee "neural_test_bsp_xgpio_example_1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  23776	   1188	  22600	  47564	   b9cc	neural_test_bsp_xgpio_example_1.elf
+'Finished building: neural_test_bsp_xgpio_example_1.elf.size'
+' '
+15:47:00 **** Incremental Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nie ma nic do zrobienia w `main-build'.
+16:07:20 **** Auto Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+'Finished building: ../main.c'
+' '
+'Building target: neural_auto.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../neural_test_bsp/ps7_cortexa9_0/lib -o "neural_auto.elf"  ./calculateOutputVal.o ./main.o ./platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: neural_auto.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size neural_auto.elf  |tee "neural_auto.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28340	   1252	  22600	  52192	   cbe0	neural_auto.elf
+'Finished building: neural_auto.elf.size'
+' '
+16:07:28 **** Incremental Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nie ma nic do zrobienia w `main-build'.
+16:08:07 **** Auto Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+'Finished building: ../main.c'
+' '
+'Building target: neural_auto.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../neural_test_bsp/ps7_cortexa9_0/lib -o "neural_auto.elf"  ./calculateOutputVal.o ./main.o ./platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: neural_auto.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size neural_auto.elf  |tee "neural_auto.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28340	   1252	  22600	  52192	   cbe0	neural_auto.elf
+'Finished building: neural_auto.elf.size'
+' '
+16:08:16 **** Incremental Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nie ma nic do zrobienia w `main-build'.
+16:12:35 **** Auto Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+'Finished building: ../main.c'
+' '
+'Building target: neural_auto.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../neural_test_bsp/ps7_cortexa9_0/lib -o "neural_auto.elf"  ./calculateOutputVal.o ./main.o ./platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: neural_auto.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size neural_auto.elf  |tee "neural_auto.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28404	   1252	  22616	  52272	   cc30	neural_auto.elf
+'Finished building: neural_auto.elf.size'
+' '
+16:12:42 **** Incremental Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nie ma nic do zrobienia w `main-build'.
+16:13:48 **** Auto Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+'Finished building: ../main.c'
+' '
+'Building target: neural_auto.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../neural_test_bsp/ps7_cortexa9_0/lib -o "neural_auto.elf"  ./calculateOutputVal.o ./main.o ./platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: neural_auto.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size neural_auto.elf  |tee "neural_auto.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28404	   1252	  22616	  52272	   cc30	neural_auto.elf
+'Finished building: neural_auto.elf.size'
+' '
+16:13:55 **** Incremental Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nie ma nic do zrobienia w `main-build'.
+16:15:00 **** Incremental Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+'Finished building: ../main.c'
+' '
+'Building target: neural_auto.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../neural_test_bsp/ps7_cortexa9_0/lib -o "neural_auto.elf"  ./calculateOutputVal.o ./main.o ./platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: neural_auto.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size neural_auto.elf  |tee "neural_auto.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28404	   1252	  22616	  52272	   cc30	neural_auto.elf
+'Finished building: neural_auto.elf.size'
+' '
+16:27:55 **** Auto Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+'Finished building: ../main.c'
+' '
+'Building target: neural_auto.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../neural_test_bsp/ps7_cortexa9_0/lib -o "neural_auto.elf"  ./calculateOutputVal.o ./main.o ./platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: neural_auto.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size neural_auto.elf  |tee "neural_auto.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28352	   1252	  22616	  52220	   cbfc	neural_auto.elf
+'Finished building: neural_auto.elf.size'
+' '
+16:30:46 **** Auto Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+'Finished building: ../main.c'
+' '
+'Building target: neural_auto.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../neural_test_bsp/ps7_cortexa9_0/lib -o "neural_auto.elf"  ./calculateOutputVal.o ./main.o ./platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: neural_auto.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size neural_auto.elf  |tee "neural_auto.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28372	   1252	  22616	  52240	   cc10	neural_auto.elf
+'Finished building: neural_auto.elf.size'
+' '
+16:32:36 **** Auto Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+'Finished building: ../main.c'
+' '
+'Building target: neural_auto.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../neural_test_bsp/ps7_cortexa9_0/lib -o "neural_auto.elf"  ./calculateOutputVal.o ./main.o ./platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: neural_auto.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size neural_auto.elf  |tee "neural_auto.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28440	   1252	  22616	  52308	   cc54	neural_auto.elf
+'Finished building: neural_auto.elf.size'
+' '
+16:33:06 **** Incremental Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nie ma nic do zrobienia w `main-build'.
+16:35:09 **** Incremental Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nie ma nic do zrobienia w `main-build'.
+16:36:26 **** Auto Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+'Finished building: ../main.c'
+' '
+'Building target: neural_auto.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../neural_test_bsp/ps7_cortexa9_0/lib -o "neural_auto.elf"  ./calculateOutputVal.o ./main.o ./platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: neural_auto.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size neural_auto.elf  |tee "neural_auto.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28440	   1252	  22616	  52308	   cc54	neural_auto.elf
+'Finished building: neural_auto.elf.size'
+' '
+16:36:33 **** Incremental Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nie ma nic do zrobienia w `main-build'.
+16:38:46 **** Auto Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+'Finished building: ../main.c'
+' '
+'Building target: neural_auto.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../neural_test_bsp/ps7_cortexa9_0/lib -o "neural_auto.elf"  ./calculateOutputVal.o ./main.o ./platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: neural_auto.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size neural_auto.elf  |tee "neural_auto.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28476	   1252	  22616	  52344	   cc78	neural_auto.elf
+'Finished building: neural_auto.elf.size'
+' '
+16:40:04 **** Auto Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+'Finished building: ../main.c'
+' '
+'Building target: neural_auto.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../neural_test_bsp/ps7_cortexa9_0/lib -o "neural_auto.elf"  ./calculateOutputVal.o ./main.o ./platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: neural_auto.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size neural_auto.elf  |tee "neural_auto.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28476	   1252	  22616	  52344	   cc78	neural_auto.elf
+'Finished building: neural_auto.elf.size'
+' '
+16:59:11 **** Auto Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+'Finished building: ../main.c'
+' '
+'Building target: neural_auto.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../neural_test_bsp/ps7_cortexa9_0/lib -o "neural_auto.elf"  ./calculateOutputVal.o ./main.o ./platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: neural_auto.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size neural_auto.elf  |tee "neural_auto.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28476	   1252	  22616	  52344	   cc78	neural_auto.elf
+'Finished building: neural_auto.elf.size'
+' '
+17:19:04 **** Incremental Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+'Finished building: ../main.c'
+' '
+'Building target: neural_auto.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../neural_test_bsp/ps7_cortexa9_0/lib -o "neural_auto.elf"  ./calculateOutputVal.o ./main.o ./platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: neural_auto.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size neural_auto.elf  |tee "neural_auto.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28476	   1252	  22616	  52344	   cc78	neural_auto.elf
+'Finished building: neural_auto.elf.size'
+' '
+17:20:56 **** Auto Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../calculateOutputVal.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"calculateOutputVal.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"calculateOutputVal.d" -MT"calculateOutputVal.o" -o "calculateOutputVal.o" "../calculateOutputVal.c"
+'Finished building: ../calculateOutputVal.c'
+' '
+'Building target: neural_auto.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../neural_test_bsp/ps7_cortexa9_0/lib -o "neural_auto.elf"  ./calculateOutputVal.o ./main.o ./platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: neural_auto.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size neural_auto.elf  |tee "neural_auto.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28356	   1252	  22616	  52224	   cc00	neural_auto.elf
+'Finished building: neural_auto.elf.size'
+' '
+17:24:44 **** Auto Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+'Finished building: ../main.c'
+' '
+'Building target: neural_auto.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../neural_test_bsp/ps7_cortexa9_0/lib -o "neural_auto.elf"  ./calculateOutputVal.o ./main.o ./platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: neural_auto.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size neural_auto.elf  |tee "neural_auto.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28356	   1252	  22616	  52224	   cc00	neural_auto.elf
+'Finished building: neural_auto.elf.size'
+' '
+17:29:47 **** Auto Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+'Finished building: ../main.c'
+' '
+'Building target: neural_auto.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../neural_test_bsp/ps7_cortexa9_0/lib -o "neural_auto.elf"  ./calculateOutputVal.o ./main.o ./platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: neural_auto.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size neural_auto.elf  |tee "neural_auto.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28420	   1252	  22616	  52288	   cc40	neural_auto.elf
+'Finished building: neural_auto.elf.size'
+' '
+17:29:54 **** Incremental Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nie ma nic do zrobienia w `main-build'.
+17:30:10 **** Incremental Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nie ma nic do zrobienia w `main-build'.
+17:30:57 **** Incremental Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nie ma nic do zrobienia w `main-build'.
+17:32:31 **** Auto Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+'Finished building: ../main.c'
+' '
+'Building target: neural_auto.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../neural_test_bsp/ps7_cortexa9_0/lib -o "neural_auto.elf"  ./calculateOutputVal.o ./main.o ./platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: neural_auto.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size neural_auto.elf  |tee "neural_auto.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28508	   1252	  22616	  52376	   cc98	neural_auto.elf
+'Finished building: neural_auto.elf.size'
+' '
+17:32:36 **** Incremental Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nie ma nic do zrobienia w `main-build'.
+17:33:48 **** Incremental Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nie ma nic do zrobienia w `main-build'.
+17:34:25 **** Incremental Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+'Finished building: ../main.c'
+' '
+'Building target: neural_auto.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../neural_test_bsp/ps7_cortexa9_0/lib -o "neural_auto.elf"  ./calculateOutputVal.o ./main.o ./platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: neural_auto.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size neural_auto.elf  |tee "neural_auto.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28364	   1252	  22616	  52232	   cc08	neural_auto.elf
+'Finished building: neural_auto.elf.size'
+' '
+17:38:45 **** Auto Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+'Finished building: ../main.c'
+' '
+'Building target: neural_auto.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../neural_test_bsp/ps7_cortexa9_0/lib -o "neural_auto.elf"  ./calculateOutputVal.o ./main.o ./platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: neural_auto.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size neural_auto.elf  |tee "neural_auto.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28436	   1252	  22616	  52304	   cc50	neural_auto.elf
+'Finished building: neural_auto.elf.size'
+' '
+17:38:50 **** Incremental Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nie ma nic do zrobienia w `main-build'.
+17:40:17 **** Auto Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+'Finished building: ../main.c'
+' '
+'Building target: neural_auto.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../neural_test_bsp/ps7_cortexa9_0/lib -o "neural_auto.elf"  ./calculateOutputVal.o ./main.o ./platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: neural_auto.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size neural_auto.elf  |tee "neural_auto.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28508	   1252	  22616	  52376	   cc98	neural_auto.elf
+'Finished building: neural_auto.elf.size'
+' '
+17:40:21 **** Incremental Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nie ma nic do zrobienia w `main-build'.
+17:41:43 **** Auto Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+'Finished building: ../main.c'
+' '
+'Building target: neural_auto.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../neural_test_bsp/ps7_cortexa9_0/lib -o "neural_auto.elf"  ./calculateOutputVal.o ./main.o ./platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: neural_auto.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size neural_auto.elf  |tee "neural_auto.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28436	   1252	  22616	  52304	   cc50	neural_auto.elf
+'Finished building: neural_auto.elf.size'
+' '
+17:41:48 **** Incremental Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nie ma nic do zrobienia w `main-build'.
+18:14:07 **** Auto Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+'Finished building: ../main.c'
+' '
+'Building target: neural_auto.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../neural_test_bsp/ps7_cortexa9_0/lib -o "neural_auto.elf"  ./calculateOutputVal.o ./main.o ./platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: neural_auto.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size neural_auto.elf  |tee "neural_auto.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28572	   1252	  22616	  52440	   ccd8	neural_auto.elf
+'Finished building: neural_auto.elf.size'
+' '
+18:14:11 **** Incremental Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nie ma nic do zrobienia w `main-build'.
+18:15:48 **** Incremental Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nie ma nic do zrobienia w `main-build'.
+18:17:26 **** Auto Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+'Finished building: ../main.c'
+' '
+'Building target: neural_auto.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../neural_test_bsp/ps7_cortexa9_0/lib -o "neural_auto.elf"  ./calculateOutputVal.o ./main.o ./platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: neural_auto.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size neural_auto.elf  |tee "neural_auto.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28572	   1252	  22616	  52440	   ccd8	neural_auto.elf
+'Finished building: neural_auto.elf.size'
+' '
+18:17:30 **** Incremental Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nie ma nic do zrobienia w `main-build'.
+18:18:56 **** Auto Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+'Finished building: ../main.c'
+' '
+'Building target: neural_auto.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../neural_test_bsp/ps7_cortexa9_0/lib -o "neural_auto.elf"  ./calculateOutputVal.o ./main.o ./platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: neural_auto.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size neural_auto.elf  |tee "neural_auto.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28572	   1252	  22616	  52440	   ccd8	neural_auto.elf
+'Finished building: neural_auto.elf.size'
+' '
+18:19:05 **** Incremental Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nie ma nic do zrobienia w `main-build'.
+18:19:46 **** Incremental Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nie ma nic do zrobienia w `main-build'.
+18:20:11 **** Auto Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+../main.c: In function 'main':
+../main.c:150:6: warning: 'ctr' is used uninitialized in this function [-Wuninitialized]
+      for(j=0;j<ctr;j++){
+      ^~~
+'Finished building: ../main.c'
+' '
+'Building target: neural_auto.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../neural_test_bsp/ps7_cortexa9_0/lib -o "neural_auto.elf"  ./calculateOutputVal.o ./main.o ./platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: neural_auto.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size neural_auto.elf  |tee "neural_auto.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28364	   1252	  22616	  52232	   cc08	neural_auto.elf
+'Finished building: neural_auto.elf.size'
+' '
+18:20:19 **** Incremental Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nie ma nic do zrobienia w `main-build'.
+18:20:59 **** Incremental Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+'Finished building: ../main.c'
+' '
+'Building target: neural_auto.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../neural_test_bsp/ps7_cortexa9_0/lib -o "neural_auto.elf"  ./calculateOutputVal.o ./main.o ./platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: neural_auto.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size neural_auto.elf  |tee "neural_auto.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28364	   1252	  22616	  52232	   cc08	neural_auto.elf
+'Finished building: neural_auto.elf.size'
+' '
+18:22:24 **** Auto Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+'Finished building: ../main.c'
+' '
+'Building target: neural_auto.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../neural_test_bsp/ps7_cortexa9_0/lib -o "neural_auto.elf"  ./calculateOutputVal.o ./main.o ./platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: neural_auto.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size neural_auto.elf  |tee "neural_auto.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28500	   1252	  22616	  52368	   cc90	neural_auto.elf
+'Finished building: neural_auto.elf.size'
+' '
+18:22:38 **** Incremental Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nie ma nic do zrobienia w `main-build'.
+18:23:23 **** Auto Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+'Finished building: ../main.c'
+' '
+'Building target: neural_auto.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../neural_test_bsp/ps7_cortexa9_0/lib -o "neural_auto.elf"  ./calculateOutputVal.o ./main.o ./platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: neural_auto.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size neural_auto.elf  |tee "neural_auto.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28508	   1252	  22616	  52376	   cc98	neural_auto.elf
+'Finished building: neural_auto.elf.size'
+' '
+18:23:28 **** Incremental Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nie ma nic do zrobienia w `main-build'.
+18:23:58 **** Incremental Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+'Finished building: ../main.c'
+' '
+'Building target: neural_auto.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../neural_test_bsp/ps7_cortexa9_0/lib -o "neural_auto.elf"  ./calculateOutputVal.o ./main.o ./platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: neural_auto.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size neural_auto.elf  |tee "neural_auto.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28508	   1252	  22616	  52376	   cc98	neural_auto.elf
+'Finished building: neural_auto.elf.size'
+' '
+18:24:47 **** Incremental Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+'Finished building: ../main.c'
+' '
+'Building target: neural_auto.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../neural_test_bsp/ps7_cortexa9_0/lib -o "neural_auto.elf"  ./calculateOutputVal.o ./main.o ./platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: neural_auto.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size neural_auto.elf  |tee "neural_auto.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28508	   1252	  22616	  52376	   cc98	neural_auto.elf
+'Finished building: neural_auto.elf.size'
+' '
+18:26:46 **** Auto Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+'Finished building: ../main.c'
+' '
+'Building target: neural_auto.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../neural_test_bsp/ps7_cortexa9_0/lib -o "neural_auto.elf"  ./calculateOutputVal.o ./main.o ./platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: neural_auto.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size neural_auto.elf  |tee "neural_auto.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28372	   1252	  22616	  52240	   cc10	neural_auto.elf
+'Finished building: neural_auto.elf.size'
+' '
+18:28:41 **** Incremental Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+'Finished building: ../main.c'
+' '
+'Building target: neural_auto.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../neural_test_bsp/ps7_cortexa9_0/lib -o "neural_auto.elf"  ./calculateOutputVal.o ./main.o ./platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: neural_auto.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size neural_auto.elf  |tee "neural_auto.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28372	   1252	  22616	  52240	   cc10	neural_auto.elf
+'Finished building: neural_auto.elf.size'
+' '
+18:29:11 **** Incremental Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+'Finished building: ../main.c'
+' '
+'Building target: neural_auto.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../neural_test_bsp/ps7_cortexa9_0/lib -o "neural_auto.elf"  ./calculateOutputVal.o ./main.o ./platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: neural_auto.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size neural_auto.elf  |tee "neural_auto.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28372	   1252	  22616	  52240	   cc10	neural_auto.elf
+'Finished building: neural_auto.elf.size'
+' '
+18:29:42 **** Incremental Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+'Finished building: ../main.c'
+' '
+'Building target: neural_auto.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../neural_test_bsp/ps7_cortexa9_0/lib -o "neural_auto.elf"  ./calculateOutputVal.o ./main.o ./platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: neural_auto.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size neural_auto.elf  |tee "neural_auto.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28372	   1252	  22616	  52240	   cc10	neural_auto.elf
+'Finished building: neural_auto.elf.size'
+' '
+18:30:17 **** Auto Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+'Finished building: ../main.c'
+' '
+'Building target: neural_auto.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../neural_test_bsp/ps7_cortexa9_0/lib -o "neural_auto.elf"  ./calculateOutputVal.o ./main.o ./platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: neural_auto.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size neural_auto.elf  |tee "neural_auto.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28372	   1252	  22616	  52240	   cc10	neural_auto.elf
+'Finished building: neural_auto.elf.size'
+' '
+18:31:39 **** Auto Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+'Finished building: ../main.c'
+' '
+'Building target: neural_auto.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../neural_test_bsp/ps7_cortexa9_0/lib -o "neural_auto.elf"  ./calculateOutputVal.o ./main.o ./platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: neural_auto.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size neural_auto.elf  |tee "neural_auto.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28372	   1252	  22616	  52240	   cc10	neural_auto.elf
+'Finished building: neural_auto.elf.size'
+' '
+18:31:44 **** Incremental Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nie ma nic do zrobienia w `main-build'.
+18:32:30 **** Auto Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+'Finished building: ../main.c'
+' '
+'Building target: neural_auto.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../neural_test_bsp/ps7_cortexa9_0/lib -o "neural_auto.elf"  ./calculateOutputVal.o ./main.o ./platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: neural_auto.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size neural_auto.elf  |tee "neural_auto.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28372	   1252	  22616	  52240	   cc10	neural_auto.elf
+'Finished building: neural_auto.elf.size'
+' '
+18:32:34 **** Incremental Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nie ma nic do zrobienia w `main-build'.
+18:33:24 **** Auto Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../calculateOutputVal.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"calculateOutputVal.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"calculateOutputVal.d" -MT"calculateOutputVal.o" -o "calculateOutputVal.o" "../calculateOutputVal.c"
+'Finished building: ../calculateOutputVal.c'
+' '
+'Building target: neural_auto.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../neural_test_bsp/ps7_cortexa9_0/lib -o "neural_auto.elf"  ./calculateOutputVal.o ./main.o ./platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: neural_auto.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size neural_auto.elf  |tee "neural_auto.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28472	   1252	  22616	  52340	   cc74	neural_auto.elf
+'Finished building: neural_auto.elf.size'
+' '
+18:33:30 **** Incremental Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nie ma nic do zrobienia w `main-build'.
+18:35:30 **** Incremental Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+'Finished building: ../main.c'
+' '
+'Building target: neural_auto.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../neural_test_bsp/ps7_cortexa9_0/lib -o "neural_auto.elf"  ./calculateOutputVal.o ./main.o ./platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: neural_auto.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size neural_auto.elf  |tee "neural_auto.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28472	   1252	  22616	  52340	   cc74	neural_auto.elf
+'Finished building: neural_auto.elf.size'
+' '
+18:35:53 **** Incremental Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nie ma nic do zrobienia w `main-build'.
+18:36:14 **** Incremental Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+'Finished building: ../main.c'
+' '
+'Building target: neural_auto.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../neural_test_bsp/ps7_cortexa9_0/lib -o "neural_auto.elf"  ./calculateOutputVal.o ./main.o ./platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: neural_auto.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size neural_auto.elf  |tee "neural_auto.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28472	   1252	  22616	  52340	   cc74	neural_auto.elf
+'Finished building: neural_auto.elf.size'
+' '
+18:36:57 **** Incremental Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+'Finished building: ../main.c'
+' '
+'Building target: neural_auto.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../neural_test_bsp/ps7_cortexa9_0/lib -o "neural_auto.elf"  ./calculateOutputVal.o ./main.o ./platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: neural_auto.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size neural_auto.elf  |tee "neural_auto.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28472	   1252	  22616	  52340	   cc74	neural_auto.elf
+'Finished building: neural_auto.elf.size'
+' '
+18:37:14 **** Incremental Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nie ma nic do zrobienia w `main-build'.
+18:37:49 **** Incremental Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nie ma nic do zrobienia w `main-build'.
+18:38:17 **** Auto Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+'Finished building: ../main.c'
+' '
+'Building target: neural_auto.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../neural_test_bsp/ps7_cortexa9_0/lib -o "neural_auto.elf"  ./calculateOutputVal.o ./main.o ./platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: neural_auto.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size neural_auto.elf  |tee "neural_auto.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28472	   1252	  22616	  52340	   cc74	neural_auto.elf
+'Finished building: neural_auto.elf.size'
+' '
+18:38:21 **** Incremental Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nie ma nic do zrobienia w `main-build'.
+18:38:38 **** Incremental Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+'Finished building: ../main.c'
+' '
+'Building target: neural_auto.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../neural_test_bsp/ps7_cortexa9_0/lib -o "neural_auto.elf"  ./calculateOutputVal.o ./main.o ./platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: neural_auto.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size neural_auto.elf  |tee "neural_auto.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28472	   1252	  22616	  52340	   cc74	neural_auto.elf
+'Finished building: neural_auto.elf.size'
+' '
+18:43:12 **** Incremental Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+'Finished building: ../main.c'
+' '
+'Building target: neural_auto.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../neural_test_bsp/ps7_cortexa9_0/lib -o "neural_auto.elf"  ./calculateOutputVal.o ./main.o ./platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: neural_auto.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size neural_auto.elf  |tee "neural_auto.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28472	   1252	  22616	  52340	   cc74	neural_auto.elf
+'Finished building: neural_auto.elf.size'
+' '
+18:43:43 **** Incremental Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+'Finished building: ../main.c'
+' '
+'Building target: neural_auto.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../neural_test_bsp/ps7_cortexa9_0/lib -o "neural_auto.elf"  ./calculateOutputVal.o ./main.o ./platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: neural_auto.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size neural_auto.elf  |tee "neural_auto.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28472	   1252	  22616	  52340	   cc74	neural_auto.elf
+'Finished building: neural_auto.elf.size'
+' '
+18:47:01 **** Auto Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+'Finished building: ../main.c'
+' '
+'Building target: neural_auto.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../neural_test_bsp/ps7_cortexa9_0/lib -o "neural_auto.elf"  ./calculateOutputVal.o ./main.o ./platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: neural_auto.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size neural_auto.elf  |tee "neural_auto.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28472	   1252	  22616	  52340	   cc74	neural_auto.elf
+'Finished building: neural_auto.elf.size'
+' '
+18:47:12 **** Incremental Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nie ma nic do zrobienia w `main-build'.
+18:48:30 **** Incremental Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+'Finished building: ../main.c'
+' '
+'Building target: neural_auto.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../neural_test_bsp/ps7_cortexa9_0/lib -o "neural_auto.elf"  ./calculateOutputVal.o ./main.o ./platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: neural_auto.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size neural_auto.elf  |tee "neural_auto.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28680	   1252	  22616	  52548	   cd44	neural_auto.elf
+'Finished building: neural_auto.elf.size'
+' '
+18:49:20 **** Incremental Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+'Finished building: ../main.c'
+' '
+'Building target: neural_auto.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../neural_test_bsp/ps7_cortexa9_0/lib -o "neural_auto.elf"  ./calculateOutputVal.o ./main.o ./platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: neural_auto.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size neural_auto.elf  |tee "neural_auto.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28680	   1252	  22616	  52548	   cd44	neural_auto.elf
+'Finished building: neural_auto.elf.size'
+' '
+18:49:59 **** Incremental Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+'Finished building: ../main.c'
+' '
+'Building target: neural_auto.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../neural_test_bsp/ps7_cortexa9_0/lib -o "neural_auto.elf"  ./calculateOutputVal.o ./main.o ./platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: neural_auto.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size neural_auto.elf  |tee "neural_auto.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28680	   1252	  22616	  52548	   cd44	neural_auto.elf
+'Finished building: neural_auto.elf.size'
+' '
+18:52:18 **** Incremental Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nie ma nic do zrobienia w `main-build'.
+18:54:01 **** Incremental Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nie ma nic do zrobienia w `main-build'.
+18:54:12 **** Incremental Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nie ma nic do zrobienia w `main-build'.
+18:54:23 **** Incremental Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nie ma nic do zrobienia w `main-build'.
+19:01:05 **** Incremental Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+'Finished building: ../main.c'
+' '
+'Building target: neural_auto.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../neural_test_bsp/ps7_cortexa9_0/lib -o "neural_auto.elf"  ./calculateOutputVal.o ./main.o ./platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: neural_auto.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size neural_auto.elf  |tee "neural_auto.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28680	   1252	  22616	  52548	   cd44	neural_auto.elf
+'Finished building: neural_auto.elf.size'
+' '
+19:02:21 **** Auto Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+'Finished building: ../main.c'
+' '
+'Building target: neural_auto.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../neural_test_bsp/ps7_cortexa9_0/lib -o "neural_auto.elf"  ./calculateOutputVal.o ./main.o ./platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: neural_auto.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size neural_auto.elf  |tee "neural_auto.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28680	   1252	  22616	  52548	   cd44	neural_auto.elf
+'Finished building: neural_auto.elf.size'
+' '
+19:02:28 **** Incremental Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nie ma nic do zrobienia w `main-build'.
+19:04:43 **** Auto Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+../main.c:93:1: error: expected identifier or '(' before '}' token
+ }
+ ^
+make: *** [main.o] B³¹d 1
+19:04:50 **** Incremental Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+../main.c:93:1: error: expected identifier or '(' before '}' token
+ }
+ ^
+make: *** [main.o] B³¹d 1
+19:04:57 **** Incremental Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+'Finished building: ../main.c'
+' '
+'Building target: neural_auto.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../neural_test_bsp/ps7_cortexa9_0/lib -o "neural_auto.elf"  ./calculateOutputVal.o ./main.o ./platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: neural_auto.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size neural_auto.elf  |tee "neural_auto.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28680	   1252	  22616	  52548	   cd44	neural_auto.elf
+'Finished building: neural_auto.elf.size'
+' '
+19:05:41 **** Incremental Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+'Finished building: ../main.c'
+' '
+'Building target: neural_auto.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../neural_test_bsp/ps7_cortexa9_0/lib -o "neural_auto.elf"  ./calculateOutputVal.o ./main.o ./platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: neural_auto.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size neural_auto.elf  |tee "neural_auto.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28684	   1252	  22616	  52552	   cd48	neural_auto.elf
+'Finished building: neural_auto.elf.size'
+' '
+19:10:07 **** Incremental Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nie ma nic do zrobienia w `main-build'.
+19:13:03 **** Incremental Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nie ma nic do zrobienia w `main-build'.
+19:14:31 **** Incremental Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nie ma nic do zrobienia w `main-build'.
+19:18:26 **** Auto Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+'Finished building: ../main.c'
+' '
+'Building target: neural_auto.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../neural_test_bsp/ps7_cortexa9_0/lib -o "neural_auto.elf"  ./calculateOutputVal.o ./main.o ./platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: neural_auto.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size neural_auto.elf  |tee "neural_auto.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28684	   1252	  22616	  52552	   cd48	neural_auto.elf
+'Finished building: neural_auto.elf.size'
+' '
+19:18:33 **** Incremental Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nie ma nic do zrobienia w `main-build'.
+19:20:02 **** Incremental Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+'Finished building: ../main.c'
+' '
+'Building target: neural_auto.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../neural_test_bsp/ps7_cortexa9_0/lib -o "neural_auto.elf"  ./calculateOutputVal.o ./main.o ./platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: neural_auto.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size neural_auto.elf  |tee "neural_auto.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28684	   1252	  22616	  52552	   cd48	neural_auto.elf
+'Finished building: neural_auto.elf.size'
+' '
+19:21:18 **** Incremental Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nie ma nic do zrobienia w `main-build'.
+19:24:03 **** Auto Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+'Finished building: ../main.c'
+' '
+'Building target: neural_auto.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../neural_test_bsp/ps7_cortexa9_0/lib -o "neural_auto.elf"  ./calculateOutputVal.o ./main.o ./platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: neural_auto.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size neural_auto.elf  |tee "neural_auto.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28612	   1252	  22616	  52480	   cd00	neural_auto.elf
+'Finished building: neural_auto.elf.size'
+' '
+19:41:39 **** Auto Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+'Finished building: ../main.c'
+' '
+'Building target: neural_auto.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../neural_test_bsp/ps7_cortexa9_0/lib -o "neural_auto.elf"  ./calculateOutputVal.o ./main.o ./platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: neural_auto.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size neural_auto.elf  |tee "neural_auto.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28596	   1252	  22616	  52464	   ccf0	neural_auto.elf
+'Finished building: neural_auto.elf.size'
+' '
+19:41:58 **** Incremental Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nie ma nic do zrobienia w `main-build'.
+19:44:49 **** Auto Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+'Finished building: ../main.c'
+' '
+'Building target: neural_auto.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../neural_test_bsp/ps7_cortexa9_0/lib -o "neural_auto.elf"  ./calculateOutputVal.o ./main.o ./platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: neural_auto.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size neural_auto.elf  |tee "neural_auto.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28660	   1252	  22616	  52528	   cd30	neural_auto.elf
+'Finished building: neural_auto.elf.size'
+' '
+19:45:49 **** Incremental Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nie ma nic do zrobienia w `main-build'.
+19:53:25 **** Auto Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+../main.c: In function 'main':
+../main.c:149:106: error: expected ')' before '{' token
+          else if((XGpio_DiscreteRead(&Gpio2, SW_CHANNEL)==8)||(XGpio_DiscreteRead(&Gpio2, SW_CHANNEL)==9){input=L;}
+                                                                                                          ^
+../main.c:173:6: error: expected expression before '}' token
+      }
+      ^
+../main.c:105:11: warning: variable 'mode' set but not used [-Wunused-but-set-variable]
+ int i, j, mode, ctr;
+           ^~~~
+../main.c:105:5: warning: unused variable 'i' [-Wunused-variable]
+ int i, j, mode, ctr;
+     ^
+../main.c:104:4: warning: unused variable 'z' [-Wunused-variable]
+ u8 z;
+    ^
+../main.c:103:17: warning: unused variable 'y4' [-Wunused-variable]
+ s32 y1, y2, y3, y4;
+                 ^~
+../main.c:103:13: warning: unused variable 'y3' [-Wunused-variable]
+ s32 y1, y2, y3, y4;
+             ^~
+../main.c:103:9: warning: unused variable 'y2' [-Wunused-variable]
+ s32 y1, y2, y3, y4;
+         ^~
+../main.c:103:5: warning: unused variable 'y1' [-Wunused-variable]
+ s32 y1, y2, y3, y4;
+     ^~
+../main.c:102:5: warning: variable 'input' set but not used [-Wunused-but-set-variable]
+ u32 input = C; //0b00010001000100011111;
+     ^~~~~
+../main.c:101:5: warning: variable 'angle' set but not used [-Wunused-but-set-variable]
+ u32 angle = 0;
+     ^~~~~
+make: *** [main.o] B³¹d 1
+19:53:38 **** Auto Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+'Finished building: ../main.c'
+' '
+'Building target: neural_auto.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../neural_test_bsp/ps7_cortexa9_0/lib -o "neural_auto.elf"  ./calculateOutputVal.o ./main.o ./platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: neural_auto.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size neural_auto.elf  |tee "neural_auto.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28724	   1252	  22616	  52592	   cd70	neural_auto.elf
+'Finished building: neural_auto.elf.size'
+' '
+19:55:26 **** Auto Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+../main.c: In function 'main':
+../main.c:129:51: error: expected expression before '||' token
+      if(XGpio_DiscreteRead(&Gpio2, SW_CHANNEL)==4)||(XGpio_DiscreteRead(&Gpio2, SW_CHANNEL)==5){
+                                                   ^~
+../main.c:105:17: warning: unused variable 'ctr' [-Wunused-variable]
+ int i, j, mode, ctr;
+                 ^~~
+../main.c:105:11: warning: variable 'mode' set but not used [-Wunused-but-set-variable]
+ int i, j, mode, ctr;
+           ^~~~
+../main.c:105:8: warning: unused variable 'j' [-Wunused-variable]
+ int i, j, mode, ctr;
+        ^
+../main.c:105:5: warning: unused variable 'i' [-Wunused-variable]
+ int i, j, mode, ctr;
+     ^
+../main.c:104:4: warning: unused variable 'z' [-Wunused-variable]
+ u8 z;
+    ^
+../main.c:103:17: warning: unused variable 'y4' [-Wunused-variable]
+ s32 y1, y2, y3, y4;
+                 ^~
+../main.c:103:13: warning: unused variable 'y3' [-Wunused-variable]
+ s32 y1, y2, y3, y4;
+             ^~
+../main.c:103:9: warning: unused variable 'y2' [-Wunused-variable]
+ s32 y1, y2, y3, y4;
+         ^~
+../main.c:103:5: warning: unused variable 'y1' [-Wunused-variable]
+ s32 y1, y2, y3, y4;
+     ^~
+../main.c:102:5: warning: unused variable 'input' [-Wunused-variable]
+ u32 input = C; //0b00010001000100011111;
+     ^~~~~
+../main.c:101:5: warning: variable 'angle' set but not used [-Wunused-but-set-variable]
+ u32 angle = 0;
+     ^~~~~
+make: *** [main.o] B³¹d 1
+19:55:43 **** Auto Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+'Finished building: ../main.c'
+' '
+'Building target: neural_auto.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../neural_test_bsp/ps7_cortexa9_0/lib -o "neural_auto.elf"  ./calculateOutputVal.o ./main.o ./platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: neural_auto.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size neural_auto.elf  |tee "neural_auto.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28788	   1252	  22616	  52656	   cdb0	neural_auto.elf
+'Finished building: neural_auto.elf.size'
+' '
+19:57:11 **** Incremental Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nie ma nic do zrobienia w `main-build'.
+19:59:25 **** Incremental Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nie ma nic do zrobienia w `main-build'.
+20:07:53 **** Auto Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+'Finished building: ../main.c'
+' '
+'Building target: neural_auto.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../neural_test_bsp/ps7_cortexa9_0/lib -o "neural_auto.elf"  ./calculateOutputVal.o ./main.o ./platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: neural_auto.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size neural_auto.elf  |tee "neural_auto.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  29052	   1252	  22616	  52920	   ceb8	neural_auto.elf
+'Finished building: neural_auto.elf.size'
+' '
+20:09:05 **** Auto Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+'Finished building: ../main.c'
+' '
+'Building target: neural_auto.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../neural_test_bsp/ps7_cortexa9_0/lib -o "neural_auto.elf"  ./calculateOutputVal.o ./main.o ./platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: neural_auto.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size neural_auto.elf  |tee "neural_auto.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  29180	   1252	  22616	  53048	   cf38	neural_auto.elf
+'Finished building: neural_auto.elf.size'
+' '
+20:09:24 **** Incremental Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nie ma nic do zrobienia w `main-build'.
+20:09:59 **** Incremental Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nie ma nic do zrobienia w `main-build'.
+20:12:17 **** Auto Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+'Finished building: ../main.c'
+' '
+'Building target: neural_auto.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../neural_test_bsp/ps7_cortexa9_0/lib -o "neural_auto.elf"  ./calculateOutputVal.o ./main.o ./platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: neural_auto.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size neural_auto.elf  |tee "neural_auto.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  29180	   1252	  22616	  53048	   cf38	neural_auto.elf
+'Finished building: neural_auto.elf.size'
+' '
+20:12:32 **** Auto Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../calculateOutputVal.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"calculateOutputVal.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"calculateOutputVal.d" -MT"calculateOutputVal.o" -o "calculateOutputVal.o" "../calculateOutputVal.c"
+'Finished building: ../calculateOutputVal.c'
+' '
+'Building target: neural_auto.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../neural_test_bsp/ps7_cortexa9_0/lib -o "neural_auto.elf"  ./calculateOutputVal.o ./main.o ./platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: neural_auto.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size neural_auto.elf  |tee "neural_auto.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  29080	   1252	  22616	  52948	   ced4	neural_auto.elf
+'Finished building: neural_auto.elf.size'
+' '
+20:12:44 **** Incremental Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nie ma nic do zrobienia w `main-build'.
+20:13:18 **** Incremental Build of configuration Debug for project neural_auto ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nie ma nic do zrobienia w `main-build'.

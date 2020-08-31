@@ -1,7 +1,7 @@
 //Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-//Date        : Sun Aug 30 14:17:41 2020
+//Date        : Mon Aug 31 14:10:30 2020
 //Host        : Mateusz-HP running 64-bit Service Pack 1  (build 7601)
 //Command     : generate_target design_ocr_wrapper.bd
 //Design      : design_ocr_wrapper
@@ -32,7 +32,8 @@ module design_ocr_wrapper
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb,
     btns_5bits_tri_i,
-    leds_8bits_tri_io);
+    leds_8bits_tri_io,
+    sws_8bits_tri_i);
   inout [14:0]DDR_addr;
   inout [2:0]DDR_ba;
   inout DDR_cas_n;
@@ -56,6 +57,7 @@ module design_ocr_wrapper
   inout FIXED_IO_ps_srstb;
   input [4:0]btns_5bits_tri_i;
   inout [7:0]leds_8bits_tri_io;
+  input [7:0]sws_8bits_tri_i;
 
   wire [14:0]DDR_addr;
   wire [2:0]DDR_ba;
@@ -111,6 +113,7 @@ module design_ocr_wrapper
   wire [5:5]leds_8bits_tri_t_5;
   wire [6:6]leds_8bits_tri_t_6;
   wire [7:7]leds_8bits_tri_t_7;
+  wire [7:0]sws_8bits_tri_i;
 
   design_ocr design_ocr_i
        (.DDR_addr(DDR_addr),
@@ -137,7 +140,8 @@ module design_ocr_wrapper
         .btns_5bits_tri_i(btns_5bits_tri_i),
         .leds_8bits_tri_i({leds_8bits_tri_i_7,leds_8bits_tri_i_6,leds_8bits_tri_i_5,leds_8bits_tri_i_4,leds_8bits_tri_i_3,leds_8bits_tri_i_2,leds_8bits_tri_i_1,leds_8bits_tri_i_0}),
         .leds_8bits_tri_o({leds_8bits_tri_o_7,leds_8bits_tri_o_6,leds_8bits_tri_o_5,leds_8bits_tri_o_4,leds_8bits_tri_o_3,leds_8bits_tri_o_2,leds_8bits_tri_o_1,leds_8bits_tri_o_0}),
-        .leds_8bits_tri_t({leds_8bits_tri_t_7,leds_8bits_tri_t_6,leds_8bits_tri_t_5,leds_8bits_tri_t_4,leds_8bits_tri_t_3,leds_8bits_tri_t_2,leds_8bits_tri_t_1,leds_8bits_tri_t_0}));
+        .leds_8bits_tri_t({leds_8bits_tri_t_7,leds_8bits_tri_t_6,leds_8bits_tri_t_5,leds_8bits_tri_t_4,leds_8bits_tri_t_3,leds_8bits_tri_t_2,leds_8bits_tri_t_1,leds_8bits_tri_t_0}),
+        .sws_8bits_tri_i(sws_8bits_tri_i));
   IOBUF leds_8bits_tri_iobuf_0
        (.I(leds_8bits_tri_o_0),
         .IO(leds_8bits_tri_io[0]),

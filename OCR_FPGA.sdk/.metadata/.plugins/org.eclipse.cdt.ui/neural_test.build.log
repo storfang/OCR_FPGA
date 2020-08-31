@@ -1,4 +1,4 @@
-21:06:57 **** Auto Build of configuration Debug for project neural_test ****
+15:46:37 **** Build of configuration Debug for project neural_test ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
@@ -6,6 +6,16 @@ a9-linaro-pre-build-step
 'Invoking: ARM v7 gcc compiler'
 arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"calculateOutputVal.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"calculateOutputVal.d" -MT"calculateOutputVal.o" -o "calculateOutputVal.o" "../calculateOutputVal.c"
 'Finished building: ../calculateOutputVal.c'
+' '
+'Building file: ../main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+'Finished building: ../main.c'
+' '
+'Building file: ../platform.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../neural_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"platform.d" -MT"platform.o" -o "platform.o" "../platform.c"
+'Finished building: ../platform.c'
 ' '
 'Building target: neural_test.elf'
 'Invoking: ARM v7 gcc linker'
@@ -19,5 +29,5 @@ arm-none-eabi-size neural_test.elf  |tee "neural_test.elf.size"
 'Finished building: neural_test.elf.size'
 ' '
 
-21:07:00 Build Finished (took 3s.610ms)
+15:46:44 Build Finished (took 6s.754ms)
 

@@ -44,6 +44,9 @@ set_property used_in_implementation false [get_files -all g:/studia/fpga/project
 set_property used_in_implementation false [get_files -all g:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.srcs/sources_1/bd/design_ocr/ip/design_ocr_rst_ps7_0_50M_0/design_ocr_rst_ps7_0_50M_0.xdc]
 set_property used_in_implementation false [get_files -all g:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.srcs/sources_1/bd/design_ocr/ip/design_ocr_rst_ps7_0_50M_0/design_ocr_rst_ps7_0_50M_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all g:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.srcs/sources_1/bd/design_ocr/ip/design_ocr_xbar_1/design_ocr_xbar_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all g:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.srcs/sources_1/bd/design_ocr/ip/design_ocr_axi_gpio_1_0/design_ocr_axi_gpio_1_0_board.xdc]
+set_property used_in_implementation false [get_files -all g:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.srcs/sources_1/bd/design_ocr/ip/design_ocr_axi_gpio_1_0/design_ocr_axi_gpio_1_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all g:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.srcs/sources_1/bd/design_ocr/ip/design_ocr_axi_gpio_1_0/design_ocr_axi_gpio_1_0.xdc]
 set_property used_in_implementation false [get_files -all g:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.srcs/sources_1/bd/design_ocr/ip/design_ocr_auto_pc_0/design_ocr_auto_pc_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all G:/studia/fpga/project_sdup_ocr/OCR_FPGA/OCR_FPGA.srcs/sources_1/bd/design_ocr/design_ocr_ooc.xdc]
 

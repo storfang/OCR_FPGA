@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="33">
   <CompositeFile CompositeFileTopName="design_ocr" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1598789904"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1598789904"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1598789904"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1598789904"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1598875833"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1598875833"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1598875833"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1598875833"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="synth\design_ocr.v" Type="Verilog">
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
@@ -60,6 +60,14 @@
       </File>
       <File Name="ip\design_ocr_xbar_1\design_ocr_xbar_1.xci" Type="IP">
         <Instance HierarchyPath="ps7_0_axi_periph/xbar"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\design_ocr_axi_gpio_1_0\design_ocr_axi_gpio_1_0.xci" Type="IP">
+        <Instance HierarchyPath="axi_gpio_1"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>

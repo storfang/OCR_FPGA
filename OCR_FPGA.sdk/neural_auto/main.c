@@ -22,11 +22,11 @@
 
 #define LED 0x01
 #define SW 0x01
+#define BTN 0x01
 #define LED_CHANNEL 1
-#define SW_CHANNEL 2
-#define GPIO_EXAMPLE_DEVICE_ID  XPAR_GPIO_0_DEVICE_ID
-//Define PI in fxp(12:10)
-#define PI 3215
+#define BTN_CHANNEL 2
+#define SW_CHANNEL 1
+
 //[19:16] expected value [15:0] input value
 #define  A 0b01110110100111111001 //0111
 #define  C 0b10001111000100011111//1000
@@ -84,70 +84,124 @@ u32 i;
 	val /= (s32) scale;
 	//Round target fixed-point to nearst integer
 	val = (val +5 )/10;
-	//if(val<1){
-	xil_printf("%dE-%u", val, nbr_of_decimal_digit );//}
+	/*if(val>=1){
+		xil_printf(" d: %d",val);
+		print("\n\r");
+	}*/
+	xil_printf("%dE-%u", val, nbr_of_decimal_digit );}
 	//else print("1");
 
-}
-    XGpio Gpio;
+
+
+XGpio Gpio1;
+XGpio Gpio2;
+
 int main()
 {
 u32 angle = 0;
 u32 input = C; //0b00010001000100011111;
 s32 y1, y2, y3, y4;
 u8 z;
-int i, j, mode;
+int i, j, mode, ctr;
 
-	XGpio_Initialize(&Gpio, GPIO_EXAMPLE_DEVICE_ID);
+	XGpio_Initialize(&Gpio1, XPAR_GPIO_0_DEVICE_ID);
+	XGpio_Initialize(&Gpio2, XPAR_GPIO_1_DEVICE_ID);
     init_platform();
 
-	XGpio_SetDataDirection(&Gpio, LED_CHANNEL, ~LED);
-	XGpio_SetDataDirection(&Gpio, SW_CHANNEL, ~SW);
+	XGpio_SetDataDirection(&Gpio1, LED_CHANNEL, ~LED);
+	XGpio_SetDataDirection(&Gpio2, SW_CHANNEL, ~SW);
+	XGpio_SetDataDirection(&Gpio1, BTN_CHANNEL, ~BTN);
 
     while(1){
 
-    	if(XGpio_DiscreteRead(&Gpio, SW_CHANNEL)==1){
-    		print("sw ON");
-    		print("\n\r");
-    		mode = 1;
-    	}
-    	else mode = 0;
-
-		XGpio_DiscreteWrite(&Gpio, LED_CHANNEL, LED);
+		XGpio_DiscreteWrite(&Gpio1, LED_CHANNEL, LED);
+		print("Enter number of epoch (two digits)");
+		print("\n\r");
     	angle = read2DigitDecVal();
 
-
-    	for(j=0;j<16;j++){
-    	print("Next epoch (any key)");
-    	//angle = read2DigitDecVal();
-    	print("\n\r");
-    	//Convert to radians fxp(12:10)
-    	angle *= 1024; 	//Fixed-point (12:10)
-    	angle = (angle * PI ) >> 10; //Fixed-point multiplication
-    	angle /= 180; 	//angle in radians
-    	input=valuesT[j];
-    	z = input >> 16;
-		XGpio_DiscreteClear(&Gpio, LED_CHANNEL, LED);
-    	for(i=0;i<1;i++){
-    	calculateOutputVal(input, mode, &y1, &y2, &y3, &y4);
-
-    	xil_printf("z value was %d", z);
-    	print("\n\r");
-    	print("y4 value is ");
-    	printDecimalFXPVal(y1, 16384, 5);
-    	print("\n\r");
-    	print("y3 value is ");
-    	printDecimalFXPVal(y2, 16384, 5);
-    	print("\n\r");
-    	print("y2 value is ");
-    	printDecimalFXPVal(y3, 16384, 5);
-    	print("\n\r");
-    	print("y1 value is ");
-    	printDecimalFXPVal(y4, 16384, 5);
-    	print("\n\r");
-    	print("\n\r");
+    	if(XGpio_DiscreteRead(&Gpio2, SW_CHANNEL)==1){
+    		print("Learning mode ON");
+    		print("\n\r");
+    		mode = 1;
+    		ctr=16;
     	}
-    }
+    	else if(XGpio_DiscreteRead(&Gpio2, SW_CHANNEL)==4){
+    		input=A;
+    		ctr=1;
+    		mode=0;
+    		print("input A");
+    		print("\n\r");
+    	}
+    	else if(XGpio_DiscreteRead(&Gpio2, SW_CHANNEL)==8){
+    		input=L;
+    		ctr=1;
+    		mode=0;
+    		print("input L");
+    		print("\n\r");
+    	}
+    	else if(XGpio_DiscreteRead(&Gpio2, SW_CHANNEL)==16){
+    		input=O;
+    		ctr=1;
+    		mode=0;
+    		print("input O");
+    		print("\n\r");
+    	}
+    	else if(XGpio_DiscreteRead(&Gpio2, SW_CHANNEL)==5){
+    		input=A;
+    		ctr=1;
+    		mode=1;
+    		print("input A");
+    		print("\n\r");
+    	}
+    	else if(XGpio_DiscreteRead(&Gpio2, SW_CHANNEL)==9){
+    		input=L;
+    		ctr=1;
+    		mode=1;
+    		print("input L");
+    		print("\n\r");
+    	}
+    	else if(XGpio_DiscreteRead(&Gpio2, SW_CHANNEL)==17){
+    		input=O;
+    		ctr=1;
+    		mode=1;
+    		print("input O");
+    		print("\n\r");
+    	}
+    	else {
+    		ctr=16;
+    		mode=0;
+    	}
+
+    	for(j=0;j<ctr;j++){
+    		print("Next epoch (any key)");
+    		print("\n\r");
+        	if((XGpio_DiscreteRead(&Gpio2, SW_CHANNEL)==4)||(XGpio_DiscreteRead(&Gpio2, SW_CHANNEL)==5)){input=A;}
+        	else if((XGpio_DiscreteRead(&Gpio2, SW_CHANNEL)==8)||(XGpio_DiscreteRead(&Gpio2, SW_CHANNEL)==9)){input=L;}
+        	else if((XGpio_DiscreteRead(&Gpio2, SW_CHANNEL)==16)||(XGpio_DiscreteRead(&Gpio2, SW_CHANNEL)==17)){input=O;}
+        	else {input=valuesT[j];}
+    		z = input >> 16;
+    		XGpio_DiscreteClear(&Gpio1, LED_CHANNEL, LED);
+    			for(i=0;i<angle;i++){
+    				calculateOutputVal(input, mode, &y1, &y2, &y3, &y4);
+    				xil_printf("Next iteration %d",i);
+    				print("\n\r");
+    				xil_printf("z value was %d", z);
+    				print("\n\r");
+    				print("y4 value is ");
+    				printDecimalFXPVal(y1, 16384, 5);
+    				print("\n\r");
+    				print("y3 value is ");
+    				printDecimalFXPVal(y2, 16384, 5);
+    				print("\n\r");
+    				print("y2 value is ");
+    				printDecimalFXPVal(y3, 16384, 5);
+    				print("\n\r");
+    				print("y1 value is ");
+    				printDecimalFXPVal(y4, 16384, 5);
+    				print("\n\r");
+    				print("\n\r");
+    			}
+    	}
     }
 
 }
